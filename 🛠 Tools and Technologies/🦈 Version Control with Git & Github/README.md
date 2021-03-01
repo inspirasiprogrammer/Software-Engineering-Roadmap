@@ -8,26 +8,26 @@
 
 ## - [**Table of content**](#table-of-content)
 
-  - 1 . [What is Git Version Control system & What is Github 😃](#-what-is-git-version-control-system--what-is-github-😃)
-  - 2 . [Learning Checklist ✅](#-learning-checklist-✅)
-  - 3 . [Installing Git](#-installing-git)
-  - 4 . [Creating a repo (Repository) 🎸](#-creating-a-repo-repository-🎸)
-  - 5 . [Review a Repo's History 🕑](#-review-a-repo's-history-🕑)
-  - 6 . [Adding Commits to a Repo 📇](#-adding-commits-to-a-repo-📇)
-  - 7 . [Tagging, Branching & Merging 🌳](#-tagging,-branching-&-merging-🌳)
-  - 8 . [Undoing Changes 🤚🏽](#-undoing-changes-🤚🏽)
+  - 1 . [What is Git Version Control system & What is Github 😃](#what-is-git-version-control-system--what-is-github-)
+  - 2 . [Learning Checklist ✅](#learning-checklist-)
+  - 3 . [Install and Setup Git](#install-and-setup-git)
+  - 4 . [Creating a repo (Repository) 🎸](#creating-a-repo-repository-)
+  - 5 . [Review a Repo's History 🕑](#review-a-repo's-history-)
+  - 6 . [Adding Commits to a Repo 📇](#adding-commits-to-a-repo-)
+  - 7 . [Tagging, Branching & Merging 🌳](#tagging,-branching-&-merging-)
+  - 8 . [Undoing Changes 🤚🏽](#undoing-changes-)
   #### Further Learning Resource
 
-  - 9 . [Articles 📰](#-articles-📰)
-  - 10 . [Books 📚](#-books-📚)
-  - 11 . [Courses 💻](#-courses-💻)
+  - 9 . [Articles 📰](#articles-)
+  - 10 . [Books 📚](#books-)
+  - 11 . [Courses 💻](#courses-)
 
 ---
 
 <br/>
 
 ## What is Git Version Control system & What is Github 😃
----
+
 Version control system is an incredibly important part of a professional developer's life. and in this guide, you'll learn about the benefits of version control system and install add Git and Github to your tool belt 😉! 
 
 ![Linus Trvoalds](https://media.giphy.com/media/xndHaRIcvge5y/giphy.gif)
@@ -38,7 +38,7 @@ ___
 <br/>
 
 ## Version control models: Centralized vs. Decentralized
----
+
 There are a number of Version Control Systems out there. This alone should prove that version control is incredibly important. Three of the most popular version control systems are:
 
 - Git
@@ -87,13 +87,13 @@ ___
 <br/><br/><br/>
 
 ## Install and Setup Git
----
+
 
 ___
 <br/><br/><br/>
 
 ## Creating a repo (Repository) 🎸
----
+
 
 ___
 
@@ -102,14 +102,13 @@ ___
 
 
 ## Review a Repo's History 🕑
----
+
 
 ___
 <br/><br/><br/>
 
 ## Adding Commits to a Repo 📇 
 
-___
 
 ___
 <br/><br/><br/>
@@ -118,9 +117,8 @@ ___
 
 ___
 
-___
-
 <br/><br/><br/>
+
 ## Undoing Changes 🤚🏽
 
 ___
@@ -128,6 +126,7 @@ ___
 ___
 
 <br/><br/><br/>
+
 ## Articles 📰
 
 ___
