@@ -27,8 +27,13 @@
 
 <br/>
 
+# 1
+
 ## **What is Git Version Control system & What is Github 😃**
 
+<details>
+  <summary>Let's first get to know GIT 📇 | <b>Click to expand</b></summary>
+</br>
 Version control system is an incredibly important part of a professional developer's life. and in this guide, you'll learn about the benefits of version control system and install add Git and Github to your tool belt 😉! 
 
 ![Linus Trvoalds](https://media.giphy.com/media/xndHaRIcvge5y/giphy.gif)
@@ -38,7 +43,7 @@ But aside from all of that Git is a free [open source](https://github.com/git/g
 ___
 <br/>
 
-## **Version control models: Centralized vs. Decentralized**
+### **Version control models: Centralized vs. Decentralized**
 
 There are a number of Version Control Systems out there. This alone should prove that version control is incredibly important. Three of the most popular version control systems are:
 
@@ -65,18 +70,26 @@ This method may sound wasteful, but in practice, it’s not a problem. Most prog
 > Version control systems aim to solve a specific problem that developers face: “storing and sharing multiple versions of code files.” If you’re a developer of any kind and you don’t use any kind of version control, you should start right now. It will make your life easier, so the main point of a version control system is to help you maintain a detailed history of the project as well as the ability to work on different versions of it. Having a detailed history of a project is important because it lets you see the progress of the project over time. If needed, you can also jump back to any point in the project to recover data or files.
 
 ---
+
+</details>
 <br/>
 <br/>
 <br/>
 
+# 2
 ## **Git Terminology**
+
+<details>
+<summary>How about we familiarize ourselves with Git's jargons, and break this fragile fear wall 💪🏽 | <b>Click to expand</b></summary>
+</br>
 Git is a tool that covered vast terminology and jargon, which can often be difficult for new users, or those who know Git basics but want to become Git masters. So, we need a little explanation of the terminology behind the tools. Let's have a look at the commonly used terms.
 
 ---
 <br/>
 <br/>
-
+<center>
 <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/2880px-Git-logo.svg.png" alt="drawing" width="200"/>
+</center>
 <br/>
 <br/>
 
@@ -273,6 +286,19 @@ In Git, cloning is the act of making a copy of any target repository. The target
 
 <br/><br/>
 
+
+### 16. **Git Remote**:
+In Git, the term remote is concerned with the remote repository. It is a shared repository that all team members use to exchange their changes. A remote repository is stored on a code hosting service like an internal server, GitHub, Subversion and more.
+
+In case of a local repository, a remote typically does not provide a file tree of the project's current state, as an alternative it only consists of the .git versioning data.
+
+
+
+
+---
+
+<br/><br/>
+
 ### 10. **SHA**:
 
 A SHA is basically an ID number for each commit. Here's what a commit's SHA might look like: e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6.
@@ -286,9 +312,15 @@ With this terminology in mind, let's take a high-level look at how we'll be usin
 
 
 ---
+</details>
 <br/><br/><br/>
 
+# 3
 ## **Learning Checklist ✅**
+
+<details>
+  <summary>A handy checklist to keep track of your progress, and know when you master Git 🧧. <b>Click to expand</b></summary>
+</br>
 
 You can use this learning checklist to follow this guide step by step and track your learning progress 💈
 
@@ -302,49 +334,88 @@ You can use this learning checklist to follow this guide step by step and track 
 :+1: :sparkles: :camel: :tada:
 :rocket: :metal: :octocat: 
 ___
+
+</details>
+
 <br/><br/><br/>
 
+# 4
 ## **Install and Setup Git**
 
+<details>
+  <summary>Install and Setup Git | <b>Click to expand</b></summary>
+</br>
+</details>
 
 ___
 <br/><br/><br/>
 
+# 5
 ## **Creating a repo (Repository) 🎸**
+<details>
+  <summary>Creating a repo (Repository) 🎸 | <b>Click to expand</b></summary>
+</br>
 
+</details>
 
 ___
 
 <br/><br/><br/>
 
-
+# 6
 
 ## **Review a Repo's History 🕑**
 
+<details>
+  <summary>Review a Repo's History 🕑 | <b>Click to expand</b></summary>
+</br>
+
+</details>
 
 ___
 <br/><br/><br/>
+
+# 7
 
 ## **Adding Commits to a Repo 📇** 
 
+<details>
+  <summary>Adding Commits to a Repo 📇 | <b>Click to expand</b></summary>
+</br>
+
+</details>
 
 ___
 <br/><br/><br/>
+
+# 8
 
 ## **Tagging, Branching & Merging 🌳**
 
+<details>
+  <summary>Tagging, Branching & Merging 🌳</b></summary>
+</br>
+
+</details>
+
 ___
 
 <br/><br/><br/>
 
+# 9
 ## **Undoing Changes 🤚🏽**
 
-___
+<details>
+  <summary>Undoing Changes 🤚🏽</b></summary>
+</br>
+
+</details>
 
 ___
 
 <br/><br/><br/>
 
+# 10
 ## **Articles 📰**
 
 ___
@@ -362,6 +433,8 @@ Article           | Provider (Platform)
 ___
 <br/><br/><br/>
 
+# 11
+
 ## Books 📚
 One of the most straight to the point Books 🔥🕹📟
 ___
@@ -372,6 +445,7 @@ Book name           | Provider (Platform) | Duration| Skill level |  Cost
 ___
 <br/> 
 
+# 12
 
 ## Courses 💻
 ----
@@ -389,6 +463,8 @@ Course name           | Provider (Platform) | Duration| Skill level | Course Cos
 ---
 
 <br/><br/><br/>
+
+# 13
 
 <!-- Tables -->
 ## **Resources**
