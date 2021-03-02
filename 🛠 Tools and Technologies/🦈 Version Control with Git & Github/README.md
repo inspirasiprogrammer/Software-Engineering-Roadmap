@@ -9,24 +9,25 @@
 ## - [**Table of content**](#table-of-content)
 
   - 1 . [What is Git Version Control system & What is Github 😃](#what-is-git-version-control-system--what-is-github-)
-  - 2 . [Learning Checklist ✅](#learning-checklist-)
-  - 3 . [Install and Setup Git](#install-and-setup-git)
-  - 4 . [Creating a repo (Repository) 🎸](#creating-a-repo-repository-)
-  - 5 . [Review a Repo's History 🕑](#review-a-repo's-history-)
-  - 6 . [Adding Commits to a Repo 📇](#adding-commits-to-a-repo-)
-  - 7 . [Tagging, Branching & Merging 🌳](#tagging,-branching-&-merging-)
-  - 8 . [Undoing Changes 🤚🏽](#undoing-changes-)
+  - 2 . [Git terminology](#git-terminology)
+  - 3 . [Learning Checklist ✅](#learning-checklist-)
+  - 4 . [Install and Setup Git](#install-and-setup-git)
+  - 5 . [Creating a repo (Repository) 🎸](#creating-a-repo-repository-)
+  - 6 . [Review a Repo's History 🕑](#review-a-repo's-history-)
+  - 7 . [Adding Commits to a Repo 📇](#adding-commits-to-a-repo-)
+  - 8 . [Tagging, Branching & Merging 🌳](#tagging,-branching-&-merging-)
+  - 9 . [Undoing Changes 🤚🏽](#undoing-changes-)
   #### Further Learning Resource
 
-  - 9 . [Articles 📰](#articles-)
-  - 10 . [Books 📚](#books-)
-  - 11 . [Courses 💻](#courses-)
+  - 10 . [Articles 📰](#articles-)
+  - 11 . [Books 📚](#books-)
+  - 12 . [Courses 💻](#courses-)
 
 ---
 
 <br/>
 
-## What is Git Version Control system & What is Github 😃
+## **What is Git Version Control system & What is Github 😃**
 
 Version control system is an incredibly important part of a professional developer's life. and in this guide, you'll learn about the benefits of version control system and install add Git and Github to your tool belt 😉! 
 
@@ -37,7 +38,7 @@ But aside from all of that Git is a free [open source](https://github.com/git/g
 ___
 <br/>
 
-## Version control models: Centralized vs. Decentralized
+## **Version control models: Centralized vs. Decentralized**
 
 There are a number of Version Control Systems out there. This alone should prove that version control is incredibly important. Three of the most popular version control systems are:
 
@@ -63,14 +64,231 @@ This method may sound wasteful, but in practice, it’s not a problem. Most prog
 > **Recap**: 
 > Version control systems aim to solve a specific problem that developers face: “storing and sharing multiple versions of code files.” If you’re a developer of any kind and you don’t use any kind of version control, you should start right now. It will make your life easier, so the main point of a version control system is to help you maintain a detailed history of the project as well as the ability to work on different versions of it. Having a detailed history of a project is important because it lets you see the progress of the project over time. If needed, you can also jump back to any point in the project to recover data or files.
 
-
-
 ---
 <br/>
 <br/>
 <br/>
 
-## Learning Checklist ✅
+## **Git Terminology**
+Git is a tool that covered vast terminology and jargon, which can often be difficult for new users, or those who know Git basics but want to become Git masters. So, we need a little explanation of the terminology behind the tools. Let's have a look at the commonly used terms.
+
+---
+<br/>
+<br/>
+
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/2880px-Git-logo.svg.png" alt="drawing" width="200"/>
+<br/>
+<br/>
+
+### 1. **Git**:
+
+an SCM (and therefore a VCS!). The URL for the Git website is https://git-scm.com/ (see how it has "SCM" directly in its domain!).
+
+---
+<br/><br/>
+
+### 2. **VCS version Control System / Source Code Manager**:
+<br/>
+
+![Branches](https://git-scm.com/book/en/v2/images/distributed.png)
+
+A version control system (abbreviated as VCS) is a tool that manages different versions of source code. A source code manager (abbreviated as SCM) is another name for a version control system.
+
+---
+
+<br/><br/>
+
+### 3. **Commit**:
+<br/>
+
+![](https://git-scm.com/book/en/v2/images/lifecycle.png)
+
+Git thinks of its data like a set of snapshots of a mini filesystem. Every time you commit (save the state of your project in Git), it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. You can think of it as a save point in a game - it saves your project's files and any information about them.
+
+Everything you do in Git is to help you make commits, so a commit is the fundamental unit in Git.
+
+---
+<br/><br/>
+
+![](https://git-scm.com/images/branching-illustration@2x.png)
+### 4. **Repository / repo**:
+
+A repository is a directory which contains your project work, as well as a few files (hidden by default on Mac OS X) which are used to communicate with Git. Repositories can exist either locally on your computer or as a remote copy on another computer. A repository is made up of commits.
+
+---
+<br/><br/>
+
+![git-scm.com](https://git-scm.com/book/en/v2/images/areas.png)
+### 5. **Working Directory**:
+<br/>
+
+The Working Directory is the files that you see in your computer's file system. When you open your project files up on a code editor, you're working with files in the Working Directory.
+
+This is in contrast to the files that have been saved (in commits!) in the repository.
+
+When working with Git, the Working Directory is also different from the command line's concept of the current working directory which is the directory that your shell is "looking at" right now.
+
+---
+<br/><br/>
+
+### 6. **Branch**:
+
+![Branches](https://git-scm.com/book/en/v2/images/checkout-master.png)
+
+A branch is a version of the repository that diverges from the main working project. It is an essential feature available in most modern version control systems.Branches serve as an abstraction for the edit/stage/commit process You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project, and a Git project can have more than one branch. We can perform many operations on Git branch-like rename, list, delete, etc.
+
+
+
+---
+<br/><br/>
+
+### 7. **Checkout**:
+![](https://git-scm.com/book/en/v2/images/basic-branching-3.png)
+
+A checkout is when content in the repository has been copied to the Working Directory, and it is used for the act of switching between different versions of a target entity and simly the git checkout command is used to switch between branches in a repository.
+
+
+---
+
+<br/><br/>
+
+### 8. **Cherry-Picking**:
+Cherry-picking in Git is meant to apply some commit from one branch into another branch. In case you made a mistake and committed a change into the wrong branch, but do not want to merge the whole branch. You can revert the commit and cherry-pick it on another branch, git cherry-pick is a useful tool but not always a best practice. Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. With that said git cherry-pick is a handy tool for a few scenarios.
+
+---
+
+<br/><br/>
+
+
+
+### 9. **Merge**:
+
+![](https://git-scm.com/book/en/v2/images/basic-merging-2.png)
+Merging is a process to put a forked history back together. The git merge command facilitates you to take the data created by git branch and integrate them into a single branch.
+
+
+---
+
+<br/><br/>
+
+### 9. **Staging Area / Staging Index / Index**:
+<br/>
+
+![](https://git-scm.com/images/about/index1@2x.png)
+
+<br/>
+
+The Git index is a staging area between the working directory and repository. It is used as the index to build up a set of changes that you want to commit together and in a simler way it's a file in the Git directory that stores information about what will go into your next commit. You can think of the staging area as a prep table where Git will take the next commit. Files on the Staging Index are poised to be added to the repository, which means when we use ``` git add ``` which will get to know what that is later, it adds files to the staging area, form the stage of the working directory, and when we ```git commit``` those added changes it adds them to the repository.
+
+
+---
+
+<br/><br/>
+
+### 10. **Pull/Pull Request**:
+The term Pull is used to receive data from remote git servers e.g Gitlab, GitHub... It fetches and merges changes on the remote server to your working directory. The git pull command is used to make a Git pull.
+
+Pull requests are a process for a developer to notify team members that they have made a feature. Once their feature branch is ready, the developer files a pull request via their remote server account. Pull request announces all the team members that they need to review the code and merge it into the master branch, Pull requests are features that makes it easier for developers to collaborate using Git servers like Github, Bitbucket, Gitlab. They provide a user-friendly web interface for discussing proposed changes before integrating them into the official project.
+
+
+
+
+---
+
+<br/><br/>
+
+### 11. **Push**:
+The push term refers to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repository. Pushing is capable of overwriting changes; caution should be taken when pushing.
+
+
+---
+
+<br/><br/>
+
+### 12. **Upstream And Downstream**:
+The term upstream and downstream refers to the repository. Generally, upstream is from where you clone the repository, and downstream is any project that integrates your work with other works. However, these terms are not restricted to Git repositories.
+
+There are two different contexts in Git for upstream/downstream, which are remotes and time/history. In the reference of remote upstream/downstream, the downstream repo will be pulled from the upstream repository. Data will flow downstream naturally.
+
+In the reference of time/history, it can be unclear, because upstream in time means downstream in history, and vice-versa. So it is better if we use the parent/child terms in place of upstream/downstream in case of time/history.
+
+
+
+
+---
+
+<br/><br/>
+
+### 13. **Git Reset**:
+The term reset stands for undoing changes. The git reset command is used to reset the changes. The git reset command has three core forms of invocation. These forms are as follows.
+
+- Soft
+- Mixed
+- Hard
+
+If we say in terms of Git, then Git is a tool that resets the current state of HEAD to a specified state. It is a sophisticated and versatile tool for undoing changes. It acts as a time machine for Git. You can jump up and forth between the various commits. Each of these reset variations affects specific trees that git uses to handle your file in its content.
+
+Additionally, git reset can operate on whole commits objects or at an individual file level. Each of these reset variations affects specific trees that git uses to handle your file and its contents.
+
+
+---
+
+<br/><br/>
+
+### 14. **Git Diff**:
+Git diff is a command-line utility. It's a multiuse Git command. When it is executed, it runs a diff function on Git data sources. These data sources can be files, branches, commits, and more. It is used to show changes between commits, commit, and working tree, etc.
+
+It compares the different versions of data sources. The version control system stands for working with a modified version of files. So, the diff command is a useful tool for working with Git.
+
+However, we can also track the changes with the help of git log command with option -p. The git log command will also work as a git diff command.
+
+
+
+---
+
+<br/><br/>
+
+### 15. **Git Fork**:
+A fork is a rough copy of a repository. Forking a repository allows you to freely test and debug with changes without affecting the original project. One of the excessive use of forking is to propose changes for bug fixing. To resolve an issue for a bug that you found, you can:
+
+- Fork the repository.
+- Make the fix.
+- Forward a pull request to the project owner.
+
+Forking is not a Git function; it is a feature of Git service like GitHub.
+
+
+
+---
+
+<br/><br/>
+
+
+### 16. **Git Clone**:
+In Git, cloning is the act of making a copy of any target repository. The target repository can be remote or local. You can clone your repository from the remote repository to create a local copy on your system. Also, you can sync between the two locations.
+
+
+
+---
+
+<br/><br/>
+
+### 10. **SHA**:
+
+A SHA is basically an ID number for each commit. Here's what a commit's SHA might look like: e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6.
+
+It is a 40-character string composed of characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. "SHA" is shorthand for "Secure Hash Algorithm". If you're interested in learning about hashes, check out our Intro to Computer Science course.
+
+---
+
+
+With this terminology in mind, let's take a high-level look at how we'll be using Git by looking at the typical workflow when working with version control.
+
+
+---
+<br/><br/><br/>
+
+## **Learning Checklist ✅**
 
 You can use this learning checklist to follow this guide step by step and track your learning progress 💈
 
@@ -86,13 +304,13 @@ You can use this learning checklist to follow this guide step by step and track 
 ___
 <br/><br/><br/>
 
-## Install and Setup Git
+## **Install and Setup Git**
 
 
 ___
 <br/><br/><br/>
 
-## Creating a repo (Repository) 🎸
+## **Creating a repo (Repository) 🎸**
 
 
 ___
@@ -101,25 +319,25 @@ ___
 
 
 
-## Review a Repo's History 🕑
+## **Review a Repo's History 🕑**
 
 
 ___
 <br/><br/><br/>
 
-## Adding Commits to a Repo 📇 
+## **Adding Commits to a Repo 📇** 
 
 
 ___
 <br/><br/><br/>
 
-## Tagging, Branching & Merging 🌳
+## **Tagging, Branching & Merging 🌳**
 
 ___
 
 <br/><br/><br/>
 
-## Undoing Changes 🤚🏽
+## **Undoing Changes 🤚🏽**
 
 ___
 
@@ -127,13 +345,17 @@ ___
 
 <br/><br/><br/>
 
-## Articles 📰
+## **Articles 📰**
 
 ___
 
 Article           | Provider (Platform)
 --------------------- | -------------- |
+[Git Cherry Pick](https://www.atlassian.com/git/tutorials/cherry-pick) | [Atlassian.com](https://atlassian.com)
+[Git Staging Area: Explained Like I'm Five](https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh) | [DEV](dev.to)
+[Git Terminology](https://www.atlassian.com/git/glossary/terminology) | [Atlassian.com](atlassian.com)
 [Centralized vs. DVCS from the Atlassian Blog](https://www.atlassian.com/blog/software-teams/version-control-centralized-dvcs) | [Atlassian.com](atlassian.com)
+[Upstream and Downstream](https://www.javatpoint.com/git-upstream-and-downstream) | [javatpoint.com](https://www.javatpoint.com/)
 [Distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control) | [Wikipedia.org](wikipedia.org)
 [🌳 🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) | [DEV](dev.to)
 
