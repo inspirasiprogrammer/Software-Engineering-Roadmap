@@ -2,6 +2,8 @@
 ![Markdown Logo](assets/images/vcs.jpg)
 <br/><br/>
 # **Version Control with Git & Github**
+
+
 #### Learn and Master Git VCS & Github 
 ---
 <br/>
@@ -31,7 +33,7 @@
 
 ## **What is Git Version Control system & What is Github 😃**
 
-<details>
+<details open>
   <summary>Let's first get to know GIT 📇 | <b>Click to expand</b></summary>
 </br>
 Version control system is an incredibly important part of a professional developer's life. and in this guide, you'll learn about the benefits of version control system and install add Git and Github to your tool belt 😉! 
@@ -79,7 +81,7 @@ This method may sound wasteful, but in practice, it’s not a problem. Most prog
 # 2
 ## **Git Terminology**
 
-<details>
+<details open>
 <summary>How about we familiarize ourselves with Git's jargons, and break this fragile fear wall 💪🏽 | <b>Click to expand</b></summary>
 </br>
 Git is a tool that covered vast terminology and jargon, which can often be difficult for new users, or those who know Git basics but want to become Git masters. So, we need a little explanation of the terminology behind the tools. Let's have a look at the commonly used terms.
@@ -100,10 +102,12 @@ an SCM (and therefore a VCS!). The URL for the Git website is https://git-scm.co
 ---
 <br/><br/>
 
+![Branches](https://git-scm.com/book/en/v2/images/distributed.png)
+
 ### 2. **VCS version Control System / Source Code Manager**:
 <br/>
 
-![Branches](https://git-scm.com/book/en/v2/images/distributed.png)
+
 
 A version control system (abbreviated as VCS) is a tool that manages different versions of source code. A source code manager (abbreviated as SCM) is another name for a version control system.
 
@@ -111,10 +115,12 @@ A version control system (abbreviated as VCS) is a tool that manages different v
 
 <br/><br/>
 
+![](https://git-scm.com/book/en/v2/images/lifecycle.png)
+
 ### 3. **Commit**:
 <br/>
 
-![](https://git-scm.com/book/en/v2/images/lifecycle.png)
+
 
 Git thinks of its data like a set of snapshots of a mini filesystem. Every time you commit (save the state of your project in Git), it basically takes a picture of what all your files look like at that moment and stores a reference to that snapshot. You can think of it as a save point in a game - it saves your project's files and any information about them.
 
@@ -124,14 +130,19 @@ Everything you do in Git is to help you make commits, so a commit is the fundame
 <br/><br/>
 
 ![](https://git-scm.com/images/branching-illustration@2x.png)
+
 ### 4. **Repository / repo**:
 
-A repository is a directory which contains your project work, as well as a few files (hidden by default on Mac OS X) which are used to communicate with Git. Repositories can exist either locally on your computer or as a remote copy on another computer. A repository is made up of commits.
+A repository is a directory which contains your project work, as well as a few files (hidden by default on Mac OS X) which are used to communicate with Git. Repositories can exist either locally on your computer or as a remote copy on another computer. A repository is made up of commits and in Git, Repository is like a data structure used by VCS to store metadata for a set of files and directories. It contains the collection of the file as well as the history of changes made to those files. Repositories in Git is considered as your project folder. A repository has all the project-related data. Distinct projects have distinct repositories.
+
+
 
 ---
 <br/><br/>
 
+
 ![git-scm.com](https://git-scm.com/book/en/v2/images/areas.png)
+
 ### 5. **Working Directory**:
 <br/>
 
@@ -144,9 +155,27 @@ When working with Git, the Working Directory is also different from the command 
 ---
 <br/><br/>
 
-### 6. **Branch**:
+
+---
+
+<br/><br/>
+
+
+### 6. **SHA**:
+
+A SHA is basically an ID number for each commit. Here's what a commit's SHA might look like: e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6.
+
+It is a 40-character string composed of characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. "SHA" is shorthand for "Secure Hash Algorithm". If you're interested in learning about hashes, check out our Intro to Computer Science course.
+
+---
+
+</br></br>
 
 ![Branches](https://git-scm.com/book/en/v2/images/checkout-master.png)
+
+### 7. **Branch**:
+
+
 
 A branch is a version of the repository that diverges from the main working project. It is an essential feature available in most modern version control systems.Branches serve as an abstraction for the edit/stage/commit process You can think of them as a way to request a brand new working directory, staging area, and project history. New commits are recorded in the history for the current branch, which results in a fork in the history of the project, and a Git project can have more than one branch. We can perform many operations on Git branch-like rename, list, delete, etc.
 
@@ -155,8 +184,10 @@ A branch is a version of the repository that diverges from the main working proj
 ---
 <br/><br/>
 
-### 7. **Checkout**:
 ![](https://git-scm.com/book/en/v2/images/basic-branching-3.png)
+
+### 8. **Checkout**:
+
 
 A checkout is when content in the repository has been copied to the Working Directory, and it is used for the act of switching between different versions of a target entity and simly the git checkout command is used to switch between branches in a repository.
 
@@ -165,7 +196,7 @@ A checkout is when content in the repository has been copied to the Working Dire
 
 <br/><br/>
 
-### 8. **Cherry-Picking**:
+### 9. **Cherry-Picking**:
 Cherry-picking in Git is meant to apply some commit from one branch into another branch. In case you made a mistake and committed a change into the wrong branch, but do not want to merge the whole branch. You can revert the commit and cherry-pick it on another branch, git cherry-pick is a useful tool but not always a best practice. Cherry picking can cause duplicate commits and many scenarios where cherry picking would work, traditional merges are preferred instead. With that said git cherry-pick is a handy tool for a few scenarios.
 
 ---
@@ -174,9 +205,10 @@ Cherry-picking in Git is meant to apply some commit from one branch into another
 
 
 
-### 9. **Merge**:
-
 ![](https://git-scm.com/book/en/v2/images/basic-merging-2.png)
+
+### 10. **Merge**:
+
 Merging is a process to put a forked history back together. The git merge command facilitates you to take the data created by git branch and integrate them into a single branch.
 
 
@@ -184,10 +216,11 @@ Merging is a process to put a forked history back together. The git merge comman
 
 <br/><br/>
 
-### 9. **Staging Area / Staging Index / Index**:
+![](https://git-scm.com/images/about/index1@2x.png)
+
+### 11. **Staging Area / Staging Index / Index**:
 <br/>
 
-![](https://git-scm.com/images/about/index1@2x.png)
 
 <br/>
 
@@ -198,7 +231,7 @@ The Git index is a staging area between the working directory and repository. It
 
 <br/><br/>
 
-### 10. **Pull/Pull Request**:
+### 12. **Pull/Pull Request**:
 The term Pull is used to receive data from remote git servers e.g Gitlab, GitHub... It fetches and merges changes on the remote server to your working directory. The git pull command is used to make a Git pull.
 
 Pull requests are a process for a developer to notify team members that they have made a feature. Once their feature branch is ready, the developer files a pull request via their remote server account. Pull request announces all the team members that they need to review the code and merge it into the master branch, Pull requests are features that makes it easier for developers to collaborate using Git servers like Github, Bitbucket, Gitlab. They provide a user-friendly web interface for discussing proposed changes before integrating them into the official project.
@@ -210,7 +243,7 @@ Pull requests are a process for a developer to notify team members that they hav
 
 <br/><br/>
 
-### 11. **Push**:
+### 13. **Push**:
 The push term refers to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repository. Pushing is capable of overwriting changes; caution should be taken when pushing.
 
 
@@ -218,7 +251,7 @@ The push term refers to upload local repository content to a remote repository. 
 
 <br/><br/>
 
-### 12. **Upstream And Downstream**:
+### 14. **Upstream And Downstream**:
 The term upstream and downstream refers to the repository. Generally, upstream is from where you clone the repository, and downstream is any project that integrates your work with other works. However, these terms are not restricted to Git repositories.
 
 There are two different contexts in Git for upstream/downstream, which are remotes and time/history. In the reference of remote upstream/downstream, the downstream repo will be pulled from the upstream repository. Data will flow downstream naturally.
@@ -232,7 +265,20 @@ In the reference of time/history, it can be unclear, because upstream in time me
 
 <br/><br/>
 
-### 13. **Git Reset**:
+
+### 15. **Fetch**:
+
+It is used to fetch branches and tags from one or more other repositories, along with the objects necessary to complete their histories. It updates the remote-tracking branches.
+
+
+
+
+---
+
+<br/><br/>
+
+### 16. **Git Reset**:
+
 The term reset stands for undoing changes. The git reset command is used to reset the changes. The git reset command has three core forms of invocation. These forms are as follows.
 
 - Soft
@@ -248,7 +294,7 @@ Additionally, git reset can operate on whole commits objects or at an individual
 
 <br/><br/>
 
-### 14. **Git Diff**:
+### 17. **Git Diff**:
 Git diff is a command-line utility. It's a multiuse Git command. When it is executed, it runs a diff function on Git data sources. These data sources can be files, branches, commits, and more. It is used to show changes between commits, commit, and working tree, etc.
 
 It compares the different versions of data sources. The version control system stands for working with a modified version of files. So, the diff command is a useful tool for working with Git.
@@ -261,7 +307,7 @@ However, we can also track the changes with the help of git log command with opt
 
 <br/><br/>
 
-### 15. **Git Fork**:
+### 18. **Git Fork**:
 A fork is a rough copy of a repository. Forking a repository allows you to freely test and debug with changes without affecting the original project. One of the excessive use of forking is to propose changes for bug fixing. To resolve an issue for a bug that you found, you can:
 
 - Fork the repository.
@@ -277,7 +323,7 @@ Forking is not a Git function; it is a feature of Git service like GitHub.
 <br/><br/>
 
 
-### 16. **Git Clone**:
+### 19. **Git Clone**:
 In Git, cloning is the act of making a copy of any target repository. The target repository can be remote or local. You can clone your repository from the remote repository to create a local copy on your system. Also, you can sync between the two locations.
 
 
@@ -287,7 +333,7 @@ In Git, cloning is the act of making a copy of any target repository. The target
 <br/><br/>
 
 
-### 16. **Git Remote**:
+### 20. **Git Remote**:
 In Git, the term remote is concerned with the remote repository. It is a shared repository that all team members use to exchange their changes. A remote repository is stored on a code hosting service like an internal server, GitHub, Subversion and more.
 
 In case of a local repository, a remote typically does not provide a file tree of the project's current state, as an alternative it only consists of the .git versioning data.
@@ -299,40 +345,165 @@ In case of a local repository, a remote typically does not provide a file tree o
 
 <br/><br/>
 
-### 10. **SHA**:
 
-A SHA is basically an ID number for each commit. Here's what a commit's SHA might look like: e2adf8ae3e2e4ed40add75cc44cf9d0a869afeb6.
+### 21. **HEAD**:
 
-It is a 40-character string composed of characters (0–9 and a–f) and calculated based on the contents of a file or directory structure in Git. "SHA" is shorthand for "Secure Hash Algorithm". If you're interested in learning about hashes, check out our Intro to Computer Science course.
+HEAD is the representation of the last commit in the current checkout branch. We can think of the head like a current branch. When you switch branches with git checkout, the HEAD revision changes, and points the new branch.
 
 ---
 
+<br/><br/>
+
+### 22. **Master**:
+
+Master is a naming convention for Git branch. It's a default branch of Git. After cloning a project from a remote server, the resulting local repository contains only a single local branch. This branch is called a "master" branch. It means that "master" is a repository's "default" branch.
+
+
+---
+
+<br/><br/>
+
+### 23. **Git Revert**:
+
+In Git, the term revert is used to revert some changes. The git revert command is used to apply revert operation. It is an undo type command. However, it is not a traditional undo alternative. It does not delete any data in this process; instead, it will create a new change with the opposite effect and thereby undo the specified commit. Generally, git revert is a commit.
+
+It can be useful for tracking bugs in the project. If you want to remove something from history then git revert is a wrong choice.
+
+Moreover, we can say that git revert records some new changes that are just opposite to previously made commits. 
+
+---
+
+<br/><br/>
+
+
+
+### 24. **Git Rm/Remove**:
+
+In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
+
+
+---
+
+<br/><br/>
+
+
+
+### 25. **Stashing**:
+
+Sometimes you want to switch the branches, but you are working on an incomplete part of your current project. You don't want to make a commit of half-done work. Git stashing allows you to do so. The git stash command enables you to switch branch without committing the current branch.
+
+
+
+---
+
+<br/><br/>
+
+
+### 26. **Tag**:
+Tags make a point as a specific point in Git history. It is used to mark a commit stage as important. We can tag a commit for future reference. Primarily, it is used to mark a projects initial point like v1.1. There are two types of tags.
+
+- Light-weighted tag
+- Annotated tag
+
+
+---
+
+<br/><br/>
+
+
+
+### 27. **Git Rm/Remove**:
+In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
+
+
+---
+
+<br/><br/>
+
+
+
+### 28. **Git Rm/Remove**:
+In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
+
+
+---
+
+<br/><br/>
+
+
+
+### 29. **Git Rm/Remove**:
+In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
+
+
+---
+
+<br/><br/>
+
+
+
+### 30. **Git Ignore**:
+In Git, the term ignore used to specify intentionally untracked files that Git should ignore. It doesn't affect the Files that already tracked by Git.
+
+---
+
+<br/><br/>
+
+
+
+### 31. **Git Squash**:
+In Git, the term squash is used to squash previous commits into one. Git squash is an excellent technique to group-specific changes before forwarding them to others. You can merge several commits into a single commit with the powerful interactive rebase command.
+
+---
+
+<br/><br/>
+
+
+
+### 32. **Origin**:
+In Git, "origin" is a reference to the remote repository from a project was initially cloned. More precisely, it is used instead of that original repository URL to make referencing much easier.
+
+
+---
+
+<br/><br/>
+
+
+
+### 33. **Git Rebase**:
+Rebasing is a process to reapply commits on top of another base trip. It is used to apply a sequence of commits from distinct branches into a final commit. It is an alternative of git merge command. It is a linear process of merging.
+
+In Git, the term rebase is referred to as the process of moving or combining a sequence of commits to a new base commit. Rebasing is very beneficial and it visualized the process in the environment of a feature branching workflow.
+
+It is good to rebase your branch before merging it.
+
+
+
+
+
+---
+</br>
 
 With this terminology in mind, let's take a high-level look at how we'll be using Git by looking at the typical workflow when working with version control.
 
-
----
 </details>
 <br/><br/><br/>
 
 # 3
 ## **Learning Checklist ✅**
 
-<details>
+<details open>
   <summary>A handy checklist to keep track of your progress, and know when you master Git 🧧. <b>Click to expand</b></summary>
 </br>
 
 You can use this learning checklist to follow this guide step by step and track your learning progress 💈
 
 ---
- - [ ] List item
- - [ ] List item
- - [ ] List item
- - [ ] List item
- - [x] @mentions, #refs, [links](),
-**formatting**, and <del>tags</del> GitHub supports emoji!
-:+1: :sparkles: :camel: :tada:
-:rocket: :metal: :octocat: 
+ - [x] In progress 📈
+ - [ ] In progress 📈
+ - [ ] In progress 📈
+ - [ ] In progress 📈
+ - [ ] In progress 📈
 ___
 
 </details>
@@ -342,7 +513,7 @@ ___
 # 4
 ## **Install and Setup Git**
 
-<details>
+<details open>
   <summary>Install and Setup Git | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -352,7 +523,7 @@ ___
 
 # 5
 ## **Creating a repo (Repository) 🎸**
-<details>
+<details open>
   <summary>Creating a repo (Repository) 🎸 | <b>Click to expand</b></summary>
 </br>
 
@@ -366,7 +537,7 @@ ___
 
 ## **Review a Repo's History 🕑**
 
-<details>
+<details open>
   <summary>Review a Repo's History 🕑 | <b>Click to expand</b></summary>
 </br>
 
@@ -379,7 +550,7 @@ ___
 
 ## **Adding Commits to a Repo 📇** 
 
-<details>
+<details open>
   <summary>Adding Commits to a Repo 📇 | <b>Click to expand</b></summary>
 </br>
 
@@ -392,7 +563,7 @@ ___
 
 ## **Tagging, Branching & Merging 🌳**
 
-<details>
+<details open>
   <summary>Tagging, Branching & Merging 🌳</b></summary>
 </br>
 
@@ -405,7 +576,7 @@ ___
 # 9
 ## **Undoing Changes 🤚🏽**
 
-<details>
+<details open>
   <summary>Undoing Changes 🤚🏽</b></summary>
 </br>
 
@@ -420,15 +591,16 @@ ___
 
 ___
 
-Article           | Provider (Platform)
---------------------- | -------------- |
-[Git Cherry Pick](https://www.atlassian.com/git/tutorials/cherry-pick) | [Atlassian.com](https://atlassian.com)
-[Git Staging Area: Explained Like I'm Five](https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh) | [DEV](dev.to)
-[Git Terminology](https://www.atlassian.com/git/glossary/terminology) | [Atlassian.com](atlassian.com)
-[Centralized vs. DVCS from the Atlassian Blog](https://www.atlassian.com/blog/software-teams/version-control-centralized-dvcs) | [Atlassian.com](atlassian.com)
-[Upstream and Downstream](https://www.javatpoint.com/git-upstream-and-downstream) | [javatpoint.com](https://www.javatpoint.com/)
-[Distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control) | [Wikipedia.org](wikipedia.org)
-[🌳 🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) | [DEV](dev.to)
+Article           | Provider (Platform) | Used reference|
+--------------------- | -------------- | ------|
+[Git Cherry Pick](https://www.atlassian.com/git/tutorials/cherry-pick) | [Atlassian.com](https://atlassian.com) | Yes
+[Git Staging Area: Explained Like I'm Five](https://dev.to/sublimegeek/git-staging-area-explained-like-im-five-1anh) | [DEV](dev.to) | Yes
+[Git Terminology](https://www.javatpoint.com/git-terminology) | [Javatpoint.com](https://www.javatpoint.com) | Yes
+[Git Terminology](https://www.atlassian.com/git/glossary/terminology) | [Atlassian.com](atlassian.com) | Yes
+[Centralized vs. DVCS from the Atlassian Blog](https://www.atlassian.com/blog/software-teams/version-control-centralized-dvcs) | [Atlassian.com](atlassian.com) | Yes
+[Upstream and Downstream](https://www.javatpoint.com/git-upstream-and-downstream) | [javatpoint.com](https://www.javatpoint.com/) | Yes
+[Distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control) | [Wikipedia.org](wikipedia.org) | No
+[🌳 🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) | [DEV](dev.to) | No
 
 ___
 <br/><br/><br/>
@@ -451,10 +623,10 @@ ___
 ----
 The most popular courses that tech Gitand Github on the internet. Yes for real 🔥🕹📟
 
-Course name           | Provider (Platform) | Duration| Skill level | Course Cost
---------------------- | -------------- | -------- | ---------- | -----
-[Version Control with Git 🔥](https://www.udacity.com/course/version-control-with-git--ud123)| [Udacity](https://udacity.com)| 4 weeks| Beginner | Free
-[Git Going Fast: One Hour Git Crash Course](https://www.udemy.com/course/git-going-fast/)| [Udemy](https://udemy.com)| 1 Hour | Beginner | 14.99 (Discount)
+Course name           | Provider (Platform) | Duration| Skill level | Course Cost | Used reference|
+--------------------- | -------------- | -------- | ---------- | ----- | ------|
+[Version Control with Git 🔥](https://www.udacity.com/course/version-control-with-git--ud123)| [Udacity](https://udacity.com)| 4 weeks| Beginner | Free | YES
+[Git Going Fast: One Hour Git Crash Course](https://www.udemy.com/course/git-going-fast/)| [Udemy](https://udemy.com)| 1 Hour | Beginner | 14.99 (Discount) | 
 [GitHub Ultimate: Master Git and GitHub - Beginner to Expert](https://www.udemy.com/course/github-ultimate/)| [Udemy](https://udemy.com)| 6.5 hours| Beginner | 18.22 (Discount)
 [Git Complete: The definitive, step-by-step guide to Git](https://www.udemy.com/course/git-complete/)| [Udemy](https://udemy.com)| 6 Hours| Beginner | 18.99 (Discount)
 [Git a Web Developer Job: Mastering the Modern Workflow](https://www.udemy.com/course/git-a-web-developer-job-mastering-the-modern-workflow/)| [Udemy](https://udemy.com)| 15.5 Hours| Intermediate | 21.99 (Discount)
