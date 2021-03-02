@@ -1,11 +1,21 @@
 
 ![Markdown Logo](assets/images/vcs.jpg)
 <br/><br/>
+
+<div align="center">
+
 # **Version Control with Git & Github**
-
-
 #### Learn and Master Git VCS & Github 
+<br>
+
+
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg)](https://GitHub.com/Naereen/StrapDown.js/graphs/commit-activity) [![Ask Me Anything !](https://img.shields.io/badge/Ask%20me-anything-1abc9c.svg)](https://github.com/humamaboalraja) [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://lbesson.mit-license.org/)
+
+
+</div>
+
 ---
+
 <br/>
 
 ## - [**Table of content**](#table-of-content)
@@ -33,7 +43,7 @@
 
 ## **What is Git Version Control system & What is Github 😃**
 
-<details open>
+<details>
   <summary>Let's first get to know GIT 📇 | <b>Click to expand</b></summary>
 </br>
 Version control system is an incredibly important part of a professional developer's life. and in this guide, you'll learn about the benefits of version control system and install add Git and Github to your tool belt 😉! 
@@ -81,7 +91,7 @@ This method may sound wasteful, but in practice, it’s not a problem. Most prog
 # 2
 ## **Git Terminology**
 
-<details open>
+<details >
 <summary>How about we familiarize ourselves with Git's jargons, and break this fragile fear wall 💪🏽 | <b>Click to expand</b></summary>
 </br>
 Git is a tool that covered vast terminology and jargon, which can often be difficult for new users, or those who know Git basics but want to become Git masters. So, we need a little explanation of the terminology behind the tools. Let's have a look at the commonly used terms.
@@ -138,7 +148,7 @@ A repository is a directory which contains your project work, as well as a few f
 
 
 ---
-<br/><br/>
+<br/>
 
 
 ![git-scm.com](https://git-scm.com/book/en/v2/images/areas.png)
@@ -153,12 +163,7 @@ This is in contrast to the files that have been saved (in commits!) in the repos
 When working with Git, the Working Directory is also different from the command line's concept of the current working directory which is the directory that your shell is "looking at" right now.
 
 ---
-<br/><br/>
-
-
----
-
-<br/><br/>
+<br/>
 
 
 ### 6. **SHA**:
@@ -229,7 +234,7 @@ The Git index is a staging area between the working directory and repository. It
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 12. **Pull/Pull Request**:
 The term Pull is used to receive data from remote git servers e.g Gitlab, GitHub... It fetches and merges changes on the remote server to your working directory. The git pull command is used to make a Git pull.
@@ -241,7 +246,7 @@ Pull requests are a process for a developer to notify team members that they hav
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 13. **Push**:
 The push term refers to upload local repository content to a remote repository. Pushing is an act of transfer commits from your local repository to a remote repository. Pushing is capable of overwriting changes; caution should be taken when pushing.
@@ -249,7 +254,7 @@ The push term refers to upload local repository content to a remote repository. 
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 14. **Upstream And Downstream**:
 The term upstream and downstream refers to the repository. Generally, upstream is from where you clone the repository, and downstream is any project that integrates your work with other works. However, these terms are not restricted to Git repositories.
@@ -263,7 +268,7 @@ In the reference of time/history, it can be unclear, because upstream in time me
 
 ---
 
-<br/><br/>
+<br/>
 
 
 ### 15. **Fetch**:
@@ -275,7 +280,7 @@ It is used to fetch branches and tags from one or more other repositories, along
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 16. **Git Reset**:
 
@@ -292,7 +297,7 @@ Additionally, git reset can operate on whole commits objects or at an individual
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 17. **Git Diff**:
 Git diff is a command-line utility. It's a multiuse Git command. When it is executed, it runs a diff function on Git data sources. These data sources can be files, branches, commits, and more. It is used to show changes between commits, commit, and working tree, etc.
@@ -305,7 +310,7 @@ However, we can also track the changes with the help of git log command with opt
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 18. **Git Fork**:
 A fork is a rough copy of a repository. Forking a repository allows you to freely test and debug with changes without affecting the original project. One of the excessive use of forking is to propose changes for bug fixing. To resolve an issue for a bug that you found, you can:
@@ -320,7 +325,7 @@ Forking is not a Git function; it is a feature of Git service like GitHub.
 
 ---
 
-<br/><br/>
+<br/>
 
 
 ### 19. **Git Clone**:
@@ -330,7 +335,7 @@ In Git, cloning is the act of making a copy of any target repository. The target
 
 ---
 
-<br/><br/>
+<br/>
 
 
 ### 20. **Git Remote**:
@@ -343,7 +348,7 @@ In case of a local repository, a remote typically does not provide a file tree o
 
 ---
 
-<br/><br/>
+<br/>
 
 
 ### 21. **HEAD**:
@@ -352,7 +357,7 @@ HEAD is the representation of the last commit in the current checkout branch. We
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 22. **Master**:
 
@@ -361,7 +366,7 @@ Master is a naming convention for Git branch. It's a default branch of Git. Afte
 
 ---
 
-<br/><br/>
+<br/>
 
 ### 23. **Git Revert**:
 
@@ -373,7 +378,7 @@ Moreover, we can say that git revert records some new changes that are just oppo
 
 ---
 
-<br/><br/>
+<br/>
 
 
 
@@ -384,7 +389,7 @@ In Git, the term rm stands for remove. It is used to remove individual files or 
 
 ---
 
-<br/><br/>
+<br/>
 
 
 
@@ -396,7 +401,7 @@ Sometimes you want to switch the branches, but you are working on an incomplete 
 
 ---
 
-<br/><br/>
+<br/>
 
 
 ### 26. **Tag**:
@@ -408,69 +413,38 @@ Tags make a point as a specific point in Git history. It is used to mark a commi
 
 ---
 
-<br/><br/>
+<br/>
 
 
 
-### 27. **Git Rm/Remove**:
-In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
 
-
----
-
-<br/><br/>
-
-
-
-### 28. **Git Rm/Remove**:
-In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
-
-
----
-
-<br/><br/>
-
-
-
-### 29. **Git Rm/Remove**:
-In Git, the term rm stands for remove. It is used to remove individual files or a collection of files. The key function of git rm is to remove tracked files from the Git index. Additionally, it can be used to remove files from both the working directory and staging index.
-
-
----
-
-<br/><br/>
-
-
-
-### 30. **Git Ignore**:
+### 27. **Git Ignore**:
 In Git, the term ignore used to specify intentionally untracked files that Git should ignore. It doesn't affect the Files that already tracked by Git.
 
 ---
 
-<br/><br/>
+<br/>
 
 
 
-### 31. **Git Squash**:
+### 28. **Git Squash**:
 In Git, the term squash is used to squash previous commits into one. Git squash is an excellent technique to group-specific changes before forwarding them to others. You can merge several commits into a single commit with the powerful interactive rebase command.
 
 ---
 
-<br/><br/>
+<br/>
 
 
 
-### 32. **Origin**:
+### 29. **Origin**:
 In Git, "origin" is a reference to the remote repository from a project was initially cloned. More precisely, it is used instead of that original repository URL to make referencing much easier.
 
 
 ---
 
-<br/><br/>
+<br/>
 
-
-
-### 33. **Git Rebase**:
+### 30. **Git Rebase**:
 Rebasing is a process to reapply commits on top of another base trip. It is used to apply a sequence of commits from distinct branches into a final commit. It is an alternative of git merge command. It is a linear process of merging.
 
 In Git, the term rebase is referred to as the process of moving or combining a sequence of commits to a new base commit. Rebasing is very beneficial and it visualized the process in the environment of a feature branching workflow.
@@ -484,10 +458,10 @@ It is good to rebase your branch before merging it.
 ---
 </br>
 
-With this terminology in mind, let's take a high-level look at how we'll be using Git by looking at the typical workflow when working with version control.
+> ### So now that we have all of these Jargons simplified, let's see how we can use all of that to make our development workflow easier with Git 😉 📟
 
 </details>
-<br/><br/><br/>
+<br/></br><br/>
 
 # 3
 ## **Learning Checklist ✅**
@@ -601,6 +575,7 @@ Article           | Provider (Platform) | Used reference|
 [Upstream and Downstream](https://www.javatpoint.com/git-upstream-and-downstream) | [javatpoint.com](https://www.javatpoint.com/) | Yes
 [Distributed version control](https://en.wikipedia.org/wiki/Distributed_version_control) | [Wikipedia.org](wikipedia.org) | No
 [🌳 🚀 CS Visualized: Useful Git Commands](https://dev.to/lydiahallie/cs-visualized-useful-git-commands-37p1) | [DEV](dev.to) | No
+[Getting started with Git: Terminology 101](https://opensource.com/article/19/2/git-terminology) | [Opensource.com](https://opensource.com/) | No
 
 ___
 <br/><br/><br/>
