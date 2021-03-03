@@ -473,11 +473,39 @@ It is good to rebase your branch before merging it.
 You can use this learning checklist to follow this guide step by step and track your learning progress 💈
 
 ---
- - [x] In progress 📈
- - [ ] In progress 📈
- - [ ] In progress 📈
- - [ ] In progress 📈
- - [ ] In progress 📈
+  ## Now i can:
+
+
+ - [ ] Install & setup Git and Configure it with my Username and E-mail 
+ - [ ] Create a Github, Bitbucket, Gitlab... account and add my username to Git config 
+
+ - [ ] Create repositories on my Computer 
+
+ - [ ] Create a "repository" (project) with a git hosting tool (like Bitbucket)
+
+ - [ ] Copy (or clone) the repository to my local machine
+ - [ ] Add a file to my local repo and "commit" (save) the changes
+ - [ ] Connect my local repository to a remote one and "Push" my project/changes to my remote repository
+ - [ ] Make a change to my file with a git hosting tool and commit
+ - [ ] "Pull" the changes to my local machine
+ - [ ] Create a "branch" (version), make a change, commit the change
+ - [ ] Interact with branches by deleting, modifying, merging etc.. them
+
+ - [ ] Open a "pull request" (propose changes to the master branch)
+ - [ ] "Merge" my branch to the master branch
+ - [ ] Merge my branch locally, delete the branch and pull from upstream.
+ - [ ] Keep my file up to date by pulling in changes from collaborators.
+ - [ ] Add a collabrator to my project.
+
+ - [ ] Fork a project from Github, Gitlab, Bitbucket... and clone it locally
+ - [ ] Add a branch locally to my forked repository to work on my changes.
+ - [ ] reset old changes, commits, branches
+ - [ ] Revert commits
+
+
+
+
+
 ___
 
 </details>
