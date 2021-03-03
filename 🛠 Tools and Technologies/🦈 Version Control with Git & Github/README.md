@@ -461,12 +461,15 @@ It is good to rebase your branch before merging it.
 > ### So now that we have all of these Jargons simplified, let's see how we can use all of that to make our development workflow easier with Git 😉 📟
 
 </details>
+
+---
+
 <br/></br><br/>
 
 # 3
 ## **Learning Checklist ✅**
 
-<details open>
+<details>
   <summary>A handy checklist to keep track of your progress, and know when you master Git 🧧. <b>Click to expand</b></summary>
 </br>
 
@@ -475,14 +478,10 @@ You can use this learning checklist to follow this guide step by step and track 
 ---
   ## Now i can:
 
-
  - [ ] Install & setup Git and Configure it with my Username and E-mail 
  - [ ] Create a Github, Bitbucket, Gitlab... account and add my username to Git config 
-
  - [ ] Create repositories on my Computer 
-
  - [ ] Create a "repository" (project) with a git hosting tool (like Bitbucket)
-
  - [ ] Copy (or clone) the repository to my local machine
  - [ ] Add a file to my local repo and "commit" (save) the changes
  - [ ] Connect my local repository to a remote one and "Push" my project/changes to my remote repository
@@ -490,13 +489,11 @@ You can use this learning checklist to follow this guide step by step and track 
  - [ ] "Pull" the changes to my local machine
  - [ ] Create a "branch" (version), make a change, commit the change
  - [ ] Interact with branches by deleting, modifying, merging etc.. them
-
  - [ ] Open a "pull request" (propose changes to the master branch)
  - [ ] "Merge" my branch to the master branch
  - [ ] Merge my branch locally, delete the branch and pull from upstream.
  - [ ] Keep my file up to date by pulling in changes from collaborators.
  - [ ] Add a collabrator to my project.
-
  - [ ] Fork a project from Github, Gitlab, Bitbucket... and clone it locally
  - [ ] Add a branch locally to my forked repository to work on my changes.
  - [ ] reset old changes, commits, branches
@@ -510,18 +507,183 @@ ___
 
 </details>
 
+---
+
 <br/><br/><br/>
 
 # 4
 ## **Install and Setup Git**
 
-<details open>
+<details>
   <summary>Install and Setup Git | <b>Click to expand</b></summary>
 </br>
+
+Before you start using Git, you have to make it available on your computer. Even if it’s already installed, it’s probably a good idea to update to the latest version. You can either install it as a package or via another installer, or download the source code and compile it yourself.
+
+
+<br>
+
+### **Mac** 🍏
+___
+Git is actually installed on MacOS, but we'll be reinstalling it so that we'll have the newest version.
+
+<details>
+<summary>1. Install Git</summary>
+<br/>
+There are several ways to install Git on a Mac. The easiest is probably to install the Xcode Command Line Tools. On Mavericks (10.9) or above you can do this simply by trying to run git from the Terminal the very first time.
+
+```latex
+ git --version
+ ```
+
+ If you don’t have it installed already, it will prompt you to install it.
+
+If you want a more up to date version, you can also install it via a binary installer. A macOS Git installer is maintained and available for download at the Git website, at https://git-scm.com/download/mac.
+
+so now install Git choosing all of the default options, Once everything is installed, you should be able to run  ```git``` on the command line. If it displays the usage information, then you're good to go!
+
+
+or you can install it using **Homebrew**,
+Install [homebrew](https://brew.sh/) if you don't already have it, then:
+
+```latex
+$ brew install git
+```
+
+</details>
+
+
+<details>
+<summary>2. First Time Git Configuration</summary>
+</br>
+Before you can start using Git, you need to configure it. Run each of the following lines on the command line to make sure everything is set up.
+
+```bash
+# sets up Git with your name
+git config --global user.name "<Your-Full-Name>"
+
+# sets up Git with your email
+git config --global user.email "<your-email-address>"
+
+# makes sure that Git output is colored
+git config --global color.ui auto
+
+# displays the original state in a conflict
+git config --global merge.conflictstyle diff3
+
+git config --list
+```
+</details>
+
+<details>
+<summary>3. Git & Code Editor setup</summary>
+</br>
+
+The last step of configuration is to get Git working with your code editor. Below are three of the most popular code editors. If you use a different editor, then do a quick search on Google for "associate X text editor with Git" (replace the X with the name of your code editor).
+
+Atom Editor Setup
+
+```bash
+git config --global core.editor "atom --wait"
+```
+
+Sublime Text Setup
+```bash
+git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
+```
+
+VSCode Setup
+```bash
+git config --global core.editor "code --wait"
+```
+
+</details>
+
+
+___
+
+<br/>
+
+
+<br>
+
+
+### **Windows** 🧊
+<details>
+<summary>1. Install Git</summary>
+</br>
+To download Git:
+
+1. go to https://git-scm.com/downloads
+2. download the software for Windows
+3. install Git choosing all of the default options
+
+Once everything is installed, you should be able to run git on the command line. If it displays the usage information, then you're good to go!
+
+
+
+</details>
+
+<details>
+<summary>2. First Time Git Configuration
+</summary>
+</br>
+Before you can start using Git, you need to configure it. Run each of the following lines on the command line to make sure everything is set up.
+
+
+
+
+```bash
+# sets up Git with your name
+git config --global user.name "<Your-Full-Name>"
+
+# sets up Git with your email
+git config --global user.email "<your-email-address>"
+
+# makes sure that Git output is colored
+git config --global color.ui auto
+
+# displays the original state in a conflict
+git config --global merge.conflictstyle diff3
+
+git config --list
+```
+
+
+</details>
+
+<details >
+<summary>3. Git & Code Editor setup
+</summary>
+</br>
+
+The last step of configuration is to get Git working with your code editor. Below are three of the most popular code editors. If you use a different editor, then do a quick search on Google for "associate X text editor with Git" (replace the X with the name of your code editor).
+
+Atom Editor Setup
+
+```bash
+git config --global core.editor "atom --wait"
+```
+
+Sublime Text Setup
+```bash
+git config --global core.editor "'/Applications/Sublime Text 2.app/Contents/SharedSupport/bin/subl' -n -w"
+```
+
+VSCode Setup
+```bash
+git config --global core.editor "code --wait"
+```
+
+</details>
+
 </details>
 
 ___
+
 <br/><br/><br/>
+
+
 
 # 5
 ## **Creating a repo (Repository) 🎸**
@@ -529,9 +691,12 @@ ___
   <summary>Creating a repo (Repository) 🎸 | <b>Click to expand</b></summary>
 </br>
 
+
+
+
 </details>
 
-___
+---
 
 <br/><br/><br/>
 
