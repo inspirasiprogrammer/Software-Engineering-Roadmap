@@ -48,7 +48,11 @@
 </br>
 Version control system is an incredibly important part of a professional developer's life. and in this guide, you'll learn about the benefits of version control system and install add Git and Github to your tool belt 😉! 
 
+</br>
+</br>
+
 ![Linus Trvoalds](https://media.giphy.com/media/xndHaRIcvge5y/giphy.gif)
+
 <!-- ![Linus Trvoalds](https://i.imgflip.com/e4gzh.jpg) -->
 But aside from all of that Git is a free [open source](https://github.com/git/git) software written by [Linus Torvalds](https://en.wikipedia.org/wiki/Linus_Torvalds) who also wrote the Linux operating system's kernel. Git is a program for keeping track of changes over time, known in programming as version control. If you've used a track changes feature in a text editing software then you're already familiar with the concept!
 
