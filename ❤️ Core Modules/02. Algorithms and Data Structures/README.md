@@ -5,7 +5,8 @@
 <div align="center">
 
 # **Algorithms and data structres 🧱**
-#### Coming soon
+ Learn and master Algorithms, Data structres, Asymptotic analysis, Recursion, Dynamic Programming, Divide and conquer and all kina awesomeness 🧃
+
 <br>
 
 
