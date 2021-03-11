@@ -155,6 +155,11 @@ For each of the data structures listed below, you have to understand their funct
 
 # 3
 ## **Algorithms Applications & theory**
+
+<br>
+</div>
+
+![](https://media.giphy.com/media/6wa5vuYvetU1Jibm13/source.gif)
 ---
 
  <h2>Algorithm</h2> 
@@ -165,7 +170,7 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
 
 **<small>Cambridge dictionary/ Oxford Languages</small>**
-</div>
+
 
 - **What:** Algorithms are a part of daily life actions, and those daily actions and everything we do is the simplest form to represent what an Algorithm is, e.g Finding you car in a parking lot , cleaning your Apartment, reading a book.
   
@@ -193,6 +198,106 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
 
 
+## **Asymptotic Analysis**:
+
+<details open>
+  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+</br>
+
+**Asymptotic analysis** of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. Using asymptotic analysis, we can very well conclude the best case, average case, and worst case scenario of an algorithm.
+
+
+</details>
+<br/>
+<br/>
+<br/>
+
+
+---
+
+<br/>
+<br/>
+
+
+
+
+## **Asymptotic Notation**:
+
+
+
+
+
+</br>
+</br>
+
+
+- ### **Big-O notation (O)**:
+   <details open>
+    <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+- ### **Omega notation (Ω)**:
+  <details open>
+    <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+    </br>
+  </details>
+- ### **Theta notation (Θ)**:
+  <details open>
+    <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+<br/>
+<br/>
+<br/>
+
+---
+
+<br/>
+<br/>
+
+
+
+
+## **Algorithm design strategies & Techniques**:
+
+<details open>
+  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+</br>
+
+</details>
+<br/>
+<br/>
+<br/>
+
+---
+
+<br/>
+<br/>
+
+
+<div align="center">
+
+## **Searching Algorithms**:
+
+<details open>
+  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+</br>
+
+</details>
+<br/>
+<br/>
+<br/>
+
+---
+
+<br/>
+<br/>
+
+</div>
+
+
 ### **Asymptotic Analysis**:
 
 <details open>
@@ -207,6 +312,7 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
 
 
+
 # 8
 ## **Articles 📰**
 
@@ -214,7 +320,7 @@ ___
 
 Article           | Provider (Platform) | Used as reference|
 --------------------- | -------------- | -------|
-
+[Data Structures - Asymptotic Analysis](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
 
 ___
 <br/><br/><br/>
