@@ -203,8 +203,6 @@ ___
 
 ## **Asymptotic Analysis**:
 
-<details open>
-  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
 </br>
 
 **Asymptotic analysis** of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. 
@@ -218,21 +216,66 @@ ___
 
   ---
 
-- in order to be able to to indicate the correct Asymptotic Analysis of an algorithm there are some rules that you need to follow:
+  <br>
+  <div align="center">
+
+  ![](https://media.giphy.com/media/3owzW5c1tPq63MPmWk/giphy.gif)
+
+  ## **But before that what Asymptotic Analysis is about?**
+  
+  </div>
+  <br>
+
+- The idea of Asymptotic complexity and looking at an asymptotic behavior is that we want to see how does the graph behave getting into very large inputs (n) values, and this is simply the idea of asymptotic complexity. 
+  
+- So why don’t we in this case to save some time measure the **elapsed real time**, like for instance measuring how fast your code ran on your machine which can tell you how strong your algorithm is!? Because it's not the effecint approach to approach Complexity analysis.
+
+- in computer science problems are often applied at a grand scale like for instance if we are writing an algorithm to optimize whatever part of **Google’s** search engine it’s going to be used across billions of users, and there will be large inputs to the algorithms. 
+  
+- Our most important point is to see how does this algorithm behave on the tail end ( as (input) gets very large), cause we can only see the true measure of performance of an algorithm when we have very large data input, and that why asymptotic complexity analysis intrigues us ❤️ 
+
+- So in order to be able to indicate the correct Asymptotic Analysis of an algorithm there are some rules that you need to follow: 
 
   1. 
   2. 
   3. 
   4. 
-  5. 
+
+
+
+
 
 
 
 </details>
 <br/>
-<br/>
-<br/>
 
+### **Time complexity**:
+<details>
+  <summary>What time complexity is? | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br></br>
+
+
+### **Space complexity**:
+<details>
+  <summary>What time complexity is? | <b>Click to expand</b></summary>
+</br>
+</details>
+
+
+</br></br>
+
+
+### **Memory**:
+<details>
+  <summary>What you need to know about memory? | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
 
 ---
 
@@ -253,8 +296,13 @@ ___
 
 
 - ### **Big-O notation (O)**:
+  <details>
+    <summary>What is Big-O notation (O) with code examples | <b>Click to expand</b></summary>
+
+    <br>
+
    <!-- <details open> -->
-    <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+    ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
     </br>
     
 
@@ -268,20 +316,21 @@ ___
       Big O Notation	| Name | Example(s) | Efficiency | Code example|
       |----------------|------|-----------| -------| ----|
       O(1) | Constant | 	Odd or Even number, <br> Look-up table (on average) | 🟩 | Python, Javascript
-      O(log n) | Constant | Finding element on sorted array with binary search | 🟩 | Python, Javascript
+      O(log(n)) | Logarithmic | Finding element on sorted array with binary search | 🟩 | Python, Javascript
       O(n) | Linear | Find max element in unsorted array. <br> Duplicate elements in array with Hash Map | 🟩 | Python, Javascript
-      O(n log n) | Linearithmic | Python, Javascriptorting elements in array with merge sort | 🟩 | Python, Javascript
-      O(n2) | Quadratic | # Duplicate elements in array **(naïve)**, <br> Sorting array with bubble sort | 🟨 | Python, Javascript
-      O(n3) | Cubic | 3 variables equation solver | 🟨 | Python, Javascript
-      O(2n) | Exponential | Find all subsets | 🟥 | Python, Javascript
+      O(nlog(n)) | Linearithmic | Python, Javascriptorting elements in array with merge sort | 🟩 | Python, Javascript
+      O(n<sup>2</sup>) | Quadratic | # Duplicate elements in array **(naïve)**, <br> Sorting array with bubble sort | 🟨 | Python, Javascript
+      O(n<sup>3</sup>) | Cubic | 3 variables equation solver | 🟨 | Python, Javascript
+      O(2<sup>n</sup>) | Exponential | Find all subsets | 🟥 | Python, Javascript
       O(n!) | Factorial | Find all permutations of a given set/string | 🟥 | Python, Javascript
       </details>
 
       ---
+  <br>
 
-    - ### **Big O code examples**
-      </br>
-      <details open>
+  2. ### **Big O code examples**
+
+      <details>
         <summary> Python 🐍 | <b>Click to expand</b></summary>
         <br>
 
@@ -319,7 +368,20 @@ ___
 
       - If x doesn’t match with any of elements,return -1.
 
-      The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion which means it will keep on looking until it matches with the given input.
+      Steps extended:
+
+      Step 1: Set i to 1
+      Step 2: if i > n then go to step 7
+      Step 3: if A[i] = x then go to step 6
+      Step 4: Set i to i + 1
+      Step 5: Go to Step 2 |The linear fashion|
+      Step 6: Print Element x Found at index i and go to step 8
+      Step 7: Print element not found
+      Step 8: Exit
+
+      The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
+      
+      which means it will keep on looking until it matches with the given input.
 
       
       '''      
@@ -340,28 +402,32 @@ ___
 
        print(matchedIndex)
 
+       # Result: 15
+
         ```
 
       </details>
+    </details>
 
-      <details>
-        <summary> Javascript 💈 | <b>Click to expand</b></summary>
-      </details>
+  ---
+  <br>
 
+  ### **Omega notation (Ω)**:
+  <details open>
+    <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
+    </br>
+  </details>
 
-- ### **Omega notation (Ω)**:
+  ---
+
+  <br>
+
+  ### **Theta notation (Θ)**:
   <details open>
     <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
     </br>
   </details>
-- ### **Theta notation (Θ)**:
-  <details open>
-    <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
-    </br>
-  </details>
 
-<br/>
-<br/>
 <br/>
 
 ---
