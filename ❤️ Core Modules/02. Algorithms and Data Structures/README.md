@@ -25,6 +25,9 @@
   - 2 . [Learning Checklist ✅](#learning-checklist-)
   - ## 4 . [Algorithms Applications & theory](#algorithms-applications-&-theory)
     - 1 . [Asymptotic Analysis](#asymptotic-analysis)
+      - 1.1 [Time Complexity](#time-complexity)
+      - 1.2 [Space Complexity](#space-complexity)
+      - 1.3 [Memory](#memory)
     - 2 . [Asymptotic notations](#asymptotic-notations)
       - 1 . [Big-O notation (O)](#big-O-notation-(O))
       - 2 . [Omega notation (Ω)](#omega-notation-(Ω))
@@ -157,11 +160,11 @@ For each of the data structures listed below, you have to understand their funct
 ## **Algorithms Applications & theory**
 
 <br>
-</div>
+
 
 ![](https://media.giphy.com/media/6wa5vuYvetU1Jibm13/source.gif)
 ---
-
+</div>
  <h2>Algorithm</h2> 
 
 noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
@@ -180,12 +183,12 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
 - **Applications**: The real power of Algorithms come in form of Digital tools, Softwares or small computer programs like, Compression algorithms in a 3D video game or Searching algorithms in Google Search engine, or sorting algorithms to sort Amazon's products based on their ratings and all the other services and digital tools that you use on daily bases.
 
-  ___
+___
 
 - **Efficiency**: Not all algorithms are created equal, and the tricky part of an Algorithm is that there are plenty of algorithms that solve the same problem at the end, but one of them is the most efficint one to use in that spesific problem case, so to know which solution to choose and to be able to compare them, these Algorithms most be analyzed, and before before analyuzing there an important thing that you need to know what makes a good algorithm is the two most important criteria which are that it solves a problem and it does so efficintly.
 
     ---
-- **Measuring Efficiency**: so the way we measure the effecincy of an algorithm is through using a scientific mathematical technique called **```Asymptotic analysis```**, which allows algorithms to be compared independently of a particular programming language or hardware, whci will next tell us that some algorithms are  more efficient than others.
+- **Measuring Efficiency**: so the way we measure the effecincy of an algorithm is through using a scientific mathematical technique called **```Asymptotic analysis```**, which allows algorithms to be compared independently of a particular programming language or hardware, which will next tell us that some algorithms are  more efficient than others.
 
 
 </details>
@@ -204,7 +207,25 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
   <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
 </br>
 
-**Asymptotic analysis** of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. Using asymptotic analysis, we can very well conclude the best case, average case, and worst case scenario of an algorithm.
+**Asymptotic analysis** of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. 
+
+- Using asymptotic analysis, we can very well conclude the best case, average case, and worst case scenario of an algorithm. 
+
+
+- Complexity analysis is effectively used to determine how "good, efficent, scalable, fits the design case best" an algorithm is and whether it's "better" than another one.
+
+- determining how efficient an algorithm is usually involves finding both the **time** complexity and **space** complexity of an Algorithm.
+
+  ---
+
+- in order to be able to to indicate the correct Asymptotic Analysis of an algorithm there are some rules that you need to follow:
+
+  1. 
+  2. 
+  3. 
+  4. 
+  5. 
+
 
 
 </details>
@@ -232,10 +253,101 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
 
 - ### **Big-O notation (O)**:
-   <details open>
+   <!-- <details open> -->
     <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
     </br>
-  </details>
+    
+
+  1. ### **Big O cheatsheet**
+
+
+      <details>
+        <summary>Big-O Complexity table ✨ | <b>Click to expand</b></summary>
+        </br>
+
+      Big O Notation	| Name | Example(s) | Efficiency | Code example|
+      |----------------|------|-----------| -------| ----|
+      O(1) | Constant | 	Odd or Even number, <br> Look-up table (on average) | 🟩 | Python, Javascript
+      O(log n) | Constant | Finding element on sorted array with binary search | 🟩 | Python, Javascript
+      O(n) | Linear | Find max element in unsorted array. <br> Duplicate elements in array with Hash Map | 🟩 | Python, Javascript
+      O(n log n) | Linearithmic | Python, Javascriptorting elements in array with merge sort | 🟩 | Python, Javascript
+      O(n2) | Quadratic | # Duplicate elements in array **(naïve)**, <br> Sorting array with bubble sort | 🟨 | Python, Javascript
+      O(n3) | Cubic | 3 variables equation solver | 🟨 | Python, Javascript
+      O(2n) | Exponential | Find all subsets | 🟥 | Python, Javascript
+      O(n!) | Factorial | Find all permutations of a given set/string | 🟥 | Python, Javascript
+      </details>
+
+      ---
+
+    - ### **Big O code examples**
+      </br>
+      <details open>
+        <summary> Python 🐍 | <b>Click to expand</b></summary>
+        <br>
+
+        ## **1.** O(N) time complexity</div>
+
+        <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
+        ![](assets/images/algorithms/linear-search.gif)
+        
+
+
+        ```python
+
+        '''
+        Sample input/ Output:
+
+        Input : arr[] = {10, 20, 80, 30, 60, 50, 
+                  110, 100, 130, 170}
+                  x = 110;
+        Output : 6
+        Element x is present at index 6
+        _________________
+
+        Input : arr[] = {10, 20, 80, 30, 60, 50, 
+                    110, 100, 130, 170}
+                  x = 175;
+        Output : -1
+        Element x is not present in arr[].
+        ___________________________________
+      
+      Steps:
+
+      - Start from the leftmost element of arr[] and one by one compare x with each element of arr[] 
+
+      - If x matches with an element, return the index.
+
+      - If x doesn’t match with any of elements,return -1.
+
+      The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion which means it will keep on looking until it matches with the given input.
+
+      
+      '''      
+
+       def linearSearch(arr, x):
+           # Linearly search x in arr[] 
+           for i in range(len(arr)): # o(n) linear time
+               # If x is present, which is our input for the function
+               if arr[i] == x:
+                   # then return its location 
+                   return i
+
+           return -1
+
+       listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 16
+
+       matchedIndex = linearSearch(listOfItemsToSearchIn, 13)
+
+       print(matchedIndex)
+
+        ```
+
+      </details>
+
+      <details>
+        <summary> Javascript 💈 | <b>Click to expand</b></summary>
+      </details>
+
 
 - ### **Omega notation (Ω)**:
   <details open>
