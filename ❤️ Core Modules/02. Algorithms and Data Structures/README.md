@@ -29,10 +29,10 @@
       - 1.2 [Space Complexity](#space-complexity)
       - 1.3 [Memory](#memory)
     - 2 . [Asymptotic notations](#asymptotic-notations)
-      - 1 . [Big-O notation (O)](#big-O-notation-(O))
-      - 2 . [Omega notation (Ω)](#omega-notation-(Ω))
-      - 3 . [Theta notation (Θ)](#theta-notation-(Θ))
-    - 4 . [Algorithm Design Techniques & Strategies](#algorithm-design-techniques-&-strategies)
+      - 1 . [Big-O notation (O)](#big-O-notation-O)
+      - 2 . [Omega notation (Ω)](#omega-notation-ω)
+      - 3 . [Theta notation (Θ)](#theta-notation-θ)
+    - 4 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
     - 6 . [Searching Algorithms](#searching-algorithms)
       - 1 . [Linear Search](#linear-search)
       - 2 . [Binary Search](#binary-search)
@@ -219,11 +219,20 @@ ___
   <br>
   <div align="center">
 
-  ![](https://media.giphy.com/media/3owzW5c1tPq63MPmWk/giphy.gif)
+  ![](https://media.giphy.com/media/3o6Yg4GUVgIUg3bf7W/giphy.gif)
 
   ## **But before that what Asymptotic Analysis is about?**
   
   </div>
+  <br>
+
+- First what what asymptotic does really mean?! i'm guessing that you have probably heard of the word "asymptote" if not An asymptote is a "line that continually approaches a given curve but does not meet it at any finite distance, in a simpler way it is line that a curve approaches, as it heads towards infinity like that:
+
+  <div align="center">
+
+  ![](assets/images/asymptotic_notation/asymptotic_analysis/asymptote.png)
+  </div>
+  <br>
   <br>
 
 - The idea of Asymptotic complexity and looking at an asymptotic behavior is that we want to see how does the graph behave getting into very large inputs (n) values, and this is simply the idea of asymptotic complexity. 
@@ -244,7 +253,35 @@ ___
 
 
 
+  <br>
 
+  ## **An example of Asymptotic Behaviour**
+  ---
+
+  ```Insertion Sort: 2 * n^2 ``` |``` Merge Sort: 50 * n * log(n)```
+    
+    ---
+
+  We have 2 computers: 🖥
+
+  - **Computer A**: runs 10 Billion instructions / second
+
+  - **Computer B**:  runs 10 Million instructions / second
+
+  - **Computer A** is 1000x faster than **Computer B**
+
+  - **Computer A** runs insertion sort, **Computer B** runs merge sort
+
+  - How long will each computer take to sort 10 million numbers?
+
+  - **Computer A**: 5.5 hours
+  - **Computer B**: 20 minutes
+
+  A computer that runs **1000x** faster lost horrendously to a computer that runs **1000x** slower than it.
+
+  But the thing is that insertion sort will be faster for an initial amount, but it will lose as the input gets larger (and that's what we care about and what is a true expression of its efficiency).
+
+  ---
 
 
 </details>
@@ -285,21 +322,42 @@ ___
 
 
 
-## **Asymptotic Notation**:
+## **Asymptotic Notations**:
+
+**Recap:** as we've mentioned in ther Asymptotic analysis section The **efficiency** of an algorithm depends on the amount of time, storage and other resources required to execute the algorithm, and an algorithm may not have the same performance for different types of inputs. With the increase in the input size, the performance will change, now this efficiency is measured with the help of Asymptotic Notations 🔥
+
+---
+
+<br>
+
+**Asymptotic Notations** are Mathematical notations that are used to describe the running time of an algorithm when the input tends towards a particular value or a limiting value.
+
+### for example: 
+
+1. In Bubble sort algorithm which we will get to it later, when the input array is already sorted, the time taken by the algorithm is linear i.e. the best case.
+
+2. But, when the input array is in reverse condition, the algorithm takes the maximum time (**quadratic**) to sort the elements i.e. the worst case.
+
+3. When the input array is neither sorted nor in reverse order, then it takes average time. These durations are denoted using asymptotic notations.
+
+  ---
+<br>
+
+### There are mainly three asymptotic notations which are 🧃:
+<br>
 
 
-
-
-
-</br>
-</br>
-
-
-- ### **Big-O notation (O)**:
-  <details>
-    <summary>What is Big-O notation (O) with code examples | <b>Click to expand</b></summary>
+- ### **Big-O notation (𝑂)**: 🤕
+  <details open>
+    <summary>Big-O notation (O) with code examples | <b>Click to expand</b></summary>
 
     <br>
+
+    **Big-O**: notation represents the upper bound of the running time of an algorithm. Thus, it gives the worst-case complexity of an algorithm.
+
+  <br>
+  <br>
+  <br>
 
    <!-- <details open> -->
     ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
@@ -382,8 +440,6 @@ ___
       The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
       
       which means it will keep on looking until it matches with the given input.
-
-      
       '''      
 
        def linearSearch(arr, x):
@@ -396,7 +452,7 @@ ___
 
            return -1
 
-       listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 16
+       listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 15
 
        matchedIndex = linearSearch(listOfItemsToSearchIn, 13)
 
@@ -412,7 +468,7 @@ ___
   ---
   <br>
 
-  ### **Omega notation (Ω)**:
+  ### **Omega notation (Ω)**: 😌
   <details open>
     <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
     </br>
@@ -422,7 +478,7 @@ ___
 
   <br>
 
-  ### **Theta notation (Θ)**:
+  ### **Theta notation (Θ)**: 💈
   <details open>
     <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
     </br>
@@ -541,10 +597,12 @@ Course name           | Provider (Platform) | Duration| Skill level | Course Cos
 ---
 <br/>
 
-> Learn by watching/ doing
+> Learn by Watching/ Doing/ Reading
 >
 Title | Description
 ------------ | -------------
+[Asymptotic Analysis: Big-O Notation and More](https://www.programiz.com/dsa/asymptotic-notations) | In this tutorial, you will learn what asymptotic notations are. Also, you will learn about Big-O notation, Theta notation and Omega notation.
+[What Is Asymptotic Analysis? And Why Does It Matter? A Deeper Understanding of Asymptotic Bounding.](https://www.youtube.com/watch?v=myZKhztFhzE) | What Asymptotic Analysis Is!
 [YouTube channel: Back To Back SWE](https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA) | A very helpful youtube channel to learn and understand Asymptotic Bounding, logratihms, sorting algorithms etc..
 [Animated Algorithms and Data Structures by Chris Laux.](https://www.chrislaux.com/) | A interactive website explaining some sorting algorithms and some data structures.
 ---
