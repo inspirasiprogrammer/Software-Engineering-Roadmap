@@ -23,23 +23,26 @@
 
   - 1 . [Getting started](#getting-started)
   - 2 . [Learning Checklist ✅](#learning-checklist-)
-  - ## 4 . [Algorithms Applications & theory](#algorithms-applications-&-theory)
+  - ## 3 . [Algorithms Applications & theory](#algorithms-applications-&-theory)
     - 1 . [Asymptotic Analysis](#asymptotic-analysis)
-      - 1.1 [Time Complexity](#time-complexity)
-      - 1.2 [Space Complexity](#space-complexity)
-      - 1.3 [Memory](#memory)
+      - 1 [Time Complexity](#time-complexity)
+      - 2 [Space Complexity](#space-complexity)
+      - 3 [Memory](#memory)
     - 2 . [Asymptotic notations](#asymptotic-notations)
       - 1 . [Big-O notation (O)](#big-O-notation-O)
       - 2 . [Omega notation (Ω)](#omega-notation-ω)
       - 3 . [Theta notation (Θ)](#theta-notation-θ)
-    - 4 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
-    - 6 . [Searching Algorithms](#searching-algorithms)
+    - 3 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
+    - 4 . [Searching Algorithms](#searching-algorithms)
       - 1 . [Linear Search](#linear-search)
       - 2 . [Binary Search](#binary-search)
       - 3 . [Jump Search](#jump-search)
       - 4 . [A* search algorithm](#a*-search-algorithm)
-    - 5 . [Recursion (Recursive Algorithms)](#recursion-(recursive-algorithms))
-    - 7 . [Sorting Algorithms](#sorting-algorithms)
+    - 5 . [Recursion (Recursive Algorithms)](#recursion-recursive-algorithms)
+      - 1 . [Differences between Recursion and Iteration](#differences-between-recursion-and-iteration)
+      - 2 . [Base case](#base-case) exit condition (when do you stop recursing)
+      - 3 . [General (recursive) case](#general-recursive-case) (Recurse)
+    - 6 . [Sorting Algorithms](#sorting-algorithms)
       - 1 . [Bubble Sort](#bubble-sort)  
       - 2 . [Selection Sort](#selection-sort)  
       - 3 . [Insertion Sort](#insertion-sort)  
@@ -47,16 +50,16 @@
       - 4 . [Quick Sort](#quick-sort)  
       - 4 . [Radix Sort](#radix-sort)  
       - 4 . [Shell Sort](#shell-sort)  
-    - 8 . [Graph Algorithms](#graph-algorithms)
+    - 7 . [Graph Algorithms](#graph-algorithms)
       - 1 . [Breadth-first search](#breadth-first-search)
       - 2 . [Depth-first search](#depth-first-search)
       - 3 . [Dijkstra’s shortest path algorithm]()
       - 4 . [Bellman–Ford algorithm](#bellman–ford-algorithm)
-    - 9 . [Greedy Algorithms](#greedy-algorithms)
-    - 10 . [Divide and Conquer](#divide-and-conquer)
-    - 11 . [Dynamic Programming](#dynamic-programming)
-    - 12 . [Backtracking](#backtracking)
-  - ## 5 . [Data structres](#data-structres)
+    - 8 . [Greedy Algorithms](#greedy-algorithms)
+    - 9 . [Divide and Conquer](#divide-and-conquer)
+    - 10 . [Dynamic Programming](#dynamic-programming)
+    - 11 . [Backtracking](#backtracking)
+  - ## 4 . [Data structres](#data-structres)
     - 1  . [What are Data structres?](#what-are-data-structres?)
     - 2  . [Complexity analysis](#complexity-analysis)
     - 3  . [Memory](#memory)
@@ -84,9 +87,9 @@
 
     #### **Further Learning Resource**
 
-  - 9 . [Articles 📰](#-articles-)
-  - 10 . [Books 📚](#-books-)
-  - 11 . [Courses 💻](#-courses-)
+  - 5 . [Articles 📰](#-articles-)
+  - 6 . [Books 📚](#-books-)
+  - 7 . [Courses 💻](#-courses-)
 
 ---
 
@@ -461,6 +464,75 @@ ___
        # Result: 15
 
         ```
+      ---
+        ## **2.** O(log(n)) time complexity/ Binary Search</div>
+
+        <small>Binary Search</small>
+        ![](assets/images/algorithms/binary_search/binary-search.jpeg)
+
+
+        ```python
+
+        '''
+        Sample input/ Output:
+
+        Input : arr[] = {10, 20, 80, 30, 60, 50, 
+                  110, 100, 130, 170}
+                  x = 110;
+        Output : 6
+        Element x is present at index 6
+        _________________
+
+        Input : arr[] = {10, 20, 80, 30, 60, 50, 
+                    110, 100, 130, 170}
+                  x = 175;
+        Output : -1
+        Element x is not present in arr[].
+        ___________________________________
+      
+      Steps:
+
+      - Start from the leftmost element of arr[] and one by one compare x with each element of arr[] 
+
+      - If x matches with an element, return the index.
+
+      - If x doesn’t match with any of elements,return -1.
+
+      Steps extended:
+
+      Step 1: Set i to 1
+      Step 2: if i > n then go to step 7
+      Step 3: if A[i] = x then go to step 6
+      Step 4: Set i to i + 1
+      Step 5: Go to Step 2 |The linear fashion|
+      Step 6: Print Element x Found at index i and go to step 8
+      Step 7: Print element not found
+      Step 8: Exit
+
+      The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
+      
+      which means it will keep on looking until it matches with the given input.
+      '''      
+
+       def linearSearch(arr, x):
+           # Linearly search x in arr[] 
+           for i in range(len(arr)): # o(n) linear time
+               # If x is present, which is our input for the function
+               if arr[i] == x:
+                   # then return its location 
+                   return i
+
+           return -1
+
+       listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 15
+
+       matchedIndex = linearSearch(listOfItemsToSearchIn, 13)
+
+       print(matchedIndex)
+
+       # Result: 15
+
+        ```
 
       </details>
     </details>
@@ -532,13 +604,55 @@ ___
 </div>
 
 
-### **Asymptotic Analysis**:
+## **Recursion (Recursive Algorithms)**:
 
-<details open>
-  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
-</br>
+  <br>
 
-</details>
+  ### **Differences between Recursion and Iteration**:
+  <details open>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  Property | Recursion | Iteration
+  ---------|-----------|------------
+  **Definition**|	Function calls itself.|	A set of instructions repeatedly executed.
+  **Application**|	For functions.|	For loops.
+  **Termination**|	Through base case, where there will be no function call.|	When the termination condition for the iterator ceases to be satisfied.
+  **Usage**|	Used when code size needs to be small, and time complexity is not an issue.|	Used when time complexity needs to be balanced against an expanded code size.
+  **Code Size** |	Smaller code size|	Larger Code Size.
+  **Time Complexity**|	Very high(generally exponential) time complexity.|	Relatively lower time complexity(generally polynomial-logarithmic).|
+
+
+
+  </details>
+
+  ---
+
+  <br>
+
+  ### **Base case**:
+  <details>
+    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+  ---
+
+  <br>
+
+  ### **General (recursive) case**:
+  <details>
+    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+  ---
+
+  <br>
+
+
+
+
 <br/>
 <br/>
 <br/>
@@ -555,6 +669,7 @@ ___
 Article           | Provider (Platform) | Used as reference|
 --------------------- | -------------- | -------|
 [Data Structures - Asymptotic Analysis](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
+[Difference between Recursion and Iteration](https://www.geeksforgeeks.org/difference-between-recursion-and-iteration/) | Geeksforgeeks | Yes
 
 ___
 <br/><br/><br/>
