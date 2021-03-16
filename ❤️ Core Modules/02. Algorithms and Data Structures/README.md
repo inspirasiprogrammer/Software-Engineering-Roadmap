@@ -100,7 +100,7 @@
 
 ## **Getting started**
 
-<details open>
+<details>
   <summary>Let's first get to know why do we need this thing 🥸 | <b>Click to expand</b></summary>
 </br>
 
@@ -123,7 +123,7 @@
 # 2
 ## **Learning Checklist ✅**
 
-<details open>
+<details>
   <summary>A handy checklist to keep track of your progress, and know when you master your Algorithms and data strucres path 💈. <b>Click to expand</b></summary>
 </br>
 
@@ -298,7 +298,7 @@ ___
 <br/>
 
 ### **Time complexity**:
-<details open>
+<details>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -307,7 +307,7 @@ ___
 
 
 ### **Space complexity**:
-<details open>
+<details>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -317,7 +317,7 @@ ___
 
 
 ### **Memory**:
-<details open>
+<details>
   <summary>What you need to know about memory? | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -381,7 +381,7 @@ ___
   <br>
   <br>
 
-   <!-- <details open> -->
+   <!-- <details> -->
     ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
     </br>
     
@@ -389,7 +389,7 @@ ___
   1. ### **Big O cheatsheet**
 
 
-      <details open>
+      <details>
         <summary>Big-O Complexity table ✨ | <b>Click to expand</b></summary>
         </br>
 
@@ -414,7 +414,7 @@ ___
   2. ### **Big O code examples**
      Quick & Simple examples that represent the common complexities, and feel free to come back to these examples after diving deep in each algorithm in the coming sections. Ordered from the fastest to the slowest.
 
-      <details open>
+      <details>
         <summary> Python 🐍 | <b>Click to expand</b></summary>
         <br>
         
@@ -423,7 +423,7 @@ ___
         <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
         ![](assets/images/algorithms/linear-search.gif)
 
-        <details open>
+        <details>
         <summary>Implementation</summary>
         
         
@@ -498,7 +498,7 @@ ___
         <small>Binary Search</small>
         ![](assets/images/algorithms/binary_search/binary-search.jpeg)
 
-        <details open>
+        <details>
         <summary>Recursive implementation</summary>
 
         ```python
@@ -563,7 +563,7 @@ ___
         ```
         </details>
 
-        <details open>
+        <details>
         <summary>Iterative implementation</summary>
         
         ```python
@@ -579,7 +579,7 @@ ___
   <br>
 
   ### **Omega notation (Ω)**: 😌 (Asymptotic Lower bound)
-  <details open>
+  <details>
     <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
     </br>
   </details>
@@ -589,7 +589,7 @@ ___
   <br>
 
   ### **Theta notation (Θ)**: 💈 (Asymptotic Tight (exact) bound))
-  <details open>
+  <details>
     <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
     </br>
   </details>
@@ -623,7 +623,7 @@ ___
 
 ## **Algorithm design strategies & Techniques**:
 
-<details open>
+<details>
   <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
 </br>
 
@@ -642,7 +642,7 @@ ___
 
 ## **Searching Algorithms**:
 
-<details open>
+<details>
   <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
 </br>
 
@@ -664,7 +664,7 @@ ___
   <br>
 
   ### **Differences between Recursion and Iteration**:
-  <details open>
+  <details>
     <summary> | <b>Click to expand</b></summary>
     </br>
 
@@ -686,7 +686,7 @@ ___
   <br>
 
   ### **Base case**:
-  <details open>
+  <details>
     <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
     </br>
   </details>
@@ -696,7 +696,7 @@ ___
   <br>
 
   ### **General (recursive) case**:
-  <details open>
+  <details>
     <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
     </br>
   </details>
