@@ -32,6 +32,7 @@
       - 1 . [Big-O notation (O)](#big-O-notation-O)
       - 2 . [Omega notation (Ω)](#omega-notation-ω)
       - 3 . [Theta notation (Θ)](#theta-notation-θ)
+      - 4 . [Differences between Big-O, Big-Ω and Big-Θ](#differences-between-big-O,-big-Ω-and-big-Θ)
     - 3 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
     - 4 . [Searching Algorithms](#searching-algorithms)
       - 1 . [Linear Search](#linear-search)
@@ -248,10 +249,16 @@ ___
 
 - So in order to be able to indicate the correct Asymptotic Analysis of an algorithm there are some rules that you need to follow: 
 
-  1. 
+  1. We measure as a function of $n$, and ignore low order terms, and that's why we drop constants, which is the reason too why:
+
+     - $5n^3 + n$  − 6 becomes $n^3$
+
+     - $8n log n$  − $60n$ becomes $n log n$
+     - $2^n + 3n^4$  − becomes $2^n$
+      - because when we say $(O(log n), o(n), O(n2),  O(n3), O(2n), o(n!))$ we are not actually describing an individual graph, or a case that is based on a constant value, what we are really describing is a class of functions and behaviors, and that’s why these functions will have the same behaviour when we get a very large input 😉
   2. 
   3. 
-  4. 
+  4. $ 
 
 
 
@@ -261,7 +268,7 @@ ___
   ## **An example of Asymptotic Behaviour**
   ---
 
-  ```Insertion Sort: 2 * n^2 ``` |``` Merge Sort: 50 * n * log(n)```
+  ```Insertion Sort:``` $2 * n^2$  | ```Merge Sort:``` $50 * n * log(n)$
     
     ---
 
@@ -291,7 +298,7 @@ ___
 <br/>
 
 ### **Time complexity**:
-<details>
+<details open>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -300,7 +307,7 @@ ___
 
 
 ### **Space complexity**:
-<details>
+<details open>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -310,7 +317,7 @@ ___
 
 
 ### **Memory**:
-<details>
+<details open>
   <summary>What you need to know about memory? | <b>Click to expand</b></summary>
 </br>
 </details>
@@ -349,14 +356,26 @@ ___
 ### There are mainly three asymptotic notations which are 🧃:
 <br>
 
-
-- ### **Big-O notation (𝑂)**: 🤕
+- ### **Big-O notation (𝑂)**: 🤕 (Asymptotic Upper bound)
   <details open>
     <summary>Big-O notation (O) with code examples | <b>Click to expand</b></summary>
 
     <br>
 
-    **Big-O**: notation represents the upper bound of the running time of an algorithm. Thus, it gives the worst-case complexity of an algorithm.
+
+    **Big-O**: notation is the formal way to represent the upper bound of the running time of an algorithm. Thus, It measures the worst case time complexity or the longest amount of time an algorithm can possibly take to complete.
+
+    -  Big O notation is usually understood to describe the **worst-case**, complexity of an algorithm, even though the worst-case complexity might differ from the **average-case** complexity.
+    - Variables used in Big O notation denote the sizes of inputs to algorithms. For example, **O(n)**  might be the time complexity of an algorithm that traverses through an array of length **n**; similarly, O(n + m) might be the time complexity of an algorithm that traverses through an array of length **n**  and through a string of length **m**
+    
+    -  e.g. some sorting algorithms have different time complexities
+  depending on the layout of elements in their input array. In rare cases, their
+  time complexity will be much worse than in more common cases. Similarly, an
+  algorithm that takes in a string and performs special operations on uppercase
+  characters might have a different time complexity when run on an input string
+  of only uppercase characters vs. on an input string with just a few uppercase
+  characters.
+  - when describing the time complexity of an algorithm, it's helpful somtimers to specify what the time complexity refers to. the average case or to the worst case (e.g., "this algorithm runs in O(nlog(n)) time on average and in $O(n^2)$ time in the worse case").
 
   <br>
   <br>
@@ -370,9 +389,12 @@ ___
   1. ### **Big O cheatsheet**
 
 
-      <details>
+      <details open>
         <summary>Big-O Complexity table ✨ | <b>Click to expand</b></summary>
         </br>
+
+
+      The following are examples of common complexities and their Big O notations,ordered from fastest to slowest:
 
       Big O Notation	| Name | Example(s) | Efficiency | Code example|
       |----------------|------|-----------| -------| ----|
@@ -390,17 +412,21 @@ ___
   <br>
 
   2. ### **Big O code examples**
+     Quick & Simple examples that represent the common complexities, and feel free to come back to these examples after diving deep in each algorithm in the coming sections. Ordered from the fastest to the slowest.
 
-      <details>
+      <details open>
         <summary> Python 🐍 | <b>Click to expand</b></summary>
         <br>
-
+        
         ## **1.** O(N) time complexity</div>
-
+        
         <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
         ![](assets/images/algorithms/linear-search.gif)
-        
 
+        <details open>
+        <summary>Implementation</summary>
+        
+        
 
         ```python
 
@@ -464,75 +490,87 @@ ___
        # Result: 15
 
         ```
+        </details>
+
       ---
         ## **2.** O(log(n)) time complexity/ Binary Search</div>
 
         <small>Binary Search</small>
         ![](assets/images/algorithms/binary_search/binary-search.jpeg)
 
+        <details open>
+        <summary>Recursive implementation</summary>
 
         ```python
 
         '''
-        Sample input/ Output:
-
-        Input : arr[] = {10, 20, 80, 30, 60, 50, 
-                  110, 100, 130, 170}
-                  x = 110;
-        Output : 6
-        Element x is present at index 6
-        _________________
-
-        Input : arr[] = {10, 20, 80, 30, 60, 50, 
-                    110, 100, 130, 170}
-                  x = 175;
-        Output : -1
-        Element x is not present in arr[].
-        ___________________________________
       
       Steps:
 
-      - Start from the leftmost element of arr[] and one by one compare x with each element of arr[] 
+      1 - Start from the leftmost element of array[] and one by one compare target with each element of array[] 
 
-      - If x matches with an element, return the index.
+      2 - If target matches with an element, return the index.
 
-      - If x doesn’t match with any of elements,return -1.
+      3 - If target doesn’t match with any of elements,return -1.
 
-      Steps extended:
 
-      Step 1: Set i to 1
-      Step 2: if i > n then go to step 7
-      Step 3: if A[i] = x then go to step 6
-      Step 4: Set i to i + 1
-      Step 5: Go to Step 2 |The linear fashion|
-      Step 6: Print Element x Found at index i and go to step 8
-      Step 7: Print element not found
-      Step 8: Exit
 
-      The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
-      
-      which means it will keep on looking until it matches with the given input.
       '''      
 
-       def linearSearch(arr, x):
-           # Linearly search x in arr[] 
-           for i in range(len(arr)): # o(n) linear time
-               # If x is present, which is our input for the function
-               if arr[i] == x:
-                   # then return its location 
-                   return i
+      def binarySearchHelper(array, target, left, right):
 
-           return -1
+          # Element is not present in the list
+          if left > right:
+            return - 1
+          
 
-       listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 15
+          middle = (left + right) // 2
+          potentialMatch = array[middle]
 
-       matchedIndex = linearSearch(listOfItemsToSearchIn, 13)
+          # If element is present at the middle itself
+          if target == potentialMatch:
+              return middle
+          
+          # If element is smaller than middle, then it can only
+          # be present in left subarray
+          elif target < potentialMatch:
+              return binarySearchHelper(array, target, left, middle - 1)
+              
+          # Else the element can only be present in right subarray
+          else:
+              return binarySearchHelper(array, target, middle + 1, right)
 
-       print(matchedIndex)
+      def binarySearch(array, target):
+        return binarySearchHelper(array, target, 0, len(array) - 1)
+
+
+
+      # Test list
+      array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+      target = 15
+
+      # Function call
+      result = binarySearch(array, target)
+
+      if result != -1:
+        print("Element is present at index", str(result))
+      else:
+        print("Element is not present in array")
+
 
        # Result: 15
 
         ```
+        </details>
+
+        <details open>
+        <summary>Iterative implementation</summary>
+        
+        ```python
+
+
+        ```
+        </details>
 
       </details>
     </details>
@@ -540,7 +578,7 @@ ___
   ---
   <br>
 
-  ### **Omega notation (Ω)**: 😌
+  ### **Omega notation (Ω)**: 😌 (Asymptotic Lower bound)
   <details open>
     <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
     </br>
@@ -550,15 +588,32 @@ ___
 
   <br>
 
-  ### **Theta notation (Θ)**: 💈
+  ### **Theta notation (Θ)**: 💈 (Asymptotic Tight (exact) bound))
   <details open>
     <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
     </br>
   </details>
-
+  
+  ---
 <br/>
 
----
+  ## **Differences between Big-O, Big-Ω and Big-Θ**
+
+  a table that explains the diffrerences between most common asymptotic notations
+
+  <br>
+
+  Big Oh | Big Omega | Big Theta 
+  --------|-------------|--------|
+  (It is like <=)  rate of growth of an algorithm is less than or equal to a specific value. | It is (like >=) rate of growth is greater than or equal to a specified value | (It is like ==) meaning the rate of growth is equal to a specified value.
+  The upper bound of algorithm is represented by Big O notation. Only the above function is bounded by Big O. asymptotic upper bond is it given by Big O notation.| The algorithm’s lower bound is represented by Omega notation. The asymptotic lower bond is given by Omega notation. | The bounding of function from above and below is represented by theta notation. The exact asymptotic behavior is done by this theta notation.
+  Big oh (O) – Worst case	| Big Omega (Ω) – Best case | Big Theta (Θ) – Average case
+  Big-O is a measure of the longest amount of time it could possibly take for the algorithm to complete. | Big- Ω is take a small amount of time as compare to Big-O it could possibly take for the algorithm to complete. | Big- Θ is take very short amount of time as compare to Big-O and Big-? it could possibly take for the algorithm to complete.
+  Mathematically – Big Oh is ```0 <=f(n) <= c g(n) for all n>=n0```	| Mathematically – Big Omega is ```O<= C g(n) <= f(n) for all n>=n 0```	| Mathematically – Big Theta is ```O<=C 2 g(n)<=f(n)<=C 1 g(n) for n>=n 0```
+
+
+
+
 
 <br/>
 <br/>
@@ -631,7 +686,7 @@ ___
   <br>
 
   ### **Base case**:
-  <details>
+  <details open>
     <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
     </br>
   </details>
@@ -641,7 +696,7 @@ ___
   <br>
 
   ### **General (recursive) case**:
-  <details>
+  <details open>
     <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
     </br>
   </details>
@@ -668,8 +723,9 @@ ___
 
 Article           | Provider (Platform) | Used as reference|
 --------------------- | -------------- | -------|
-[Data Structures - Asymptotic Analysis](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
+[Difference between Big Oh, Big Omega and Big Theta](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
 [Difference between Recursion and Iteration](https://www.geeksforgeeks.org/difference-between-recursion-and-iteration/) | Geeksforgeeks | Yes
+[Difference between Big Oh, Big Omega and Big Theta](https://www.geeksforgeeks.org/difference-between-big-oh-big-omega-and-big-theta/) | Geeksforgeeks | Yes
 
 ___
 <br/><br/><br/>
@@ -716,8 +772,10 @@ Course name           | Provider (Platform) | Duration| Skill level | Course Cos
 >
 Title | Description
 ------------ | -------------
+[Data Structures Crash Course (Algoexpert.io)](https://www.algoexpert.io/data-structures) | The foundational knowledge you need to ace the coding interviews.
 [Asymptotic Analysis: Big-O Notation and More](https://www.programiz.com/dsa/asymptotic-notations) | In this tutorial, you will learn what asymptotic notations are. Also, you will learn about Big-O notation, Theta notation and Omega notation.
 [What Is Asymptotic Analysis? And Why Does It Matter? A Deeper Understanding of Asymptotic Bounding.](https://www.youtube.com/watch?v=myZKhztFhzE) | What Asymptotic Analysis Is!
 [YouTube channel: Back To Back SWE](https://www.youtube.com/channel/UCmJz2DV1a3yfgrR7GqRtUUA) | A very helpful youtube channel to learn and understand Asymptotic Bounding, logratihms, sorting algorithms etc..
 [Animated Algorithms and Data Structures by Chris Laux.](https://www.chrislaux.com/) | A interactive website explaining some sorting algorithms and some data structures.
+[Recursion in software development](https://livevideo.manning.com/module/31_3_1/algorithms-in-motion/recursion/recursion?) | To understand recursion you must first understand recursion
 ---
