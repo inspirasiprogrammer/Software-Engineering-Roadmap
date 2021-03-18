@@ -24,10 +24,10 @@
   - 1 . [Getting started](#getting-started)
   - 2 . [Learning Checklist ✅](#learning-checklist-)
   - ## 3 . [Algorithms Applications & theory](#algorithms-applications-&-theory)
-    - 1 . [Asymptotic Analysis](#asymptotic-analysis)
-      - 1 [Time Complexity](#time-complexity)
-      - 2 [Space Complexity](#space-complexity)
-      - 3 [Memory](#memory)
+    - 3.1 . [Asymptotic Analysis](#asymptotic-analysis)
+      - 1 . [Time Complexity](#time-complexity)
+      - 2 . [Space Complexity](#space-complexity)
+      - 3 . [Memory](#memory)
     - 2 . [Asymptotic notations](#asymptotic-notations)
       - 1 . [Big-O notation (O)](#big-O-notation-O)
       - 2 . [Omega notation (Ω)](#omega-notation-ω)
@@ -39,6 +39,8 @@
       - 2 . [Binary Search](#binary-search)
       - 3 . [Jump Search](#jump-search)
       - 4 . [A* search algorithm](#a*-search-algorithm)
+      - 5 . [Ternary search](#ternary-search)
+      - 6 . [Exponential search](#exponential-search)
     - 5 . [Recursion (Recursive Algorithms)](#recursion-recursive-algorithms)
       - 1 . [Differences between Recursion and Iteration](#differences-between-recursion-and-iteration)
       - 2 . [Base case](#base-case) exit condition (when do you stop recursing)
@@ -47,10 +49,11 @@
       - 1 . [Bubble Sort](#bubble-sort)  
       - 2 . [Selection Sort](#selection-sort)  
       - 3 . [Insertion Sort](#insertion-sort)  
-      - 3 . [Merge Sort](#merge-sort)  
-      - 4 . [Quick Sort](#quick-sort)  
-      - 4 . [Radix Sort](#radix-sort)  
-      - 4 . [Shell Sort](#shell-sort)  
+      - 4 . [Merge Sort](#merge-sort)  
+      - 5 . [Quick Sort](#quick-sort)  
+      - 6 . [Counting Sort](#counting-sort)  
+      - 7 . [Radix Sort](#radix-sort)  
+      - 8 . [Bucket Sort](#bucket-sort)  
     - 7 . [Graph Algorithms](#graph-algorithms)
       - 1 . [Breadth-first search](#breadth-first-search)
       - 2 . [Depth-first search](#depth-first-search)
@@ -62,27 +65,25 @@
     - 11 . [Backtracking](#backtracking)
   - ## 4 . [Data structres](#data-structres)
     - 1  . [What are Data structres?](#what-are-data-structres?)
-    - 2  . [Complexity analysis](#complexity-analysis)
-    - 3  . [Memory](#memory)
-    - 4  . [Logarithm](#logarithm)
-    - 5  . [Difference between Linear and Non-linear Data Structures](#difference-between-linear-and-non-linear-data-structures)
-    - 6  . [Arrays](#arrays)
-    - 7  . [Linked lists](#linked-lists)
-      - 7.1  . [Singly Linked lists](#singly-linked-lists)
-      - 7.2  . [Doubly Linked lists](#doubly-linked-lists)
-      - 7.2  . [Circular Linked lists](#circular-linked-lists)
-    - 8  . [Hash tables](#hash-tables)
-    - 9  . [Stacks](#stacks)
-    - 10 . [Queues](#queues)
-    - 11 . [Trees](#trees)
-      - 11.1 . [Binary search trees](#binary-search-trees)
-      - 11.2 . [AVL Trees](#avl-trees)
-      - 11.3 . [Heaps](#heaps)
-    - 12 . [Tries](#tries)
-    - 14 . [Graphs](#graphs)
-    - 15 . [Strings](#strings)
-    - 16 . [Priority Queue](#priority-queue)
-    - 17 . [Dictionaries](#dictionaries)
+    - 2  . [Logarithm](#logarithm)
+    - 3  . [Difference between Linear and Non-linear Data Structures](#difference-between-linear-and-non-linear-data-structures)
+    - 4  . [Arrays](#arrays)
+    - 5  . [Linked lists](#linked-lists)
+      - 5.1  . [Singly Linked lists](#singly-linked-lists)
+      - 5.2  . [Doubly Linked lists](#doubly-linked-lists)
+      - 5.2  . [Circular Linked lists](#circular-linked-lists)
+    - 6  . [Hash tables](#hash-tables)
+    - 7  . [Stacks](#stacks)
+    - 8 . [Queues](#queues)
+    - 9 . [Trees](#trees)
+      - 9.1 . [Binary search trees](#binary-search-trees)
+      - 9.2 . [AVL Trees](#avl-trees)
+      - 9.3 . [Heaps](#heaps)
+    - 10 . [Tries](#tries)
+    - 11 . [Graphs](#graphs)
+    - 12 . [Strings](#strings)
+    - 13 . [Priority Queue](#priority-queue)
+    - 14 . [Dictionaries](#dictionaries)
     
     <br>
 
@@ -161,6 +162,7 @@ For each of the data structures listed below, you have to understand their funct
 <div align="center">
 
 # 3
+
 ## **Algorithms Applications & theory**
 
 <br>
@@ -178,6 +180,11 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
 **<small>Cambridge dictionary/ Oxford Languages</small>**
 
+<br>
+<details>
+<summary>Algorithms Applications & theory | <b>Click to expand 🔥</b></summary>
+
+<br>
 
 - **What:** Algorithms are a part of daily life actions, and those daily actions and everything we do is the simplest form to represent what an Algorithm is, e.g Finding you car in a parking lot , cleaning your Apartment, reading a book.
   
@@ -326,6 +333,7 @@ ___
 
 ---
 
+</details>
 <br/>
 <br/>
 
@@ -579,6 +587,7 @@ ___
   <br>
 
   ### **Omega notation (Ω)**: 😌 (Asymptotic Lower bound)
+
   <details>
     <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
     </br>
@@ -629,37 +638,122 @@ ___
 
 </details>
 <br/>
-<br/>
-<br/>
 
 ---
 
 <br/>
 <br/>
+<br/>
+<br/>
 
 
-<div align="center">
+
+# 4
 
 ## **Searching Algorithms**:
 
 <details>
-  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
-</br>
+<summary>Searching Algorithms explanation & examples</summary>
 
-</details>
-<br/>
-<br/>
+  <br>
+  
+  ### **Linear Search**: 
+
+  <details>
+    <summary>What Linear Search with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+  <br>
+  
+  ---
+
+  
+
+  ### **Binary search**:
+
+ <details>
+   <summary>What is Binary search with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+   <br>
+  
+  ---
+
+  
+
+  ### **Jump Search**: 
+
+ <details>
+   <summary>What Jump Search with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+
+   <br>
+  
+  ---
+
+  
+
+  ### **A<sup>*</sup> Search Algorithm**: 
+
+ <details>
+   <summary>What is A* Search Algorithm | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+
+   <br>
+  
+  ---
+
+  
+
+  ### **Ternary search**: 
+
+ <details>
+   <summary>What is Ternary search with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+
+   <br>
+  
+  ---
+
+  
+
+  ### **Exponential search**: 
+
+ <details>
+   <summary>What is Exponential search with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+  <br>
 <br/>
 
 ---
 
-<br/>
-<br/>
 
 </div>
+</details>
+<br/>
+<br/>
+<br/>
+<br/>
 
+
+
+# 5
 
 ## **Recursion (Recursive Algorithms)**:
+  
+
+<details>
+<summary>Recursion cases, explanation & examples</summary>
 
   <br>
 
@@ -699,18 +793,295 @@ ___
   <details>
     <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
     </br>
+
+  ---
+
+  </details>
+
+
+
+
+<br/>
+
+
+</details>
+---
+<br/>
+<br/>
+<br/>
+
+
+
+# 6
+
+
+## **Sorting Algorithms**:
+
+<details>
+<summary>Sorting Algorithms explanation and examples</summary>
+<br>
+
+---
+  
+  ### **Bubble Sort**: 
+
+  <details>
+    <summary>What Bubble Sort with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+  <br>
+  
+  ---
+
+  
+
+  ### **Selection Sort**:
+
+ <details>
+   <summary>What is Selection Sort with examples<b>Click to expand</b></summary>
+   </br>
+ </details>
+
+   <br>
+  
+  ---
+
+  
+
+  ### **Insertion Sort**: 
+
+ <details>
+   <summary>What Insertion Sort with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+
+   <br>
+  
+  ---
+
+  
+
+  ### **Merge Sort**: 
+
+ <details>
+   <summary>What is Merge Sort with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+
+   <br>
+  
+  ---
+
+
+
+
+  ### **Quick Sort**: 
+
+ <details>
+   <summary>What is Quick Sort with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+   <br>
+  
+  ---
+
+
+
+  ### **Radix Sort**: 
+
+ <details>
+   <summary>What is Radix Sort with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+
+   <br>
+  
+  ---
+
+
+
+  ### **Counting Sort**: 
+
+ <details>
+   <summary>What is Radix Sort with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+   <br>
+  
+  ---
+
+  
+
+  ### **Bucket Sort**: 
+
+ <details>
+   <summary>What is Bucket Sort with examples | <b>Click to expand</b></summary>
+   </br>
+ </details>
+
+   <br>
+</details>
+
+  ---
+ 
+ 
+  <br>
+<br/>
+<br/>
+<br/>
+
+
+# 7
+
+## **Graph Algorithms**:
+
+  <br>
+
+<details>
+<summary>Graph Algorithms explanation and examples</summary>
+<br>
+
+---
+  
+
+
+  ### **Breadth-first search**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
   </details>
 
   ---
 
   <br>
 
+  ### **Depth-first search**:
+  <details>
+    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+  ---
+
+  <br>
+
+  ### **Dijkstra’s shortest path algorithm**:
+  <details>
+    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    </br>
+
+  ---
+
+  </details>
+
+
+  ---
+
+  <br>
+
+  ### **Bellman–Ford algorithm**:
+  <details>
+    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    </br>
+
+  ---
+
+  </details>
+
 
 
 
 <br/>
+
+</details>
+---
+
+  <br>
 <br/>
 <br/>
+<br/>
+
+
+
+# 8
+
+## **Divide and Conquer**:
+
+  <br>
+
+
+
+
+  ### **Breadth-first search**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+  <br>
+<br/>
+<br/>
+<br/>
+
+
+# 9
+
+## **Dynamic Programming**:
+
+  <br>
+
+
+
+
+  ### **Breadth-first search**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+  <br>
+<br/>
+<br/>
+<br/>
+
+
+# 10
+
+## **Backtracking**:
+
+  <br>
+
+
+
+
+  ### **Breadth-first search**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+<br/>
+<br/>
+<br/>
+
+
+
 
 
 
