@@ -220,6 +220,12 @@ ___
 
 **Asymptotic analysis** of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. 
 
+<details>
+
+<summary>Asymptotic Analysis explanation | <b>Click to expand</b></summary>
+
+<br>
+
 - Using asymptotic analysis, we can very well conclude the best case, average case, and worst case scenario of an algorithm. 
 
 
@@ -274,12 +280,13 @@ ___
 
   <br>
 
-  ## **An example of Asymptotic Behaviour**
-  ---
+## **An example of Asymptotic Behaviour**
+  
+---
 
   ```Insertion Sort:``` $2 * n^2$  | ```Merge Sort:``` $50 * n * log(n)$
     
-    ---
+  ---
 
   We have 2 computers: 🖥
 
@@ -305,6 +312,8 @@ ___
 
 </details>
 <br/>
+
+</details>
 
 ### **Time complexity**:
 <details>
@@ -337,19 +346,26 @@ ___
 
 </details>
 
+
+
 <br/>
 <br/>
 
+</details>
 
 
-
-# 3.3
+# 3.2
 
 ## **Asymptotic Notations**:
 
 **Recap:** as we've mentioned in ther Asymptotic analysis section The **efficiency** of an algorithm depends on the amount of time, storage and other resources required to execute the algorithm, and an algorithm may not have the same performance for different types of inputs. With the increase in the input size, the performance will change, now this efficiency is measured with the help of Asymptotic Notations 🔥
 
 ---
+
+<br>
+
+<details>
+<summary>Asymptotic mathematical Notations <b> | Click to expand</b></summary>
 
 <br>
 
@@ -369,34 +385,35 @@ ___
 ### There are mainly three asymptotic notations which are 🧃:
 <br>
 
-- ### **Big-O notation (𝑂)**: 🤕 (Asymptotic Upper bound)
-  <details open>
-    <summary>Big-O notation (O) with code examples | <b>Click to expand</b></summary>
+### **Big-O notation (𝑂)**: 🤕 (Asymptotic Upper bound)
 
-    <br>
+<details>
+  <summary>Big-O notation (O) with code examples | <b>Click to expand</b></summary>
+
+ <br>
 
 
-    **Big-O**: notation is the formal way to represent the upper bound of the running time of an algorithm. Thus, It measures the worst case time complexity or the longest amount of time an algorithm can possibly take to complete.
+ **Big-O**: notation is the formal way to represent the upper bound of the running time of an algorithm. Thus, It measures the worst case time complexity or the longest amount of time an algorithm can possibly take to complete.
 
-    -  Big O notation is usually understood to describe the **worst-case**, complexity of an algorithm, even though the worst-case complexity might differ from the **average-case** complexity.
-    - Variables used in Big O notation denote the sizes of inputs to algorithms. For example, **O(n)**  might be the time complexity of an algorithm that traverses through an array of length **n**; similarly, O(n + m) might be the time complexity of an algorithm that traverses through an array of length **n**  and through a string of length **m**
-    
-    -  e.g. some sorting algorithms have different time complexities
-  depending on the layout of elements in their input array. In rare cases, their
-  time complexity will be much worse than in more common cases. Similarly, an
-  algorithm that takes in a string and performs special operations on uppercase
-  characters might have a different time complexity when run on an input string
-  of only uppercase characters vs. on an input string with just a few uppercase
-  characters.
-  - when describing the time complexity of an algorithm, it's helpful somtimers to specify what the time complexity refers to. the average case or to the worst case (e.g., "this algorithm runs in O(nlog(n)) time on average and in $O(n^2)$ time in the worse case").
+ -  Big O notation is usually understood to describe the **worst-case**, complexity of an algorithm, even though the worst-case complexity might differ from the **average-case** complexity.
+ - Variables used in Big O notation denote the sizes of inputs to algorithms. For example, **O(n)**  might be the time complexity of an algorithm that traverses through an array of length **n**; similarly, O(n + m) might be the time complexity of an algorithm that traverses through an array of length **n**  and through a string of length **m**
+ 
+ -  e.g. some sorting algorithms have different time complexities
+depending on the layout of elements in their input array. In rare cases, their
+time complexity will be much worse than in more common cases. Similarly, an
+algorithm that takes in a string and performs special operations on uppercase
+characters might have a different time complexity when run on an input string
+of only uppercase characters vs. on an input string with just a few uppercase
+characters.
+- when describing the time complexity of an algorithm, it's helpful somtimers to specify what the time complexity refers to. the average case or to the worst case (e.g., "this algorithm runs in O(nlog(n)) time on average and in $O(n^2)$ time in the worse case").
 
 <br>
 
-![progra](assets/images/asymptotic_notation/big_o/big-o.svg)
+  ![progra](assets/images/asymptotic_notation/big_o/big-o.svg)
 
-<div align="center">
-  <small>Big-O giving the upper bound of a function
- | Image source / <a href="https://cdn.programiz.com/sites/tutorial2program/files/big0.png">Programiz</a></small>
+  <div align="center">
+    <small>Big-O giving the upper bound of a function
+  | Image source / <a href="https://cdn.programiz.com/sites/tutorial2program/files/big0.png">Programiz</a></small>
 <br>
 <br>
 
@@ -413,13 +430,9 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 
 
-  <br>
-  <br>
-  <br>
 
-   <!-- <details> -->
 
-  ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
+  
     
   </br>
     
@@ -428,8 +441,10 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 
       <details>
-        <summary>Big-O Complexity table ✨ | <b>Click to expand</b></summary>
-        </br>
+      <summary>Big-O Complexity table ✨ | <b>Click to expand</b></summary>
+      </br>
+
+      ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
 
 
       The following are examples of common complexities and their Big O notations,ordered from fastest to slowest:
@@ -449,98 +464,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
       ---
   <br>
 
-  2. ### **Big O code examples**
-     Quick & Simple examples that represent the common complexities, and feel free to come back to these examples after diving deep in each algorithm in the coming sections. Ordered from the fastest to the slowest.
-
-      <details>
-        <summary> Python 🐍 | <b>Click to expand</b></summary>
-        <br>
-        
- 
-
-      ---
-        ## **2.** O(log(n)) time complexity/ Binary Search</div>
-
-        <small>Binary Search</small>
-        ![](assets/images/algorithms/binary_search/binary-search.jpeg)
-
-        <details>
-        <summary>Recursive implementation</summary>
-
-        ```python
-
-        '''
-      
-      Steps:
-
-      1 - Start from the leftmost element of array[] and one by one compare target with each element of array[] 
-
-      2 - If target matches with an element, return the index.
-
-      3 - If target doesn’t match with any of elements,return -1.
-
-
-
-      '''      
-
-      def binarySearchHelper(array, target, left, right):
-
-          # Element is not present in the list
-          if left > right:
-            return - 1
-          
-
-          middle = (left + right) // 2
-          potentialMatch = array[middle]
-
-          # If element is present at the middle itself
-          if target == potentialMatch:
-              return middle
-          
-          # If element is smaller than middle, then it can only
-          # be present in left subarray
-          elif target < potentialMatch:
-              return binarySearchHelper(array, target, left, middle - 1)
-              
-          # Else the element can only be present in right subarray
-          else:
-              return binarySearchHelper(array, target, middle + 1, right)
-
-      def binarySearch(array, target):
-        return binarySearchHelper(array, target, 0, len(array) - 1)
-
-
-
-      # Test list
-      array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
-      target = 15
-
-      # Function call
-      result = binarySearch(array, target)
-
-      if result != -1:
-        print("Element is present at index", str(result))
-      else:
-        print("Element is not present in array")
-
-
-       # Result: 15
-
-        ```
-        </details>
-
-        <details>
-        <summary>Iterative implementation</summary>
-        
-        ```python
-
-
-        ```
-      </details>
-
-  </details>
-
-  </details>
+</details>
 
   ---
   <br>
@@ -566,11 +490,15 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 <br/>
 
 
+
 <br/>
+
 
   ## **Differences between Big-O, Big-Ω and Big-Θ**
 
-  a table that explains the diffrerences between most common asymptotic notations
+<details>
+
+<summary>a table that explains the diffrerences between most common asymptotic notations</summary>
 
   <br>
 
@@ -582,9 +510,10 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
   Big-O is a measure of the longest amount of time it could possibly take for the algorithm to complete. | Big- Ω is take a small amount of time as compare to Big-O it could possibly take for the algorithm to complete. | Big- Θ is take very short amount of time as compare to Big-O and Big-? it could possibly take for the algorithm to complete.
   Mathematically – Big Oh is ```0 <=f(n) <= c g(n) for all n>=n0```	| Mathematically – Big Omega is ```O<= C g(n) <= f(n) for all n>=n 0```	| Mathematically – Big Theta is ```O<=C 2 g(n)<=f(n)<=C 1 g(n) for n>=n 0```
 
+</details>
 
 
-
+</details>
 
 <br/>
 <br/>
@@ -620,7 +549,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 ## **Searching Algorithms**:
 
-<details open>
+<details>
 <summary>Searching Algorithms explanation & examples</summary>
 
 <div align="center">
@@ -691,7 +620,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
  📟 input/ output:
 ```
 
-<details open>
+<details>
 <summary>Input/ output examples</summary>
 
 <br>
@@ -816,11 +745,17 @@ target = 175;
 
   ### **Binary search**:
 
- <details open>
+ <details >
    <summary>What is Binary search with examples | <b>Click to expand</b></summary>
    </br>
 
-![](https://media.giphy.com/media/3o6MbbwX2g2GA4MUus/giphy.gif)
+<div align="center">
+
+![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Binary_Search_Depiction.svg/2880px-Binary_Search_Depiction.svg.png)
+
+<small>Image source/ <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#/media/File:Binary_Search_Depiction.svg">Wikipedia</a></small>
+</div>
+
 
 <br>
 
@@ -917,13 +852,13 @@ target = 130;
 ```
 
 
-<details open>
+<details>
 <summary>Python 🐍</summary>
 
 <br>
 
 
-  <details open>
+  <details>
   <summary>Recursive implementation</summary>
 
   ```python
@@ -1035,7 +970,7 @@ else:
 ```
 
 
-<details open>
+<details>
 <summary>Asymptotic analysis</summary>
 
 <br>
@@ -1535,11 +1470,15 @@ Time | Space
   <br>
 <br/>
 
----
+
+
 
 
 </div>
 </details>
+
+---
+
 <br/>
 <br/>
 <br/>
@@ -1605,7 +1544,9 @@ Time | Space
 
 
 </details>
+
 ---
+
 <br/>
 <br/>
 <br/>
