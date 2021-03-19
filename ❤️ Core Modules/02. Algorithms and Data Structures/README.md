@@ -84,6 +84,7 @@
     - 12 . [Strings](#strings)
     - 13 . [Priority Queue](#priority-queue)
     - 14 . [Dictionaries](#dictionaries)
+    - 15 . [Matrix](#Matrix)
     
     <br>
 
@@ -212,6 +213,7 @@ ___
 
 
 
+# 3.1
 ## **Asymptotic Analysis**:
 
 </br>
@@ -334,11 +336,14 @@ ___
 ---
 
 </details>
+
 <br/>
 <br/>
 
 
 
+
+# 3.3
 
 ## **Asymptotic Notations**:
 
@@ -385,13 +390,38 @@ ___
   characters.
   - when describing the time complexity of an algorithm, it's helpful somtimers to specify what the time complexity refers to. the average case or to the worst case (e.g., "this algorithm runs in O(nlog(n)) time on average and in $O(n^2)$ time in the worse case").
 
+<br>
+
+![progra](assets/images/asymptotic_notation/big_o/big-o.svg)
+
+<div align="center">
+  <small>Big-O giving the upper bound of a function
+ | Image source / <a href="https://cdn.programiz.com/sites/tutorial2program/files/big0.png">Programiz</a></small>
+<br>
+<br>
+
+</div>
+For a function g(n), O(g(n)) is given by the relation:
+
+``` math
+O(g(n)) = { f(n): there exist positive constants c and n0
+such that 0 ≤ f(n) ≤ cg(n) for all n ≥ n0 }
+```
+
+Since Big-o gives the worst-case running time of an algorithm, it is widely used to analyze an algorithm as we are always interested in the worst-case scenario.
+
+
+
+
   <br>
   <br>
   <br>
 
    <!-- <details> -->
-    ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
-    </br>
+
+  ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
+    
+  </br>
     
 
   1. ### **Big O cheatsheet**
@@ -426,79 +456,7 @@ ___
         <summary> Python 🐍 | <b>Click to expand</b></summary>
         <br>
         
-        ## **1.** O(N) time complexity</div>
-        
-        <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
-        ![](assets/images/algorithms/linear-search.gif)
-
-        <details>
-        <summary>Implementation</summary>
-        
-        
-
-        ```python
-
-        '''
-        Sample input/ Output:
-
-        Input : arr[] = {10, 20, 80, 30, 60, 50, 
-                  110, 100, 130, 170}
-                  x = 110;
-        Output : 6
-        Element x is present at index 6
-        _________________
-
-        Input : arr[] = {10, 20, 80, 30, 60, 50, 
-                    110, 100, 130, 170}
-                  x = 175;
-        Output : -1
-        Element x is not present in arr[].
-        ___________________________________
-      
-      Steps:
-
-      - Start from the leftmost element of arr[] and one by one compare x with each element of arr[] 
-
-      - If x matches with an element, return the index.
-
-      - If x doesn’t match with any of elements,return -1.
-
-      Steps extended:
-
-      Step 1: Set i to 1
-      Step 2: if i > n then go to step 7
-      Step 3: if A[i] = x then go to step 6
-      Step 4: Set i to i + 1
-      Step 5: Go to Step 2 |The linear fashion|
-      Step 6: Print Element x Found at index i and go to step 8
-      Step 7: Print element not found
-      Step 8: Exit
-
-      The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
-      
-      which means it will keep on looking until it matches with the given input.
-      '''      
-
-       def linearSearch(arr, x):
-           # Linearly search x in arr[] 
-           for i in range(len(arr)): # o(n) linear time
-               # If x is present, which is our input for the function
-               if arr[i] == x:
-                   # then return its location 
-                   return i
-
-           return -1
-
-       listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 15
-
-       matchedIndex = linearSearch(listOfItemsToSearchIn, 13)
-
-       print(matchedIndex)
-
-       # Result: 15
-
-        ```
-        </details>
+ 
 
       ---
         ## **2.** O(log(n)) time complexity/ Binary Search</div>
@@ -578,10 +536,11 @@ ___
 
 
         ```
-        </details>
-
       </details>
-    </details>
+
+  </details>
+
+  </details>
 
   ---
   <br>
@@ -604,6 +563,9 @@ ___
   </details>
   
   ---
+<br/>
+
+
 <br/>
 
   ## **Differences between Big-O, Big-Ω and Big-Θ**
@@ -629,6 +591,12 @@ ___
 
 
 
+<br/>
+
+
+
+
+# 3.3
 
 ## **Algorithm design strategies & Techniques**:
 
@@ -648,12 +616,18 @@ ___
 
 
 
-# 4
+# 3.4
 
 ## **Searching Algorithms**:
 
-<details>
+<details open>
 <summary>Searching Algorithms explanation & examples</summary>
+
+<div align="center">
+
+
+
+</div>
 
   <br>
   
@@ -662,6 +636,176 @@ ___
   <details>
     <summary>What Linear Search with examples | <b>Click to expand</b></summary>
     </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+  1.  Start from the leftmost element of array[ ], and one by one compare target with each element of array[ ] 
+
+  2. If target matches with an element, return the index.
+
+  3. If target doesn’t match with any of elements,return -1.
+
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+   - 1: Set i to 1
+   - 2: if i > n then go to step 7
+   - 3: if A[i] = x then go to step 6
+   - 4: Set i to i + 1
+   - 5: Go to Step 2 |The linear fashion|
+   - 6: Print Element x Found at index i and go to step 8
+   - 7: Print element not found
+   - 8: Exit
+
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details open>
+<summary>Input/ output examples</summary>
+
+<br>
+
+  Sample input/ Output:
+    
+``` python
+array[] = {10, 20, 80, 30, 60, 50, 110, 100, 130, 170}
+target = 110;
+```
+
+  Output : 6 | Element target is present at index 6
+
+  ---
+
+``` python
+array[] = {10, 20, 80, 30, 60, 50, 110, 100, 130, 170}
+target = 175;    
+```
+  Output : -1 | Element target is not present in array[]
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+  ## **1.** O(N) time complexity</div>
+        
+  <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
+  ![](assets/images/algorithms/linear-search.gif)
+     
+
+  ```python
+    def linearSearch(array, target):
+        # Linearly search target in array[] 
+        for index in range(len(array)): # o(n) linear time
+            # If target is present, which is our input for the function
+            if array[index] == target:
+                # then return its location 
+                return index
+
+        return -1
+
+    listOfItemsToSearchIn = [2,9,35,16,2,7,8,22,35,46,57,68,34,213,4,13] # Size N = 15
+
+    matchedIndex = linearSearch(listOfItemsToSearchIn, 13)
+
+    print(matchedIndex)
+
+    # Result: 15
+
+  ```
+
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+   The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
+   
+   which means it will keep on looking until it matches with the given input.
+
+   Worse 𝑂 | Average  | Best
+
+   
+
+</details>
+<br>
+<br>
+
+
+    
   </details>
 
   <br>
@@ -672,9 +816,266 @@ ___
 
   ### **Binary search**:
 
- <details>
+ <details open>
    <summary>What is Binary search with examples | <b>Click to expand</b></summary>
    </br>
+
+![](https://media.giphy.com/media/3o6MbbwX2g2GA4MUus/giphy.gif)
+
+<br>
+
+**Binary search** is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one.
+
+- it only works on sorted lists
+- Faster than linear search
+
+<br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+1. Compare target with the middle element.
+2. If target matches with middle element, we return the middle index.
+3. Else If target is greater than the middle element, then target can only lie in right half subarray after the middle element. So we recur for right half.
+4. Else (target is smaller) recur for the left half.
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+1. Let left = 0 and right = n-1.
+
+2. If left > right, then stop: target is not present in array. Return -1.
+3. Compute middle as the average of right and left, rounded down (so that it is an integer).
+4. If array[middle] equals target, then stop. You found it! Return middle.
+5. If the middle was too low, that is, array[middle] < target, then set left = middle + 1.
+6. Otherwise, the middle was too high. Set max = middle - 1.
+7. Go back to step 2.
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+  Sample input/ Output:
+    
+``` python
+array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+target = 15
+
+```
+
+  Output : 6 | Element target is present at index 6
+
+  ---
+
+``` python
+array[] = {10, 20, 80, 30, 60, 50, 110, 100, 130, 170}
+target = 130;    
+
+
+
+ # Result: 8
+
+```
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details open>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+  <details open>
+  <summary>Recursive implementation</summary>
+
+  ```python
+def binarySearchHelper(array, target, left, right):
+
+    # Element is not present in the list
+    if left > right:
+      return - 1
+    
+
+    middle = (left + right) // 2
+    potentialMatch = array[middle]
+
+    # If element is present at the middle itself
+    if target == potentialMatch:
+        return middle
+    
+    # If element is smaller than middle, then it can only
+    # be present in left subarray
+    elif target < potentialMatch:
+        return binarySearchHelper(array, target, left, middle - 1)
+        
+    # Else the element can only be present in right subarray
+    else:
+        return binarySearchHelper(array, target, middle + 1, right)
+
+def binarySearch(array, target):
+  return binarySearchHelper(array, target, 0, len(array) - 1)
+
+
+
+# Test list
+array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+target = 15
+
+# Function call
+result = binarySearch(array, target)
+
+if result != -1:
+  print("Element is present at index", str(result))
+else:
+  print("Element is not present in array")
+
+
+ # Result: 14
+
+  ```
+  </details>
+
+  <details>
+  <summary>Iterative implementation</summary>
+  
+  ```python
+def binarySearchHelper(array, target, left, right):
+
+    while left <= right:
+
+      middle = (left + right) // 2
+      potentialMatch = array[middle]
+
+      # If element is present at the middle itself
+      if target == potentialMatch:
+          return middle
+      
+      # If element is smaller than middle, then it can only
+      # be present in left subarray
+      elif target < potentialMatch:
+          right = middle - 1
+          
+      # Else the element can only be present in right subarray
+      else:
+          left = middle + 1
+    
+    # Element is not present in the list
+    return -1
+
+def binarySearch(array, target):
+  return binarySearchHelper(array, target, 0, len(array) - 1)
+
+# Test list
+array = [1,2,3,4,5,6,7,8,9,10,11,12,13,14,15]
+target = 15
+
+# Function call
+result = binarySearch(array, target)
+
+if result != -1:
+  print("Element is present at index", str(result))
+else:
+  print("Element is not present in array")
+
+
+ # Result: 14
+
+  ```
+</details>
+
+
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details open>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+**Recursive**
+Time | Space
+----------|----------
+O(log(n)) | O(log(n))
+
+<br>
+<br>
+
+Iterative
+
+Time | Space
+----------|----------
+---
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
  </details>
 
    <br>
@@ -688,6 +1089,105 @@ ___
  <details>
    <summary>What Jump Search with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br> 
  </details>
 
 
@@ -702,6 +1202,106 @@ ___
  <details>
    <summary>What is A* Search Algorithm | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
 
@@ -716,6 +1316,106 @@ ___
  <details>
    <summary>What is Ternary search with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
 
@@ -730,6 +1430,106 @@ ___
  <details>
    <summary>What is Exponential search with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
   <br>
@@ -747,7 +1547,7 @@ ___
 
 
 
-# 5
+# 3.5
 
 ## **Recursion (Recursive Algorithms)**:
   
@@ -812,7 +1612,7 @@ ___
 
 
 
-# 6
+# 3.6
 
 
 ## **Sorting Algorithms**:
@@ -826,8 +1626,108 @@ ___
   ### **Bubble Sort**: 
 
   <details>
-    <summary>What Bubble Sort with examples | <b>Click to expand</b></summary>
+    <summary>What is Bubble Sort with examples | <b>Click to expand</b></summary>
     </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
   </details>
 
   <br>
@@ -841,6 +1741,106 @@ ___
  <details>
    <summary>What is Selection Sort with examples<b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
    <br>
@@ -852,8 +1852,108 @@ ___
   ### **Insertion Sort**: 
 
  <details>
-   <summary>What Insertion Sort with examples | <b>Click to expand</b></summary>
+   <summary>What is Insertion Sort with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
 
@@ -868,6 +1968,106 @@ ___
  <details>
    <summary>What is Merge Sort with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
 
@@ -883,6 +2083,106 @@ ___
  <details>
    <summary>What is Quick Sort with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
    <br>
@@ -896,6 +2196,106 @@ ___
  <details>
    <summary>What is Radix Sort with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
 
@@ -910,6 +2310,106 @@ ___
  <details>
    <summary>What is Radix Sort with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
    <br>
@@ -923,6 +2423,106 @@ ___
  <details>
    <summary>What is Bucket Sort with examples | <b>Click to expand</b></summary>
    </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
  </details>
 
    <br>
@@ -937,7 +2537,7 @@ ___
 <br/>
 
 
-# 7
+# 3.7
 
 ## **Graph Algorithms**:
 
@@ -953,9 +2553,107 @@ ___
 
   ### **Breadth-first search**:
   <details>
-    <summary> | <b>Click to expand</b></summary>
+    <summary>what is Breadth-first search with examples | <b>Click to expand</b></summary>
     </br>
 
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
   </details>
 
   ---
@@ -964,8 +2662,107 @@ ___
 
   ### **Depth-first search**:
   <details>
-    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    <summary>what is Depth-first search with examples | <b>Click to expand</b></summary>
     </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
   </details>
 
   ---
@@ -974,10 +2771,108 @@ ___
 
   ### **Dijkstra’s shortest path algorithm**:
   <details>
-    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    <summary>what is Dijkstra’s shortest path algorithm with examples | <b>Click to expand</b></summary>
     </br>
 
-  ---
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
 
   </details>
 
@@ -988,8 +2883,107 @@ ___
 
   ### **Bellman–Ford algorithm**:
   <details>
-    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+    <summary>what is Bellman–Ford algorithm with examples | <b>Click to expand</b></summary>
     </br>
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
 
   ---
 
@@ -1010,7 +3004,7 @@ ___
 
 
 
-# 8
+# 3.8
 
 ## **Divide and Conquer**:
 
@@ -1034,7 +3028,7 @@ ___
 <br/>
 
 
-# 9
+# 3.9
 
 ## **Dynamic Programming**:
 
@@ -1058,7 +3052,7 @@ ___
 <br/>
 
 
-# 10
+# 3.10
 
 ## **Backtracking**:
 
@@ -1079,7 +3073,63 @@ ___
 <br/>
 <br/>
 <br/>
+<br/>
 
+
+
+
+
+<div align="center">
+
+# 4
+
+## **Data structures** 
+
+<br>
+
+
+![](https://media.giphy.com/media/2UqWA20weXLPRQW5xQ/giphy.gif)
+---
+</div>
+ <h2>Data structres</h2> 
+
+
+
+>a process, step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations to be executed in a certain order to get the desired output, especially by a computer, and those can be simple processes, such as multiplying two numbers, or a complex operation, such as playing  compressed video file. or a Search engine that uses proprietary algorithms to display the most relevant results from its search index for specific queries.
+
+
+**<small>Cambridge dictionary/ Oxford Languages</small>**
+
+<br>
+<details>
+<summary>Algorithms Applications & theory | <b>Click to expand 🔥</b></summary>
+
+<br>
+
+- **What:** Algorithms are a part of daily life actions, and those daily actions and everything we do is the simplest form to represent what an Algorithm is, e.g Finding you car in a parking lot , cleaning your Apartment, reading a book.
+  
+  ---
+
+
+
+- **Applications**: The real power of Algorithms come in form of Digital tools, Softwares or small computer programs like, Compression algorithms in a 3D video game or Searching algorithms in Google Search engine, or sorting algorithms to sort Amazon's products based on their ratings and all the other services and digital tools that you use on daily bases.
+
+___
+
+- **Efficiency**: Not all algorithms are created equal, and the tricky part of an Algorithm is that there are plenty of algorithms that solve the same problem at the end, but one of them is the most efficint one to use in that spesific problem case, so to know which solution to choose and to be able to compare them, these Algorithms most be analyzed, and before before analyuzing there an important thing that you need to know what makes a good algorithm is the two most important criteria which are that it solves a problem and it does so efficintly.
+
+    ---
+- **Measuring Efficiency**: so the way we measure the effecincy of an algorithm is through using a scientific mathematical technique called **```Asymptotic analysis```**, which allows algorithms to be compared independently of a particular programming language or hardware, which will next tell us that some algorithms are  more efficient than others.
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+<br/>
 
 
 
