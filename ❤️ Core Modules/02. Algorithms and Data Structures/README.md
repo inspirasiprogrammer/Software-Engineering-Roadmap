@@ -24,28 +24,29 @@
   - 1 . [Getting started](#getting-started)
   - 2 . [Learning Checklist ✅](#learning-checklist-)
   - ## 3 . [Algorithms Applications & theory](#algorithms-applications-&-theory)
-    - 3.1 . [Asymptotic Analysis](#asymptotic-analysis)
+    - 1 . [Characteristics of an Algorithm](#characteristics-of-an-algorithm)
+    - 2 . [Asymptotic Analysis](#asymptotic-analysis)
       - 1 . [Time Complexity](#time-complexity)
       - 2 . [Space Complexity](#space-complexity)
       - 3 . [Memory](#memory)
-    - 2 . [Asymptotic notations](#asymptotic-notations)
+    - 3 . [Asymptotic notations](#asymptotic-notations)
       - 1 . [Big-O notation (O)](#big-O-notation-O)
       - 2 . [Omega notation (Ω)](#omega-notation-ω)
       - 3 . [Theta notation (Θ)](#theta-notation-θ)
       - 4 . [Differences between Big-O, Big-Ω and Big-Θ](#differences-between-big-O,-big-Ω-and-big-Θ)
-    - 3 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
-    - 4 . [Searching Algorithms](#searching-algorithms)
+    - 4 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
+    - 5 . [Searching Algorithms](#searching-algorithms)
       - 1 . [Linear Search](#linear-search)
       - 2 . [Binary Search](#binary-search)
       - 3 . [Jump Search](#jump-search)
       - 4 . [A* search algorithm](#a*-search-algorithm)
       - 5 . [Ternary search](#ternary-search)
       - 6 . [Exponential search](#exponential-search)
-    - 5 . [Recursion (Recursive Algorithms)](#recursion-recursive-algorithms)
+    - 6 . [Recursion (Recursive Algorithms)](#recursion-recursive-algorithms)
       - 1 . [Differences between Recursion and Iteration](#differences-between-recursion-and-iteration)
       - 2 . [Base case](#base-case) exit condition (when do you stop recursing)
       - 3 . [General (recursive) case](#general-recursive-case) (Recurse)
-    - 6 . [Sorting Algorithms](#sorting-algorithms)
+    - 7 . [Sorting Algorithms](#sorting-algorithms)
       - 1 . [Bubble Sort](#bubble-sort)  
       - 2 . [Selection Sort](#selection-sort)  
       - 3 . [Insertion Sort](#insertion-sort)  
@@ -54,15 +55,15 @@
       - 6 . [Counting Sort](#counting-sort)  
       - 7 . [Radix Sort](#radix-sort)  
       - 8 . [Bucket Sort](#bucket-sort)  
-    - 7 . [Graph Algorithms](#graph-algorithms)
+    - 8 . [Graph Algorithms](#graph-algorithms)
       - 1 . [Breadth-first search](#breadth-first-search)
       - 2 . [Depth-first search](#depth-first-search)
       - 3 . [Dijkstra’s shortest path algorithm]()
       - 4 . [Bellman–Ford algorithm](#bellman–ford-algorithm)
-    - 8 . [Greedy Algorithms](#greedy-algorithms)
-    - 9 . [Divide and Conquer](#divide-and-conquer)
-    - 10 . [Dynamic Programming](#dynamic-programming)
-    - 11 . [Backtracking](#backtracking)
+    - 9 . [Greedy Algorithms](#greedy-algorithms)
+    - 10 . [Divide and Conquer](#divide-and-conquer)
+    - 11 . [Dynamic Programming](#dynamic-programming)
+    - 12 . [Backtracking](#backtracking)
   - ## 4 . [Data structres](#data-structres)
     - 1  . [What are Data structres?](#what-are-data-structres?)
     - 2  . [Logarithm](#logarithm)
@@ -176,7 +177,7 @@ For each of the data structures listed below, you have to understand their funct
 
 noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
 
->a process, step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations to be executed in a certain order to get the desired output, especially by a computer, and those can be simple processes, such as multiplying two numbers, or a complex operation, such as playing  compressed video file. or a Search engine that uses proprietary algorithms to display the most relevant results from its search index for specific queries.
+>a process, step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations to be executed in a certain order to get the desired output, especially by a computer, and those can be simple processes, such as multiplying two numbers, or a complex operation, such as playing  compressed video file. or a Search engine that uses proprietary algorithms to display the most relevant results from its search index for specific queries. Algorithms are generally created independent of underlying languages, i.e. an algorithm can be implemented in more than one programming language.
 
 
 **<small>Cambridge dictionary/ Oxford Languages</small>**
@@ -191,6 +192,10 @@ noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
   
   ---
 
+- **How to:** There are no well-defined standards for writing algorithms. Rather, it is problem and resource dependent. Algorithms are never written to support a particular programming code. As we know that all programming languages share basic code constructs like loops (do, for, while), flow-control (if-else), etc. These common constructs can be used to write an algorithm. We write algorithms in a step-by-step manner, but it is not always the case. Algorithm writing is a process and is executed after the problem domain is well-defined. That is, we should know the problem domain, for which we are designing a solution.
+  
+  ---
+
 
 
 - **Applications**: The real power of Algorithms come in form of Digital tools, Softwares or small computer programs like, Compression algorithms in a 3D video game or Searching algorithms in Google Search engine, or sorting algorithms to sort Amazon's products based on their ratings and all the other services and digital tools that you use on daily bases.
@@ -201,6 +206,20 @@ ___
 
     ---
 - **Measuring Efficiency**: so the way we measure the effecincy of an algorithm is through using a scientific mathematical technique called **```Asymptotic analysis```**, which allows algorithms to be compared independently of a particular programming language or hardware, which will next tell us that some algorithms are  more efficient than others.
+
+  ---
+  
+  <br>
+
+  Some important categories of algorithms, from data structures point of view.
+
+  # | Details
+  ---|------
+  **Search** | Algorithm to search an item in a data structure.
+  **Sort** | Algorithm to sort items in a certain order.
+  **Insert** | Algorithm to insert item in a data structure.
+  **Update** | Algorithm to update an existing item in a data structure.
+  **Delete** | Algorithm to delete an existing item from a data structure.
 
 
 </details>
@@ -213,7 +232,44 @@ ___
 
 
 
+
+
+
 # 3.1
+## **Characteristics of an Algorithm**:
+
+</br>
+
+Not all procedures can be called an algorithm. An algorithm should have the following characteristics.
+
+
+#     |  Details|
+------|-------|
+**Unambiguous** | Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.
+**Input** | An algorithm should have 0 or more well-defined inputs.
+**Output** | An algorithm should have 1 or more well-defined outputs, and should match the desired output.
+**Finiteness** | Algorithms must terminate after a finite number of steps.
+**Feasibility** | Should be feasible with the available resources
+**Independent** | An algorithm should have step-by-step directions, which should be independent of any programming code.
+
+
+<br>
+
+<summary>Characteristics of an Algorithm explanation | <b>Click to expand</b></summary>
+
+<br>
+
+
+
+
+---
+
+<br/>
+<br/>
+
+
+
+# 3.2
 ## **Asymptotic Analysis**:
 
 </br>
@@ -271,9 +327,9 @@ ___
      - $8n log n$  − $60n$ becomes $n log n$
      - $2^n + 3n^4$  − becomes $2^n$
       - because when we say $(O(log n), o(n), O(n2),  O(n3), O(2n), o(n!))$ we are not actually describing an individual graph, or a case that is based on a constant value, what we are really describing is a class of functions and behaviors, and that’s why these functions will have the same behaviour when we get a very large input 😉
-  2. 
+  2. If the function is a product of several factors, any constants can be omitted.
   3. 
-  4. $ 
+  4. 
 
 
 
@@ -319,6 +375,39 @@ ___
 <details>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
+
+- Time complexity of an algorithm represents the amount of time required by the algorithm to run to completion. Time requirements can be defined as a numerical function T(n), where T(n) can be measured as the number of steps, provided each step consumes constant time.
+
+  - For example, addition of two n-bit integers takes n steps. Consequently, the total computational time is T(n) = c ∗ n, where c is the time taken for the addition of two bits. Here, we observe that T(n) grows linearly as the input size increases.
+
+- The time complexity of an algorithm relates the length of an algorithm's input to the number of steps it takes.
+
+<br>
+
+---
+
+We do not want to give the running time of an algorithm in a time unit because this would mean that it is only comparable
+with the same implementations (programming language, compiler, hardware, etc.). Thus, it is given as a function:
+
+
+
+
+### **The RAM (random access machine) Model of Computation**:
+
+Is a Machine-indepdendent algorithm design  depends upon a hypothetical computer called (Random Access Machine) and under this model of computation we are confronted with a computer where:
+
+- Simple logical or arithmetic operations (+, *, =, if, call) are considered to be simple operations that that take one time step
+-  Loops and subroutines are complex operations composed of multiple time steps based on the number of iterations
+- All memory access takes exactly one time step.
+
+> This model encapsulates the core functionality of computers but does not mimic them completely. For example, an addition operation and a multiplication operation are both worth a single time step, however, in reality it will take a machine more operations to compute a product versus a sum.
+
+- The reason the RAM model makes these assumptions is because doing so allows a balance between simplicity and completely imitating underlying machine, resulting in a tool that is useful in practice.
+
+- The exact analysis of algorithms is a difficult task. It is the nature of algorithm analysis to be both machine and language independent. For example, if your computer becomes twice as fast after a recent update, the complexity of your algorithm still remains the same.
+
+
+
 </details>
 
 </br></br>
@@ -328,6 +417,12 @@ ___
 <details>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
+
+Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. The space required by an algorithm is equal to the sum of the following two components −
+
+
+A measure of how much auxiliary memory an algorithm takes up, space complexity is a central concept in the field of
+
 </details>
 
 
@@ -418,11 +513,13 @@ characters.
 <br>
 
 </div>
+The Big O notation is useful when we only have upper bound on time complexity of an algorithm. Many times we easily find an upper bound by simply looking at the algorithm.  
 For a function g(n), O(g(n)) is given by the relation:
 
 ``` math
 O(g(n)) = { f(n): there exist positive constants c and n0
 such that 0 ≤ f(n) ≤ cg(n) for all n ≥ n0 }
+
 ```
 
 Since Big-o gives the worst-case running time of an algorithm, it is widely used to analyze an algorithm as we are always interested in the worst-case scenario.
@@ -1005,6 +1102,16 @@ Time | Space
 <summary>Algorithm's mathematical explanation</summary>
 
 <br>
+
+The time complexity of Binary Search can be written as
+
+```
+T(n) = T(n/2) + c 
+
+```
+The above recurrence can be solved either using Recurrence T ree method or Master method. It falls in case II of Master Method and solution of the recurrence is Theta(Logn).
+
+Auxiliary Space: O(1) in case of iterative implementation. In case of recursive implementation, O(Logn) recursion call stack space.
 
 
 
@@ -2936,6 +3043,7 @@ Time | Space
 <br/>
 
 </details>
+
 ---
 
   <br>
@@ -3085,6 +3193,7 @@ ___
 
 Article           | Provider (Platform) | Used as reference|
 --------------------- | -------------- | -------|
+[Data Structures - Algorithms Basics](https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm) | Tutorialspoint | Yes
 [Difference between Big Oh, Big Omega and Big Theta](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
 [Difference between Recursion and Iteration](https://www.geeksforgeeks.org/difference-between-recursion-and-iteration/) | Geeksforgeeks | Yes
 [Difference between Big Oh, Big Omega and Big Theta](https://www.geeksforgeeks.org/difference-between-big-oh-big-omega-and-big-theta/) | Geeksforgeeks | Yes
