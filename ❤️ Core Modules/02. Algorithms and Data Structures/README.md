@@ -413,15 +413,95 @@ Is a Machine-indepdendent algorithm design  depends upon a hypothetical computer
 </br></br>
 
 
-### **Space complexity**:
-<details>
+### **Space complexity and Auxiliary Space**:
+<details open>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 
-Space complexity of an algorithm represents the amount of memory space required by the algorithm in its life cycle. The space required by an algorithm is equal to the sum of the following two components −
+**Space complexity**: of an algorithm represents the total amount of memory space required by the algorithm in its life cycle (including the space of input values) and relates to the length of an algorithm's input to the number of storage locations it uses. The space required by an algorithm is equal to the sum of the following two components:
+
+- A fixed part that is a space required to store certain data and variables, that are independent of the size of the problem. For example, simple variables and constants used, program size, etc.
+
+- A variable part is a space required by variables, whose size depends on the size of the problem. For example, dynamic memory allocation, recursion stack space, etc.
 
 
-A measure of how much auxiliary memory an algorithm takes up, space complexity is a central concept in the field of
+
+It is also expressed asymptotically. Space complexity is a measure of the amount of working storage an algorithm needs.
+This amount is, again, dependent on the input size. 
+
+to find space-complexity, it is enough to calculate the space occupied by the variables used in an algorithm/program.
+
+
+
+---
+
+**Auxiliary space**: is not the same as space complexity even though they are sometimes (wrongly) used for the same thing. Space complexity is the sum of the auxiliary space and the input
+space, **Auxiliary space** refers to the temporary space required by an algorithm to be used allocated by the algorithm during it's execution to solve the problem, with respect to input size. Think of temporary arrays, pointers etc.
+
+```
+Space Complexity = Auxiliary Space + Space use by input values
+```
+
+Whenever a solution to a problem is written some memory is required to complete. For any algorithm memory may be used for the following:
+
+  1. Variables (This include the constant values, temporary values)
+   1. Program Instruction
+   2. Execution
+
+  ---
+
+  Example #1:
+
+  ```python
+  def print_items(array):
+    for item in array:
+      print(item)
+    return True
+  ```
+  - The function runs through every item in the list once for an array with length n it runs n times
+  - Constant terms (e.g. returning or printing some value) are ignored
+    - (constant terms can make a difference if the compared algorithms have the same running time)
+  - Time complexity of Θ(𝑛)
+  - Space complexity
+    - the array takes n units of space, as the length can vary
+    - the item variable is constant as the new item will be saved and the old item will be discarded
+    - thus, we have a space complexity of Θ(𝑛)
+    - if we talk about auxiliary space, the input array would not be counted
+      - thus, we have a auxiliary space complexity of Θ(1)
+
+> And this is why the term space complexity cannot be used for auxiliary space complexity.
+
+  ---
+<br>
+
+  Example #2: In recursive calls stack space also counts. 
+  <br>
+
+   ```python
+      def add(number):
+          if number <= 0:
+              return 0
+          return number + add(number-1)
+   ```
+
+  Here each call add a level to the stack :
+```
+  1.  add(4)
+  2.    -> add(3)
+  3.      -> add(2)
+  4.        -> add(1)
+  5.          -> add(0)
+```
+
+Each of these calls is added to call stack and takes up actual memory.
+      
+So it takes ```O(n) space```.
+
+However just because you have n calls total doesn’t mean it takes O(n) space.
+
+
+
+---
 
 </details>
 
@@ -3193,6 +3273,7 @@ ___
 
 Article           | Provider (Platform) | Used as reference|
 --------------------- | -------------- | -------|
+[What does ‘Space Complexity’ mean?](https://www.geeksforgeeks.org/g-fact-86/) | Geeksforgeeks | Yes
 [Data Structures - Algorithms Basics](https://www.tutorialspoint.com/data_structures_algorithms/algorithms_basics.htm) | Tutorialspoint | Yes
 [Difference between Big Oh, Big Omega and Big Theta](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
 [Difference between Recursion and Iteration](https://www.geeksforgeeks.org/difference-between-recursion-and-iteration/) | Geeksforgeeks | Yes
