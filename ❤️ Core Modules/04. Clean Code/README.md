@@ -35,14 +35,22 @@ Safar Safarov</small>
 - 6 . [Control Structures & Errors](#control-structures-&-errors-handling)
 
 - 7 . [Objects, Classes & Data Containers / Structures](#Objects,-classes-&-data-containers-/-structures)
- - ### 8 . [Refactoring](#refactoring)
-    - 1 . [Code Smells](#code-smells)
-      - 1 . [Bloaters](#bloaters)
-      - 2 . [Long method](#long-method)
-      - 3 . [Large class](#large-class)
-      - 4 . [Primitive Obsession](#long-method)
-      - 5 . [Long Parameter List](#long-parameter-list)
-      - 6 . [Data Clumps](#data-clumps)
+  - 1 . [Cohesion, Coupling and Interfaces](#cohesion-coupling-and-Interfaces)
+  - 2 . [Polymorphism; Inheritance and Composition](#polymorphism-inheritance-and-composition)
+  - 3 . [Classes, Data Structures, Encapsulation](#polymorphism-inheritance-and-composition)
+- 8 . [SOLID principles](#solid-principles)
+  - 1 . [Single-Responsibility-Principle (SRP)](#single-responsibility-principle-srp)
+  - 2 . [Open-Closed Principle (OCP)](#open-closed-principle-OCP)
+  - 3 . [Liskov Substitution Principle](#liskov-substitution-principle)
+  - 4 . [Interface Segregation Principle](#interface-segregation-principle)
+  - 5 . [Dependency Inversion Principle](#dependency-inversion-principle)
+- 8 .  [Code smells](#code-smells)
+    - 1 . [Bloaters](#bloaters)
+      - 1 . [Long method](#long-method)
+      - 2 . [Large class](#large-class)
+      - 3 . [Primitive Obsession](#long-method)
+      - 4 . [Long Parameter List](#long-parameter-list)
+      - 5 . [Data Clumps](#data-clumps)
     - 2 . [Object-Orientation Abusers](#object-orientation-abusers)
       - 1 . [Switch Statements](#switch-statements)
       - 2 . [Temporary Field](#temporary-field)
@@ -65,10 +73,11 @@ Safar Safarov</small>
       - 2 . [Inappropriate Intimacy](#inappropriate-intimacy)
       - 3 . [Message Chains](#message-chains)
       - 4 . [Middle Man](#middle-man)
-      - 5 . [Middle Man](#middle-man)
     - 6 . [Other smells](#incomplete-library-class)
       - 1 . [Incomplete Library Class](#incomplete-library-class)
 
+- 9 . [Refactoring techniques](#refactoring-techniques)
+  - 1 . 
 
   #### Further Learning Resource
 
@@ -79,6 +88,10 @@ Safar Safarov</small>
 ---
 
 <br/>
+
+
+
+
 
 # 1
 
