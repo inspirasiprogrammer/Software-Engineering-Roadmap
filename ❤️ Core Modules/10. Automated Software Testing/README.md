@@ -6,7 +6,9 @@ Kevin Ku</small>
 <div align="center">
 
 # **Automated Software Testing 🧪**
-#### Coming soon
+Learn the art of automated testing in its different forms, including unit testing, integration testing and system testing, and gain the practical ability to write solid clean tests for your product/software and to judge whether some tests are sufficient or not.
+
+
 <br>
 
 
@@ -23,11 +25,43 @@ Kevin Ku</small>
 
   - 1 . [Getting started](#getting-started)
   - 2 . [Learning Checklist ✅](#learning-checklist-)
-  #### Further Learning Resource
+  - 3 . [Manual vs. automated testing]()
+  - 4 . [Essential testing Glossary](#essential-testing-glossary)
+    - 1 . [Assertion](#assertion)
+    - 2 . [Monkey Patching](#monkey-patching)
+    - 3 . [Code Coverage](#code-coverage)
+    - 4 . [Spy](#spy)
+    - 5 . [Libraries](#Libraries)
+    - 6 . [Stub](#Stub)
+    - 7 . [Mocking](#mocking)
+    - 8 . [Test doubles](#test-doubles)
+    - 9 . [Testing frameworks](#testing-frameworks)
+    - 10 . [Pure functions](#pure-functions)
+  - 5 . [Why do i write tests?](#why-do-i-write-tests)
+  - 6 . [Why should i test?](#why-should-i-test)
+  - 7 . [Test-Driven Development (TDD)](#test-driven-development-TDD)
 
-  - 9 . [Articles 📰](#-articles-)
-  - 10 . [Books 📚](#-books-)
-  - 11 . [Courses 💻](#-courses-)
+  - 8 . [Static testing](#static-testing)
+  - 9 . [Unit testing](#unit-testing)
+  - 10 . [Integration testing](#integration-testing)
+  - 11 . [End to end testing](#end-to-end-testing)
+  - 12 . [UI Tests](#ui-tests)
+  ---
+  Further
+  
+  - 12 . [Black Box Testing](#black-box-testing)
+  - 13 . [white Box Testing](#white-box-testing)
+  - 14 . [Gray Box Testing](#gray-box-testing)
+  - 15 . [Differences between Black Box and White Box Testing](#white-box-testing)
+  - 16 . [Acceptance Testing](#acceptance-testing)
+  - 17 . [Performance Testing](#performance-testing)
+  - 18 . [Functional Testing](#functional-testing)
+  - 19 . [Mutation Testing](#mutation-testing)
+  #### Further Learning Resources
+
+  - 20 . [Articles 📰](#-articles-)
+  - 21 . [Books 📚](#-books-)
+  - 22 . [Courses 💻](#-courses-)
 
 ---
 
@@ -41,12 +75,34 @@ Kevin Ku</small>
   <summary>Let's first get to know why do we need this thing 🥸 | <b>Click to expand</b></summary>
 </br>
 
-### **Why do you need any of this**
+<div align="center">
+
+![](https://media.giphy.com/media/3pZhyDpeZRy46gsO9i/source.gif)
+
+  ## **What is Automated Software Testing**
+
+</div>
+
+<br>
 
 
 ---
 
+<br>
+
+## **What are we going to learn**:
+
+<details>
+<summary>A list of the things we're going to learn 🔥 | <b>Read more</b></summary>
+
+<br>
+
+
+
 </details>
+
+</details>
+
 <br/>
 <br/>
 <br/>
@@ -61,7 +117,7 @@ Kevin Ku</small>
 
 ---
 
-### **Algorithm analysis**
+
 
 
 
@@ -71,6 +127,9 @@ Kevin Ku</small>
 </details>
 
 
+<br>
+<br>
+<br>
 
 # 8
 
