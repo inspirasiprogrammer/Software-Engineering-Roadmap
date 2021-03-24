@@ -213,8 +213,8 @@ ___
 
   Some important categories of algorithms, from data structures point of view.
 
-  # | Details
-  ---|------
+  |# | Details|
+  |---|------|
   **Search** | Algorithm to search an item in a data structure.
   **Sort** | Algorithm to sort items in a certain order.
   **Insert** | Algorithm to insert item in a data structure.
@@ -240,27 +240,32 @@ ___
 
 </br>
 
+<details>
+<summary>Characteristics of an Algorithm | <b>Click to expand</b></summary>
+
+<br>
+
 Not all procedures can be called an algorithm. An algorithm should have the following characteristics.
 
 
-#     |  Details|
-------|-------|
-**Unambiguous** | Algorithm should be clear and unambiguous. Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.
-**Input** | An algorithm should have 0 or more well-defined inputs.
-**Output** | An algorithm should have 1 or more well-defined outputs, and should match the desired output.
-**Finiteness** | Algorithms must terminate after a finite number of steps.
+|No.     |  Details|
+|------|-------|
+**Unambiguous** | Algorithm should be clear and unambiguous.| Each of its steps (or phases), and their inputs/outputs should be clear and must lead to only one meaning.|
+**Input** | An algorithm should have 0 or more well-defined inputs.|
+**Output** | An algorithm should have 1 or more well-defined outputs, and should match the desired output.|
+**Finiteness** | Algorithms must terminate after a finite number of steps.|
 **Feasibility** | Should be feasible with the available resources
-**Independent** | An algorithm should have step-by-step directions, which should be independent of any programming code.
+**Independent** | An algorithm should have step-by-step directions, which should be independent of any programming code.|
 
 
 <br>
 
-<summary>Characteristics of an Algorithm explanation | <b>Click to expand</b></summary>
+
 
 <br>
 
 
-
+</details>
 
 ---
 
@@ -322,14 +327,12 @@ Not all procedures can be called an algorithm. An algorithm should have the foll
 
   1. We measure as a function of $n$, and ignore low order terms, and that's why we drop constants, which is the reason too why:
 
-     - $5n^3 + n$  − 6 becomes $n^3$
+     - 5n<sup>3</sup> + n  − 6 becomes n<sup>3</sup>
 
-     - $8n log n$  − $60n$ becomes $n log n$
-     - $2^n + 3n^4$  − becomes $2^n$
-      - because when we say $(O(log n), o(n), O(n2),  O(n3), O(2n), o(n!))$ we are not actually describing an individual graph, or a case that is based on a constant value, what we are really describing is a class of functions and behaviors, and that’s why these functions will have the same behaviour when we get a very large input 😉
+     - 8n log n  − <math>60n</math> becomes n log n
+     - 2<sup>n</sup> + 3n<sup>4</sup>  − becomes 2<sup>n</sup>
+      - because when we say (O(log n), o(n), O(n2),  O(n3), O(2n), o(n!)) we are not actually describing an individual graph, or a case that is based on a constant value, what we are really describing is a class of functions and behaviors, and that’s why these functions will have the same behaviour when we get a very large input 😉
   2. If the function is a product of several factors, any constants can be omitted.
-  3. 
-  4. 
 
 
 
@@ -376,7 +379,7 @@ Not all procedures can be called an algorithm. An algorithm should have the foll
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 
-- Time complexity of an algorithm represents the amount of time required by the algorithm to run to completion. Time requirements can be defined as a numerical function T(n), where T(n) can be measured as the number of steps, provided each step consumes constant time.
+Time complexity of an algorithm represents the amount of time required by the algorithm to run to completion. Time requirements can be defined as a numerical function T(n), where T(n) can be measured as the number of steps, provided each step consumes constant time.
 
   - For example, addition of two n-bit integers takes n steps. Consequently, the total computational time is T(n) = c ∗ n, where c is the time taken for the addition of two bits. Here, we observe that T(n) grows linearly as the input size increases.
 
@@ -414,7 +417,7 @@ Is a Machine-indepdendent algorithm design  depends upon a hypothetical computer
 
 
 ### **Space complexity and Auxiliary Space**:
-<details open>
+<details>
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 
@@ -726,7 +729,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 ## **Searching Algorithms**:
 
-<details>
+<details open>
 <summary>Searching Algorithms explanation & examples</summary>
 
 <div align="center">
@@ -1745,7 +1748,7 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 ## **Sorting Algorithms**:
 
-<details>
+<details open>
 <summary>Sorting Algorithms explanation and examples</summary>
 <br>
 
