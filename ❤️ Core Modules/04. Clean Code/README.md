@@ -6,7 +6,9 @@ Safar Safarov</small>
 <div align="center">
 
 # **Clean Code 🧼**
-#### Coming soon
+#### Learn how to write clean readable, understandable and scalable code that any developer can read, maintain and change easily.
+
+
 <br>
 
 
@@ -98,11 +100,111 @@ Safar Safarov</small>
 ## **Getting started**
 
 <details open>
-  <summary>Let's first get to know why do we need this thing 🥸 | <b>Click to expand</b></summary>
+  <summary>Let's first get to know What Clean Code is | <b>Click to expand</b></summary>
 </br>
 
-### **Why do you need any of this**
+  <div align="center">
 
+  ![](https://media.giphy.com/media/FHEjBpiqMwSuA/giphy.gif)
+  
+  <br>
+
+  ## **What's a Clean Code?**
+  
+  </div>
+
+  Clean Code is a readable, understandable and scalable code that any developer other than the original author can read, maintain and change easily, a code that can be adapted to changing requirements and with understandability comes readability, changeability, extensibility and maintainability.
+
+  ---
+
+  and of the things that a Clean Code is certinaly not is not a code that (**just works**)
+  and Martin Fowler describes clean code in one of the places:
+
+  > Any fool can write code that a computer can understand. Good programmers write code that humans can understand. (<small>Martin Fowler</small>)
+
+  <br>
+
+---
+
+<br> 
+
+## **Characteristics of a Clean code:**
+
+<br>
+
+<details>
+<summary>What are the Characteristics of a Clean code? | <b>Read more</b></summary>
+
+#### 1. It should be elegant readable and meaningful
+   -  Clean code should be pleasing to read. Reading it should make you smile the way a well-crafted music box or well-designed car would.
+
+#### 2. Should avoid unintiuitive names, complex nesting, and big code blocks.
+  
+#### 3. Clean code is focused
+   -  Each function, each class, each module exposes a single-minded attitude that remains entirely undistracted, and unpolluted, by the surrounding details.
+#### 4. Clean code is taken care of.
+   - Someone has taken the time to keep it simple and orderly. They have paid appropriate attention to details. They have cared.
+
+#### 5. Runs all the tests
+   - You know your code is dirty when only 95% of your tests passed. You know you’re screwed when you test coverage is 0%.
+
+#### 6. Clean code is easier and cheaper to maintain!
+
+
+#### 7. Contains no duplication and reduces cognitive load
+   - Each time you have to make a change in a duplicate code, you have to remember to make the same change to every instance. This increases the cognitive load and slows down the progress, so Minimize the number of entities such as classes, methods, functions, and the like.
+
+#### 8. Minimize the number of entities such as classes, methods, functions, and the like.
+  - Less code is less stuff to keep in your head. Less code is less maintenance. Less code is fewer bugs. Code is liability, keep it short and simple.
+
+
+#### 9. Should follow common best practices and patterns.
+
+</details>
+
+---
+
+<br>
+
+## **What's not a Clean code**
+
+a code that grows more and more disorganized as it is changed over time, leading to slower and slower development,
+and that's why it's crucial to master how to write Clean Code as a Software engineer.
+
+---
+
+<br>
+
+## **What are we going to learn**:
+
+<details>
+<summary>A list of the things we're going to learn 🔥 | <b>Read more</b></summary>
+
+<br>
+
+- Modularity
+- Single Responsibility Principle (SRP)
+- Interfaces in general, characteristics of clean interfaces
+- YAGNI (You Ain't Gonna Need It)
+- Principle of least astonishment
+- Good identifier names
+- Good functions: size, arguments, return values
+- Error handling and exceptions
+- Appropriate use of data types
+- How to recognize and write high-quality data structures, classes, and interfaces, leveraging the following concepts as appropriate:
+  - Encapsulation and information hiding
+  - Internal cohesion and external coupling
+  - Inheritance and composition
+  - Dependency inversion
+
+- SOLID Principles
+- how to practically write code that has high quality
+- how to recognize potential quality issues (“bad smells”)
+- how to improve code quality by refactoring
+- knowledge and are able to use it in practice.
+
+
+</details>
 
 ---
 
@@ -136,8 +238,7 @@ ___
 
 Article           | Provider (Platform) | Used as reference|
 --------------------- | -------------- | -------|
-
-
+[Clean code](https://refactoring.guru/refactoring/what-is-refactoring) | refactoring.guru | Yes ❤️
 ___
 <br/><br/><br/>
 
@@ -149,6 +250,7 @@ ___
 Book name           | Provider (Platform) | Duration| Skill level |  Cost
 --------------------- | -------------- | -------- | ---------- | -----
 [Refactoring: Improving the Design of Existing Code](https://www.amazon.com/Refactoring-Improving-Existing-Addison-wesley-Signature/dp/0134757599/) | Amazon | 448 pages | Beginner | Hardcover $44.46 |
+[Clean Code: A Handbook of Agile Software Craftsmanship](https://www.amazon.de/-/en/Robert-Martin/dp/0132350882) | oreilly | 464 pages | Beginner | Paperback $32.46 |
 ___
 
 <br/> 
