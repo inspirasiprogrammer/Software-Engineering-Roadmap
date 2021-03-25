@@ -6,7 +6,7 @@ Safar Safarov</small>
 <div align="center">
 
 # **Clean Code 🧼**
-#### Learn how to write clean readable, understandable and scalable code that any developer can read, maintain and change easily.
+#### Learn how to write clean readable, understandable and scalable code that any developer can read, maintain and change easily 🍀
 
 
 <br>
@@ -28,25 +28,26 @@ Safar Safarov</small>
 
 - 2 . [Learning Checklist ✅](#learning-checklist-)
 
-- 3 . [Naming Variables, Constant, Functions Classes & More](#naming-variables,-constant-functions,-classes-&-more)
+- 3 . [Characteristics of a Clean code](#characteristics-of-a-clean-code)
+- 4 . [Naming Variables, Constant, Functions Classes & More](#naming-variables,-constant-functions,-classes-&-more)
 
-- 4 . [Code Structure, Comments & Formatting](#code-structure,-comments-&-formatting)
+- 5 . [Code Structure, Comments & Formatting](#code-structure,-comments-&-formatting)
 
-- 5 . [Functions & Methods](#functions-and-methods)
+- 6 . [Functions & Methods](#functions-and-methods)
 
-- 6 . [Control Structures & Errors](#control-structures-&-errors-handling)
+- 7 . [Control Structures & Errors](#control-structures-&-errors-handling)
 
-- 7 . [Objects, Classes & Data Containers / Structures](#Objects,-classes-&-data-containers-/-structures)
+- 8 . [Objects, Classes & Data Containers / Structures](#Objects,-classes-&-data-containers-/-structures)
   - 1 . [Cohesion, Coupling and Interfaces](#cohesion-coupling-and-Interfaces)
   - 2 . [Polymorphism; Inheritance and Composition](#polymorphism-inheritance-and-composition)
   - 3 . [Classes, Data Structures, Encapsulation](#polymorphism-inheritance-and-composition)
-- 8 . [SOLID principles](#solid-principles)
+- 9 . [SOLID principles](#solid-principles)
   - 1 . [Single-Responsibility-Principle (SRP)](#single-responsibility-principle-srp)
   - 2 . [Open-Closed Principle (OCP)](#open-closed-principle-OCP)
   - 3 . [Liskov Substitution Principle](#liskov-substitution-principle)
   - 4 . [Interface Segregation Principle](#interface-segregation-principle)
   - 5 . [Dependency Inversion Principle](#dependency-inversion-principle)
-- 8 .  [Code smells](#code-smells)
+- 10 .  [Code smells](#code-smells)
     - 1 . [Bloaters](#bloaters)
       - 1 . [Long method](#long-method)
       - 2 . [Large class](#large-class)
@@ -78,17 +79,20 @@ Safar Safarov</small>
     - 6 . [Other smells](#incomplete-library-class)
       - 1 . [Incomplete Library Class](#incomplete-library-class)
 
-- 9 . [Refactoring techniques](#refactoring-techniques)
+- 11 . [Refactoring techniques](#refactoring-techniques)
   - 1 . 
 
-  #### Further Learning Resource
+#### Further Learning Resource
 
-  - 9 . [Articles 📰](#-articles-)
-  - 10 . [Books 📚](#-books-)
-  - 11 . [Courses 💻](#-courses-)
+- 12 . [Articles 📰](#-articles-)
+
+- 13 . [Books 📚](#-books-)
+- 14 . [Courses 💻](#-courses-)
 
 ---
 
+<br/>
+<br/>
 <br/>
 
 
@@ -99,7 +103,7 @@ Safar Safarov</small>
 
 ## **Getting started**
 
-<details open>
+<details >
   <summary>Let's first get to know What Clean Code is | <b>Click to expand</b></summary>
 </br>
 
@@ -118,23 +122,94 @@ Safar Safarov</small>
   ---
 
   and of the things that a Clean Code is certinaly not is not a code that (**just works**)
-  and Martin Fowler describes clean code in one of the places:
+  and Martin Fowler & Uncle Bob describes clean code in one of the places:
 
   > Any fool can write code that a computer can understand. Good programmers write code that humans can understand. (<small>Martin Fowler</small>)
 
+  >What derives us to make the mess in the first place in software development is (The desire to go fast) (<small>Uncle Bob</small>)
   <br>
 
 ---
 
-<br> 
+<br>
 
-## **Characteristics of a Clean code:**
+## **What's not a Clean code**
+
+a code that grows more and more disorganized as it is changed over time, leading to slower and slower development,
+and that's why it's crucial to master how to write Clean Code as a Software engineer.
+
+---
 
 <br>
 
-<details>
-<summary>What are the Characteristics of a Clean code? | <b>Read more</b></summary>
 
+</details>
+<br/>
+<br/>
+<br/>
+
+# 2
+## **Learning Checklist ✅**
+
+<details>
+  <summary>A handy checklist to keep track of your progress, and know when you master your Clean code path 💈. <b>Click to expand</b></summary>
+</br>
+
+A list of the things we're going to learn 🔥
+
+- [ ]  Modularity
+- [ ]  SOLID Principles
+- [ ]  Interfaces in general, characteristics of clean interfaces
+- [ ]  YAGNI (You Ain't Gonna Need It)
+- [ ]  Principle of least astonishment
+
+Characteristics of high-quality code:
+
+- [ ]  Good identifier names
+- [ ]  Good functions: size, arguments, return values
+- [ ]  Error handling and exceptions
+- [ ]  Appropriate use of data types
+
+How to recognize and write high-quality data structures, classes, and interfaces, leveraging the following concepts as appropriate:
+  - [ ]  Encapsulation and information hiding
+  - [ ]  Internal cohesion and external coupling
+  - [ ]  Inheritance and composition
+  - [ ]  Dependency inversion
+
+Mastering:
+- [ ]  know the characteristics of high-quality code
+- [ ]  how to practically write code that has high quality
+- [ ]  how to recognize potential quality issues (“bad smells”)
+- [ ]  how to improve code quality by refactoring
+- [ ]  knowledge and are able to use it in practice.
+
+
+
+
+---
+
+
+
+</details>
+
+<br/>
+<br/>
+<br/>
+
+
+# 3
+## **Characteristics of a Clean code**:
+
+</br>
+
+<details>
+<summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
+
+<br>
+
+Aside from all the steps and to summerize (Treat your code like an essay an you are it's author) and that's what is going to lean to building a readable and understable code 😉
+
+  ---
 #### 1. It should be elegant readable and meaningful
    -  Clean code should be pleasing to read. Reading it should make you smile the way a well-crafted music box or well-designed car would.
 
@@ -160,72 +235,255 @@ Safar Safarov</small>
 
 #### 9. Should follow common best practices and patterns.
 
-</details>
-
----
 
 <br>
 
-## **What's not a Clean code**
 
-a code that grows more and more disorganized as it is changed over time, leading to slower and slower development,
-and that's why it's crucial to master how to write Clean Code as a Software engineer.
-
----
 
 <br>
-
-## **What are we going to learn**:
-
-<details>
-<summary>A list of the things we're going to learn 🔥 | <b>Read more</b></summary>
-
-<br>
-
-- Modularity
-- Single Responsibility Principle (SRP)
-- Interfaces in general, characteristics of clean interfaces
-- YAGNI (You Ain't Gonna Need It)
-- Principle of least astonishment
-- Good identifier names
-- Good functions: size, arguments, return values
-- Error handling and exceptions
-- Appropriate use of data types
-- How to recognize and write high-quality data structures, classes, and interfaces, leveraging the following concepts as appropriate:
-  - Encapsulation and information hiding
-  - Internal cohesion and external coupling
-  - Inheritance and composition
-  - Dependency inversion
-
-- SOLID Principles
-- how to practically write code that has high quality
-- how to recognize potential quality issues (“bad smells”)
-- how to improve code quality by refactoring
-- knowledge and are able to use it in practice.
 
 
 </details>
 
 ---
 
-</details>
-<br/>
 <br/>
 <br/>
 
-# 2
-## **Learning Checklist ✅**
 
-<details open>
-  <summary>A handy checklist to keep track of your progress, and know when you master your Clean code advancement path 💈. <b>Click to expand</b></summary>
+<br/>
+
+
+
+# 4
+## **Naming Variables, Constant, Functions Classes & More**:
+
 </br>
 
+<details>
+<summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
 
----
+<br>
 
+
+<br>
+
+
+
+<br>
 
 
 </details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+# 5
+## **Code Structure, Comments & Formatting**:
+
+</br>
+
+<details>
+<summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
+
+<br>
+
+
+<br>
+
+
+
+<br>
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
+# 6
+## **Functions & Methods**:
+
+</br>
+
+<details>
+<summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
+
+<br>
+
+
+<br>
+
+
+
+<br>
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
+# 7
+## **Control Structures & Errors**:
+
+</br>
+
+<details>
+<summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
+
+<br>
+
+
+<br>
+
+
+
+<br>
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
+
+# 8
+## **Objects, Classes & Data Containers / Structures**:
+
+</br>
+
+<details>
+<summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
+
+<br>
+
+
+### **Cohesion, Coupling and Interfaces**:
+
+<details>
+<summary>Cohesion, Coupling and Interfaces | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+### **Polymorphism; Inheritance and Composition**:
+
+<details>
+<summary>Polymorphism; Inheritance and Composition | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+### **Classes, Data Structures, Encapsulation**:
+
+<details>
+<summary>Classes, Data Structures, Encapsulation | <b>Click to expand</b></summary>
+
+</details>
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
+
+
+# 9
+## **SOLID principles**:
+
+</br>
+
+<details >
+<summary>Everything you need to know to master SOLID principles | <b>Click to expand</b></summary>
+
+<br>
+
+
+### **Single-Responsibility-Principle (SRP)**:
+
+<details>
+<summary>Single-Responsibility-Principle (SRP) | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+### **Open-Closed Principle (OCP)**:
+
+<details>
+<summary>Open-Closed Principle (OCP) | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+### **Liskov Substitution Principle**:
+
+<details>
+<summary>Liskov Substitution Principle | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+### **Interface Segregation Principle**:
+
+<details>
+<summary>Interface Segregation Principle | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+### **Dependency Inversion Principle**:
+
+<details>
+<summary>Dependency Inversion Principle | <b>Click to expand</b></summary>
+
+</details>
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
 
 
 
