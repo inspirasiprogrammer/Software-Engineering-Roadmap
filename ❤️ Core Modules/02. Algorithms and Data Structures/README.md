@@ -34,19 +34,26 @@
       - 2 . [Omega notation (Ω)](#omega-notation-ω)
       - 3 . [Theta notation (Θ)](#theta-notation-θ)
       - 4 . [Differences between Big-O, Big-Ω and Big-Θ](#differences-between-big-O,-big-Ω-and-big-Θ)
-    - 4 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
-    - 5 . [Searching Algorithms](#searching-algorithms)
+      - 5 . [Best, Worst, Average Case](#best,-worst,-average-case)
+        - [Adding Functions](#adding-functions)
+        - [Multiplying Functions](#multiplying-functions)
+        - [Properties of Logarithm](#properties-of-logarithm)
+        - [Dominance Pecking Order](#dominance-pecking-order)
+        - [Same Time Complexity](#same-time-complexity)
+    - 4 . [Master Theorem](#algorithm-design-strategies--techniques)
+    - 5 . [Algorithm Design Techniques & Strategies](#master-theorem)
+    - 6 . [Searching Algorithms](#searching-algorithms)
       - 1 . [Linear Search](#linear-search)
       - 2 . [Binary Search](#binary-search)
       - 3 . [Jump Search](#jump-search)
       - 4 . [A* search algorithm](#a*-search-algorithm)
       - 5 . [Ternary search](#ternary-search)
       - 6 . [Exponential search](#exponential-search)
-    - 6 . [Recursion (Recursive Algorithms)](#recursion-recursive-algorithms)
+    - 7 . [Recursion (Recursive Algorithms)](#recursion-recursive-algorithms)
       - 1 . [Differences between Recursion and Iteration](#differences-between-recursion-and-iteration)
       - 2 . [Base case](#base-case) exit condition (when do you stop recursing)
       - 3 . [General (recursive) case](#general-recursive-case) (Recurse)
-    - 7 . [Sorting Algorithms](#sorting-algorithms)
+    - 8 . [Sorting Algorithms](#sorting-algorithms)
       - 1 . [Bubble Sort](#bubble-sort)  
       - 2 . [Selection Sort](#selection-sort)  
       - 3 . [Insertion Sort](#insertion-sort)  
@@ -55,15 +62,15 @@
       - 6 . [Counting Sort](#counting-sort)  
       - 7 . [Radix Sort](#radix-sort)  
       - 8 . [Bucket Sort](#bucket-sort)  
-    - 8 . [Graph Algorithms](#graph-algorithms)
+    - 9 . [Graph Algorithms](#graph-algorithms)
       - 1 . [Breadth-first search](#breadth-first-search)
       - 2 . [Depth-first search](#depth-first-search)
       - 3 . [Dijkstra’s shortest path algorithm]()
       - 4 . [Bellman–Ford algorithm](#bellman–ford-algorithm)
-    - 9 . [Greedy Algorithms](#greedy-algorithms)
-    - 10 . [Divide and Conquer](#divide-and-conquer)
-    - 11 . [Dynamic Programming](#dynamic-programming)
-    - 12 . [Backtracking](#backtracking)
+    - 10 . [Greedy Algorithms](#greedy-algorithms)
+    - 11 . [Divide and Conquer](#divide-and-conquer)
+    - 12 . [Dynamic Programming](#dynamic-programming)
+    - 13 . [Backtracking](#backtracking)
   - ## 4 . [Data structres](#data-structres)
     - 1  . [What are Data structres?](#what-are-data-structres?)
     - 2  . [Logarithm](#logarithm)
@@ -103,14 +110,43 @@
 
 ## **Getting started**
 
-<details>
+<details open>
   <summary>Let's first get to know why do we need this thing 🥸 | <b>Click to expand</b></summary>
 </br>
 
-### **Why do you need any of this**
+  <div align="center">
+
+  ![](https://media.giphy.com/media/3o7btPCcdNniyf0ArS/giphy.gif)
+  
+  <br>
+
+  ## **What are Data structres and Algorithms?**
+  
+  </div>
+
+  A computer program is a collection of instructions to perform a specific task. For this, a computer program may need to store data, retrieve data, and perform computations on the data.
+
+  A data structure is a named location that can be used to store and organize data. And, an algorithm is a collection of steps to solve a particular problem. Learning data structures and algorithms allow us to write efficient and optimized computer programs. [Source](https://www.programiz.com/dsa)
+
+  and the differences between them are that a Data Structure is about organising and managing data effectively such that we can perform specific operation efficiently, while an Algorithm is a step-by-step procedure to be followed to reach the desired output. ... Steps in an algorithm can use one or many data structure(s) to solve a problem.
+
+
+
+  ---
+
+  Algorithms and Data structures go through solutions to standard problems in detail and give you an insight into how efficient it is to use each one of them, and help in understanding the nature of the problem at a deeper level and that's why it's very crucial to master them as a Software Engineer.
+
+  and eventually:
+  > it's all about data, and the most efficent way to play with this data 😉
+
+  <div align="center">
+  Pumped enough! let's get started!
+  </div>
+
 
 
 ---
+
 
 </details>
 <br/>
@@ -131,13 +167,30 @@
 </br>
 
 ### **Algorithms**:
-Show that you:
+Show that you know:
+
 - [ ]  Know how to analyze algorithms
-- [ ]  Know what is algorithm time complexity
+- [ ] A detailed description of the algorithm
+    - [ ] Goal of the algorithm
+    - [ ] Termination condition
+    - [ ] Criteria for determining that the algorithm is correct
+    - [ ] Explanation of the steps of the algorithm
+- [ ] A specific example illustrating how the algorithm works
+- [ ] Detailed calculation of the time complexities, including best, worst and average cases
+- [ ] Pseudo-code for complex algorithms (this excludes simple searching and sorting algorithms)
 - [ ]  Applied these concepts to searching and sorting algorithms
 
 ### **Data structures**:
 For each of the data structures listed below, you have to understand their functionality, including common operations and their time complexities; what are their strengths and their limitations and, finally, how they are used in real-world scenarios.
+
+When describing a data structure make sure your analysis includes the following points
+
+- [ ] How does the data structure organize and manipulate data?
+- [ ] What operations can you do on it and what are their time complexities and why?
+- [ ] What operations can you do on it and what are their time complexities and why?
+- [ ] Applications
+  
+  ---
 
 - [ ]  Arrays
   - [ ] Traversing, Searching, Insertion, Deletion, Size
@@ -256,6 +309,7 @@ Not all procedures can be called an algorithm. An algorithm should have the foll
 **Finiteness** | Algorithms must terminate after a finite number of steps.|
 **Feasibility** | Should be feasible with the available resources
 **Independent** | An algorithm should have step-by-step directions, which should be independent of any programming code.|
+**Correctness** | Every step of the algorithm must generate a correct output.|
 
 
 <br>
@@ -542,7 +596,7 @@ However just because you have n calls total doesn’t mean it takes O(n) space.
 
 <br>
 
-<details>
+<details open>
 <summary>Asymptotic mathematical Notations <b> | Click to expand</b></summary>
 
 <br>
@@ -705,6 +759,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 
 
+
 # 3.3
 
 ## **Algorithm design strategies & Techniques**:
@@ -725,7 +780,28 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 
 
+
 # 3.4
+
+## **Algorithm design strategies & Techniques**:
+
+<details>
+  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
+</br>
+
+</details>
+<br/>
+
+---
+
+<br/>
+<br/>
+<br/>
+<br/>
+
+
+
+# 3.5
 
 ## **Searching Algorithms**:
 
@@ -3223,11 +3299,34 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 ![](https://media.giphy.com/media/2UqWA20weXLPRQW5xQ/giphy.gif)
 ---
 </div>
- <h2>Data structres</h2> 
+ <h2><b>Data structres</b></h2> 
+
+A data structure is a named location that can be used to store and organize data. And, an algorithm is a collection of steps to solve a particular problem. Learning data structures and algorithms allow us to write efficient and optimized computer programs. 
 
 
+- Anything that can store data can be called as a data structure, hence Integer, Float, Boolean, Char etc, all are data structures. They are known as Primitive Data Structures.
 
->a process, step-by-step procedure or set of rules to be followed in calculations or other problem-solving operations to be executed in a certain order to get the desired output, especially by a computer, and those can be simple processes, such as multiplying two numbers, or a complex operation, such as playing  compressed video file. or a Search engine that uses proprietary algorithms to display the most relevant results from its search index for specific queries.
+- We also have some complex Data Structures, which are used to store large and connected data. Some example of Abstract Data Structure are :
+
+  - Linked List
+  - Tree
+  - Graph
+  - Stack, Queue etc.
+
+
+All these data structures allow us to perform different operations on data. We select these data structures based on which type of operation is required. We will look into these data structures in more details in our later lessons.
+
+
+Data structures can also be classified on the basis of the following characteristics:
+
+|Characterstic |	Description|
+---------------|--------------|
+|Linear	| In Linear data structures,the data items are arranged in a linear sequence. Example: Array
+|Non-Linear	| In Non-Linear data structures,the data items are not in sequence. Example: Tree, Graph
+|Homogeneous	| In homogeneous data structures,all the elements are of same type. Example: Array
+|Non-Homogeneous |	In Non-Homogeneous data structure, the elements may or may not be of the same type. Example: Structures
+|Static	| Static data structures are those whose sizes and structures associated memory locations are fixed, at compile time. Example: Array
+|Dynamic |	Dynamic structures are those which expands or shrinks depending upon the program need and its execution. Also, their associated memory locations changes. Example: Linked List created using pointers
 
 
 **<small>Cambridge dictionary/ Oxford Languages</small>**
@@ -3238,20 +3337,20 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 <br>
 
-- **What:** Algorithms are a part of daily life actions, and those daily actions and everything we do is the simplest form to represent what an Algorithm is, e.g Finding you car in a parking lot , cleaning your Apartment, reading a book.
+- **What:** 
   
   ---
 
 
 
-- **Applications**: The real power of Algorithms come in form of Digital tools, Softwares or small computer programs like, Compression algorithms in a 3D video game or Searching algorithms in Google Search engine, or sorting algorithms to sort Amazon's products based on their ratings and all the other services and digital tools that you use on daily bases.
+- **Applications**: 
 
 ___
 
-- **Efficiency**: Not all algorithms are created equal, and the tricky part of an Algorithm is that there are plenty of algorithms that solve the same problem at the end, but one of them is the most efficint one to use in that spesific problem case, so to know which solution to choose and to be able to compare them, these Algorithms most be analyzed, and before before analyuzing there an important thing that you need to know what makes a good algorithm is the two most important criteria which are that it solves a problem and it does so efficintly.
+- **Efficiency**: 
 
     ---
-- **Measuring Efficiency**: so the way we measure the effecincy of an algorithm is through using a scientific mathematical technique called **```Asymptotic analysis```**, which allows algorithms to be compared independently of a particular programming language or hardware, which will next tell us that some algorithms are  more efficient than others.
+- **Measuring Efficiency**: 
 
 
 </details>
