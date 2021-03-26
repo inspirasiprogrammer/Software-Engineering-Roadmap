@@ -82,12 +82,15 @@ Safar Safarov</small>
 - 11 . [Refactoring techniques](#refactoring-techniques)
   - 1 . 
 
+- 12 . [Talks about Clean Code](#talks-about-clean-code)
+  - [Uncle Bob](#uncle-bob)
+    - [Clean Code - Uncle Bob / Lesson 1](#clean-code-uncle-bob-/-lesson-1)
 #### Further Learning Resource
 
-- 12 . [Articles 📰](#-articles-)
+- 13 . [Articles 📰](#-articles-)
 
-- 13 . [Books 📚](#-books-)
-- 14 . [Courses 💻](#-courses-)
+- 14 . [Books 📚](#-books-)
+- 15 . [Courses 💻](#-courses-)
 
 ---
 
@@ -507,6 +510,81 @@ Aside from all the steps and to summerize (Treat your code like an essay an you 
 <br/>
 
 
+# 12
+## **Talks about Clean Code**:
+
+</br>
+
+<details >
+<summary>Talks about Clean Code summarized 🎁 | <b>Click to expand</b></summary>
+
+<br>
+
+
+## **Uncle Bob**
+<details>
+<summary>Uncle Bob's talks</summary>
+
+<br>
+
+  <details>
+    <summary>Clean Code - Uncle Bob / Lesson 1</summary>
+
+  <br>
+
+  </details>
+
+
+  <details>
+    <summary>Clean Code - Uncle Bob / Lesson 2</summary>
+
+  <br>
+
+  </details>
+
+
+  <details>
+    <summary>Clean Code - Uncle Bob / Lesson 3</summary>
+
+  <br>
+
+  </details>
+
+
+  <details>
+    <summary>Clean Code - Uncle Bob / Lesson 4</summary>
+
+  <br>
+
+  </details>
+
+
+  <details>
+    <summary>Clean Code - Uncle Bob / Lesson 5</summary>
+
+  <br>
+
+  </details>
+
+
+
+
+
+</details>
+
+
+<br>
+
+
+</details>
+
+---
+
+<br/>
+<br/>
+<br/>
+
+
 
 
 
@@ -566,5 +644,6 @@ Course name           | Provider (Platform) | Duration| Skill level | Course Cos
 >
 Title | Description
 ------------ | -------------
--- | --
+[Clean Code - Uncle Bob / Lesson 1](https://www.youtube.com/watch?v=7EmboKQH8lM) | "Coding Better World Together" is a set of master lessons from the famous Uncle Bob (Robert Cecil Martin), where he gives us a broad vision of the importance and future of Software in today's society.
+
 ---
