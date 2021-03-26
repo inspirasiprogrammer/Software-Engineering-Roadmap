@@ -103,13 +103,16 @@ Safar Safarov</small>
 
 ## **Getting started**
 
-<details >
+<details>
   <summary>Let's first get to know What Clean Code is | <b>Click to expand</b></summary>
 </br>
 
   <div align="center">
 
-  ![](https://media.giphy.com/media/FHEjBpiqMwSuA/giphy.gif)
+  ![](assets/images/CleanCode.jpeg)
+
+  <small>Let’s Clean that Code
+ / Source <a href="https://blog.knoldus.com/keep-your-code-clean/">Knoldus</a></small>
   
   <br>
 
@@ -137,6 +140,16 @@ Safar Safarov</small>
 
 a code that grows more and more disorganized as it is changed over time, leading to slower and slower development,
 and that's why it's crucial to master how to write Clean Code as a Software engineer.
+
+
+<br>
+
+![](assets/images/wtf_minute.jpeg)
+
+<div align="center">
+
+<small>Let’s Clean that Code/ Source<a href="https://blog.knoldus.com/keep-your-code-clean/">Knoldus</a></small>
+</div>
 
 ---
 
@@ -205,6 +218,16 @@ Mastering:
 <details>
 <summary>Characteristics of a Clean code | <b>Click to expand</b></summary>
 
+<br>
+
+![Let’s Clean that Code](assets/images/clean_code_analysis.jpg)
+
+<div align="center">
+
+<small>Let’s Clean that Code
+ / Source <a href="https://blog.knoldus.com/keep-your-code-clean/">Knoldues</a></small>
+
+</div>
 <br>
 
 Aside from all the steps and to summerize (Treat your code like an essay an you are it's author) and that's what is going to lean to building a readable and understable code 😉
