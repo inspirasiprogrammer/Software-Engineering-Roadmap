@@ -214,18 +214,28 @@ When describing a data structure make sure your analysis includes the following 
 
 
 
-<div align="center">
+
 
 # 3
 
 ## **Algorithms Applications & theory**
 
+
 <br>
 
+<details>
+
+<summary>Algorithms Applications & theory | <b>Click to expand</b></summary>
+<br>
+
+<div align="center">
 
 ![](https://media.giphy.com/media/6wa5vuYvetU1Jibm13/source.gif)
----
+
 </div>
+
+---
+
  <h2>Algorithm</h2> 
 
 noun, UK  /ˈæl.ɡə.rɪ.ðəm/ US  /ˈæl.ɡə.rɪ.ðəm/
@@ -274,6 +284,8 @@ ___
   **Update** | Algorithm to update an existing item in a data structure.
   **Delete** | Algorithm to delete an existing item from a data structure.
 
+
+</details>
 
 </details>
 
@@ -332,6 +344,7 @@ Not all procedures can be called an algorithm. An algorithm should have the foll
 ## **Asymptotic Analysis**:
 
 </br>
+
 
 **Asymptotic analysis** of an algorithm refers to defining the mathematical boundation/framing of its run-time performance. 
 
@@ -397,7 +410,7 @@ Not all procedures can be called an algorithm. An algorithm should have the foll
   
 ---
 
-  ```Insertion Sort:``` $2 * n^2$  | ```Merge Sort:``` $50 * n * log(n)$
+  ```Insertion Sort:``` 2 * n<sup>2</sup>  | ```Merge Sort:``` 50 * n * log(n)
     
   ---
 
@@ -471,7 +484,7 @@ Is a Machine-indepdendent algorithm design  depends upon a hypothetical computer
 
 
 ### **Space complexity and Auxiliary Space**:
-<details>
+<details >
   <summary>What time complexity is? | <b>Click to expand</b></summary>
 </br>
 
@@ -509,16 +522,40 @@ Whenever a solution to a problem is written some memory is required to complete.
 
   Example #1:
 
+  We can use the RAM model to determine the number of steps it will take an algorithm to end with an input we choose, but estimating the worst, average, and best case runtime scenerio with the RAM model can be unconvenint.
+
+
+
   ```python
-  def print_items(array):
-    for item in array:
-      print(item)
-    return True
+  def even_numbers_avg(array):
+    '''
+    This function returns either the average of the 
+    sum of even numbers, or None.
+    '''
+    even_sum = 0           #1 time step
+    even_count = 0         #1 time step
+                  #n times:
+    for n in array:           #1 time step
+        if n % 2 == 0:        #1 time step
+            even_sum += n         #1 time step
+            even_count +=1        #1 time step
+            
+    if even_count > 0:              #1 time step
+        return even_sum/even_count     #1 time step
+    else:                           #1 time step
+        return None                    #1 time step
   ```
-  - The function runs through every item in the list once for an array with length n it runs n times
+  - In the example above, we can try to generalize the time complexity of this algorithm by counting every step, and we will find that in the worst case its time complexity will be:  
+  T(n) = 5n + 6
+  - Its space complexity will be the size of the array n, plus the two variables we initialize.
+  - The problem with the notation we used above is that is difficult to work precisely with it. In the example above we can see that both return statements have been counted as well as every step in the for loop, which is correct for the worst but not for the average and best case scenarios.
+  - Since we can approximate an algorithm to a mathematical function, we can also determine its growth as a function of the input and define an upper bound function (Big O), a lower bound function (Big Ω), or both (Big Θ) in order to understand how it grows.
+  - In Asymptotic Notation, we only consider the fastest growing term without any multiplicative constant. E.g.: in the example above 
+   
+    **T(n) = 5n + 6 is O(n)** and not **O(5n)**
   - Constant terms (e.g. returning or printing some value) are ignored
-    - (constant terms can make a difference if the compared algorithms have the same running time)
-  - Time complexity of Θ(𝑛)
+    - (constant terms can make a difference if the compared algorithms have the same running time) an that's why In Asymptotic Notation, we only consider the fastest growing term without any multiplicative constant. E.g.: in the example above **T(n) = 5n + 6** is **O(n)** and not **O(5n)**
+
   - Space complexity
     - the array takes n units of space, as the length can vary
     - the item variable is constant as the new item will be saved and the old item will be discarded
@@ -596,7 +633,7 @@ However just because you have n calls total doesn’t mean it takes O(n) space.
 
 <br>
 
-<details open>
+<details>
 <summary>Asymptotic mathematical Notations <b> | Click to expand</b></summary>
 
 <br>
@@ -610,6 +647,32 @@ However just because you have n calls total doesn’t mean it takes O(n) space.
 2. But, when the input array is in reverse condition, the algorithm takes the maximum time (**quadratic**) to sort the elements i.e. the worst case.
 
 3. When the input array is neither sorted nor in reverse order, then it takes average time. These durations are denoted using asymptotic notations.
+
+  ---
+
+  ### **Order of Dominance in the Asymptotic Limit**
+
+  some common asymptotic growths, valid for both space and time complexity:
+
+ - Constant: O(1)
+ - Logarithmic: O(log(n))
+ - Linear: O(n)
+ - Quasilinear: O(n⋅log(n))
+ - Quadratic: O(n2)
+ - Exponential: O(2n)
+ - Factorial: O(n!)
+
+To understand the difference between some of the most common time complexities, take a look at thi graph below, were the x-axys represents the size of the input of the functions and the y-axys represents the result of the functions.
+
+![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
+
+<div align="center">
+<b>n! >> 2n >> n2 >> n⋅logn >> n >> log(n) >> 1</b>
+</div>
+
+It is also clear that an efficient algorithm can really make the difference in terms of time and space efficiency, especially as the input size grows.
+
+
 
   ---
 <br>
@@ -641,11 +704,12 @@ characters.
 
 <br>
 
-  ![progra](assets/images/asymptotic_notation/big_o/big-o.svg)
-
   <div align="center">
-    <small>Big-O giving the upper bound of a function
-  | Image source / <a href="https://cdn.programiz.com/sites/tutorial2program/files/big0.png">Programiz</a></small>
+
+  ![progra](assets/images/asymptotic_notation/big-o.png)
+
+  <small>Big O.
+  | Image source / <a href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation">Khan Academy</a></small>
 <br>
 <br>
 
@@ -654,15 +718,19 @@ The Big O notation is useful when we only have upper bound on time complexity of
 For a function g(n), O(g(n)) is given by the relation:
 
 ``` math
-O(g(n)) = { f(n): there exist positive constants c and n0
-such that 0 ≤ f(n) ≤ cg(n) for all n ≥ n0 }
+O(f(n)) = { 
+  g(n): 
+  there exist positive constants c >  0 and n0
+  such that 0 ≤ f(n) ≤ c.g(n) for all n ≥ n0 
+}
 
 ```
 
 Since Big-o gives the worst-case running time of an algorithm, it is widely used to analyze an algorithm as we are always interested in the worst-case scenario.
 
 
-
+Summary:
+>The Big O of a function is its asymptotic upper bound. This means that the running time of a function T will be always shorter than that of f . To generalize we can say that a funciton **T(n)** is **O(f(n))** if there is a constant k such that **T(n) < k** ⋅ **f(n)** for large enough **n**.
 
 
 
@@ -678,7 +746,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
       <summary>Big-O Complexity table ✨ | <b>Click to expand</b></summary>
       </br>
 
-      ![](assets/images/asymptotic_notation/big_o/big-o-notation.png)
+
 
 
       The following are examples of common complexities and their Big O notations,ordered from fastest to slowest:
@@ -805,7 +873,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 
 ## **Searching Algorithms**:
 
-<details open>
+<details>
 <summary>Searching Algorithms explanation & examples</summary>
 
 <div align="center">
@@ -818,9 +886,21 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
   
   ### **Linear Search**: 
 
-  <details>
+  <details >
     <summary>What Linear Search with examples | <b>Click to expand</b></summary>
     </br>
+
+  <div align="center">
+
+  ![](assets/images/algorithms/linear-search.gif)
+
+  <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
+  
+  </div>
+
+  **Linear search** is a very simple sequential search algorithm search that takes in input an array and a value to search and iterates through the array to search for the value. It usually returns the index of the element (if it is in the array) or −1 (if the element is not in the array).
+  
+
 
 ``` 
  🦶🏽 Steps:
@@ -853,6 +933,9 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 <summary>Table of steps <b>(Pseudocode)</b></summary>
 
 <br>
+
+  Linear Search ( Array A, Value x)
+
 
    - 1: Set i to 1
    - 2: if i > n then go to step 7
@@ -914,10 +997,6 @@ target = 175;
 
 <br>
 
-  ## **1.** O(N) time complexity</div>
-        
-  <small>Linear Search/ [Programming Simplified](programmingsimplified.com)</small>
-  ![](assets/images/algorithms/linear-search.gif)
      
 
   ```python
@@ -960,6 +1039,45 @@ target = 175;
 <br>
 
 
+<details>
+<summary>Time Complexity Analysis</summary>
+<br>
+
+
+- Looking at the linear search algorithm, we assume that this code would need the sum of one iteration times the length of the array plus the time it takes to set up the for loop and returning a value. 
+  
+  - (**c1 * n + c2**) Where **c1** is the time for one loop iteration, **n** the array length and **c2** the time of the overhead.  We now can say that the running time grows with **n** 
+  
+  - which means that this algorithm will search for an element by iterating through the whole array of **n**, so in case if the element is not present or positioned as the last element in the array, then the algorithm will go through the whole array of n elements.
+
+  ---
+
+  ### **<div align="center">Complexity</div>**
+
+- **Average | Worst**: We have seen that In the Average | Worst case, the number of elements through which it needs to iterate also depend on **<i>n</i>** which means that Its time complexity in the average and worst case will therefore be **Θ = O(n)**/ **Θ(𝑛)**:
+  - linear complexity =  (will keep on looking until it matches with the given input)
+
+
+- **Best**: case will be in case the element was found at the first iteration (Was positioned as the first element in the list) thus the time complexity of this algorithm in the best case will be **Ω(1)** / **Θ(1)**. 
+
+  ---
+
+- **Termination**: The algorithm terminates for every input, either when it finds the element it is looking for, ot when it iterates through the whole array.
+
+
+
+<br>
+</details>
+
+<details>
+<summary>Space Complexity Analysis</summary>
+<br>
+No auxiliary data structures are required by this algorithm
+
+
+</br>
+</details>
+
 
 </details>
 <br>
@@ -976,14 +1094,9 @@ target = 175;
 
 <br>
 
+   **c1 * n + c2** |  Where **c1** is the time for one loop iteration, **n** the array length and **c2** the time of the overhead. We now can say that the running time grows with **n**
 
-   The time complexity of linear search algorithm is O(n) cause it's looking for the data in a linear fashion,
-   
-   which means it will keep on looking until it matches with the given input.
 
-   Worse 𝑂 | Average  | Best
-
-   
 
 </details>
 <br>
@@ -1824,7 +1937,7 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 ## **Sorting Algorithms**:
 
-<details open>
+<details>
 <summary>Sorting Algorithms explanation and examples</summary>
 <br>
 
@@ -3287,7 +3400,7 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 
 
-<div align="center">
+
 
 # 4
 
@@ -3295,10 +3408,19 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 <br>
 
+<details>
+<summary>Data structres | <b>Click to expand</b></summary>
+
+<br>
+
+<div align="center">
 
 ![](https://media.giphy.com/media/2UqWA20weXLPRQW5xQ/giphy.gif)
----
+
 </div>
+
+---
+
  <h2><b>Data structres</b></h2> 
 
 A data structure is a named location that can be used to store and organize data. And, an algorithm is a collection of steps to solve a particular problem. Learning data structures and algorithms allow us to write efficient and optimized computer programs. 
@@ -3352,6 +3474,8 @@ ___
     ---
 - **Measuring Efficiency**: 
 
+
+</details>
 
 </details>
 
