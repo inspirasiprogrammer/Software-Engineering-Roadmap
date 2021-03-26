@@ -30,12 +30,23 @@ Safar Safarov</small>
 
 - 3 . [Characteristics of a Clean code](#characteristics-of-a-clean-code)
 - 4 . [Naming Variables, Constant, Functions Classes & More](#naming-variables,-constant-functions,-classes-&-more)
+  - 1 . [Variables | Properties](#variables-|-properties)
+  - 2 . [Functions | Methods](#Functions-|-Methods)
+  - 3 . [Classes | Modules](#Classes-|-modules)
 
 - 5 . [Code Structure, Comments & Formatting](#code-structure,-comments-&-formatting)
+  - 1 . [Formatting](#formatting)
+  - 2 . [Good & Bad Comments](#good-&-bad-comments)
 
 - 6 . [Functions & Methods](#functions-and-methods)
+  - 1 . [Length](#length)
+  - 2 . [Parameters](#parameters)
+  - 3 . [Best practices](#best-practices)
 
-- 7 . [Control Structures & Errors](#control-structures-&-errors-handling)
+- 7 . [Control Structures/ Nested & Error handling](#control-structures-&-errors-handling)
+  - 1 . [Conditionals](#conditionals)
+  - 1 . [Deep nesting](#deep-nesting)
+  - 3 . [Error handling](#error-handling)
 
 - 8 . [Objects, Classes & Data Containers / Structures](#Objects,-classes-&-data-containers-/-structures)
   - 1 . [Cohesion, Coupling and Interfaces](#cohesion-coupling-and-Interfaces)
@@ -85,6 +96,11 @@ Safar Safarov</small>
 - 12 . [Talks about Clean Code](#talks-about-clean-code)
   - [Uncle Bob](#uncle-bob)
     - [Clean Code - Uncle Bob / Lesson 1](#clean-code-uncle-bob-/-lesson-1)
+    - [Clean Code - Uncle Bob / Lesson 2](#clean-code-uncle-bob-/-lesson-2)
+    - [Clean Code - Uncle Bob / Lesson 3](#clean-code-uncle-bob-/-lesson-3)
+    - [Clean Code - Uncle Bob / Lesson 4](#clean-code-uncle-bob-/-lesson-4)
+    - [Clean Code - Uncle Bob / Lesson 6](#clean-code-uncle-bob-/-lesson-6)
+
 #### Further Learning Resource
 
 - 13 . [Articles 📰](#-articles-)
@@ -510,6 +526,487 @@ Aside from all the steps and to summerize (Treat your code like an essay an you 
 <br/>
 
 
+
+
+
+# 10
+## **Code Smells**:
+
+</br>
+
+<details >
+<summary>Everything you need to know to master SOLID principles | <b>Click to expand</b></summary>
+
+<br>
+
+
+### **Bloaters**:
+
+<details>
+<summary>Bloaters | <b>Click to expand</b></summary>
+
+
+<br>
+
+
+### **Long method**:
+
+<details>
+<summary>Long method | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Large class**:
+
+<details>
+<summary>Large class | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Primitive Obsession**:
+
+<details>
+<summary>Bloaters | <b>Primitive Obsessionick to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Long Parameter List**:
+
+<details>
+<summary>Long Parameter List | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Data Clumps**:
+
+<details>
+<summary>Data Clumps | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+
+
+
+
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+### **Object-Orientation Abusers**:
+
+<details>
+<summary>Object-Orientation Abusers | <b>Click to expand</b></summary>
+
+<br>
+
+
+### **Switch Statements**:
+
+<details>
+<summary>Switch Statements | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Temporary Field**:
+
+<details>
+<summary>Temporary Field | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Refused Bequest**:
+
+<details>
+<summary>Refused Bequest | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Alternative Classes with Different Interfaces**:
+
+<details>
+<summary>Alternative Classes with Different Interfaces | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+
+### **Change Preventers**:
+
+<details>
+<summary>Change Preventers | <b>Click to expand</b></summary>
+
+
+
+<br>
+
+
+### **Divergent Change**:
+
+<details>
+<summary>Divergent Change | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Shotgun Surgery**:
+
+<details>
+<summary>Shotgun Surgery | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+
+<br>
+
+
+### **Parallel Inheritance Hierarchies**:
+
+<details>
+<summary>Refused Bequest | <b>Parallel Inheritance Hierarchies expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Parallel Inheritance Hierarchies**:
+
+<details>
+<summary>Refused Bequest | <b>Parallel Inheritance Hierarchies expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+
+
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+
+### **Dispensables**:
+
+<details>
+<summary>Dispensables | <b>Click to expand</b></summary>
+
+
+<br>
+
+
+### **Comments**:
+
+<details>
+<summary>Comments | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Duplicate Code**:
+
+<details>
+<summary>Duplicate Code | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+
+<br>
+
+
+### **Lazy Class**:
+
+<details>
+<summary>Lazy Class | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Data Class**:
+
+<details>
+<summary>Data Class | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Dead Code**:
+
+<details>
+<summary>Dead Code | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Refused Bequest**:
+
+<details>
+<summary>Refused Bequest | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+</details>
+
+<br>
+
+---
+
+<br>
+
+### **Couplers**:
+
+<details>
+<summary>Couplers | <b>Click to expand</b></summary>
+
+
+<br>
+
+
+### **Feature Envy**:
+
+<details>
+<summary>Feature Envy <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+<br>
+
+
+### **Inappropriate Intimacy**:
+
+<details>
+<summary>Inappropriate Intimacy | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+
+
+<br>
+
+
+### **Message Chains**:
+
+<details>
+<summary>Message Chains | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+### **Middle Man**:
+
+<details>
+<summary>Middle Man | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+---
+
+
+<br>
+
+
+
+
+</details>
+
+<br>
+
+
+---
+
+<br>
+
+### **Other smells**:
+
+<details>
+<summary>Other smells | <b>Click to expand</b></summary>
+
+</details>
+
+<br>
+
+
+</details>
+
+
+---
+<br/>
+<br/>
+<br/>
+
+
+
 # 12
 ## **Talks about Clean Code**:
 
@@ -588,6 +1085,8 @@ Aside from all the steps and to summerize (Treat your code like an essay an you 
 
 
 
+
+
 # 8
 
 
@@ -622,8 +1121,8 @@ The most popular courses that teach Clean Code. Yes for real 🔥🕹📟
 
 Course name           | Provider (Platform) | Duration| Skill level | Course Cost | Used as refrence
 --------------------- | -------------- | -------- | ---------- | ----- | -----
-[Dive Into REFACTORING](https://refactoring.guru/refactoring/course) | refactoring.guru | -- | Beginner | $35.70 discount | Yes ❤️
-[Clean Code](https://www.udemy.com/course/writing-clean-code/) | Udemy | 6.5 hours | Beginner | $14.29 discount | Yes ❤️
+[Dive Into REFACTORING](https://refactoring.guru/refactoring/course) | refactoring.guru | -- | Beginner | $35.70 discount | Yes ❤️ Using the code smells index structre
+[Clean Code](https://www.udemy.com/course/writing-clean-code/) | Udemy | 6.5 hours | Beginner | $14.29 discount | Yes ❤️ Used by summerizing most of its content
 
 ---
 
