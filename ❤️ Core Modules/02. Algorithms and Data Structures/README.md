@@ -54,14 +54,17 @@
       - 2 . [Base case](#base-case) exit condition (when do you stop recursing)
       - 3 . [General (recursive) case](#general-recursive-case) (Recurse)
     - 8 . [Sorting Algorithms](#sorting-algorithms)
-      - 1 . [Bubble Sort](#bubble-sort)  
-      - 2 . [Selection Sort](#selection-sort)  
-      - 3 . [Insertion Sort](#insertion-sort)  
-      - 4 . [Merge Sort](#merge-sort)  
-      - 5 . [Quick Sort](#quick-sort)  
-      - 6 . [Counting Sort](#counting-sort)  
-      - 7 . [Radix Sort](#radix-sort)  
-      - 8 . [Bucket Sort](#bucket-sort)  
+      - 1 . [In-place Sorting and Not-in-place Sorting](#in-place-sorting-and-not-in-place-sorting)
+      - 2 . [Stable and Not Stable Sorting](#in-place-sorting-and-not-in-place-sorting)
+      - 3 . [Adaptive and Non-Adaptive Sorting Algorithm](#adaptive-and-non-adaptive-sorting-algorithm)
+      - 3 . [Bubble Sort](#bubble-sort)  
+      - 4 . [Selection Sort](#selection-sort)  
+      - 5 . [Insertion Sort](#insertion-sort)  
+      - 6 . [Merge Sort](#merge-sort)  
+      - 7 . [Quick Sort](#quick-sort)  
+      - 8 . [Counting Sort](#counting-sort)  
+      - 9 . [Radix Sort](#radix-sort)  
+      - 10 . [Bucket Sort](#bucket-sort)  
     - 9 . [Graph Algorithms](#graph-algorithms)
       - 1 . [Breadth-first search](#breadth-first-search)
       - 2 . [Depth-first search](#depth-first-search)
@@ -873,7 +876,7 @@ Summary:
 
 ## **Searching Algorithms**:
 
-<details>
+<details >
 <summary>Searching Algorithms explanation & examples</summary>
 
 <div align="center">
@@ -881,6 +884,17 @@ Summary:
 
 
 </div>
+
+<br>
+
+  Not even a single day pass, when we do not have to search for something in our day to day life, car keys, books, pen, mobile charger and what not. Same is the life of a computer, there is so much data stored in it, that whenever a user asks for some data, computer has to search it's memory to look for the data and make it available to the user and that's where come:
+
+  **Searching Algorithms** are designed to check for an element or retrieve an element from any data structure where it is stored. Based on the type of search operation, these algorithms are generally classified into two categories:
+
+  - **Sequential Search**: Lists or arrays are traversed sequentially and every element is checked. For example: Linear Search. (designed to search for an item in unsorted data structures, they check every item in the data structure sequentially.) For example: **Linear Search**.
+
+  - **Interval Search**: These algorithms are specifically designed for searching in sorted data-structures. These type of searching algorithms are much more efficient than Linear Search as they repeatedly target the center of the search structure and divide the search space in half. For Example: Binary Search.
+
 
   <br>
   
@@ -1120,15 +1134,31 @@ No auxiliary data structures are required by this algorithm
 
 <div align="center">
 
-![](https://upload.wikimedia.org/wikipedia/commons/thumb/8/83/Binary_Search_Depiction.svg/2880px-Binary_Search_Depiction.svg.png)
+![](https://d18l82el6cdm1i.cloudfront.net/uploads/bePceUMnSG-binary_search_gif.gif)
 
-<small>Image source/ <a href="https://en.wikipedia.org/wiki/Binary_search_algorithm#/media/File:Binary_Search_Depiction.svg">Wikipedia</a></small>
+<small>Image source/ <a href="https://brilliant.org/wiki/binary-search/">Brilliant</a></small>
 </div>
 
 
 <br>
 
-**Binary search** is an efficient algorithm for finding an item from a sorted list of items. It works by repeatedly dividing in half the portion of the list that could contain the item, until you've narrowed down the possible locations to just one.
+**Binary search** is an efficient Interval Searching algorithm that searches a sorted list for a desired, or target, element. 
+
+It does this efficiently by halving the search space during each iteration of the program. it finds the middle of the list, asks “is the element I’m looking for larger or smaller than this?” Then it cuts the search space in the list in half and searches only in the left list if the element is smaller, and searches only in the right list if the element is bigger. It repeats this process iteratively or recursively until it finds the element it is looking for (or reports back that the element isn’t in the list at all). The algorithm uses a divide and conquer (or divide and reduce) approach to search.
+
+
+
+- It takes a sorted array and the value to search for as an input.
+- It works by comparing the target value to the middle element of the array.
+-  If the target value is greater than the middle element, the left half of the list is eliminated from the search space, and the search continues in the right half.
+- If the target value is less than the middle value, the right half is eliminated from the search space, and the search continues in the left half.
+- This process is repeated until the middle element is equal to the target value, or if the algorithm returns that the element is not in the list at all.
+
+
+
+
+
+> The only limitation is that the array or list of elements must be sorted for the binary search algorithm to work on it.
 
 - it only works on sorted lists
 - Faster than linear search
@@ -1139,15 +1169,17 @@ No auxiliary data structures are required by this algorithm
  🦶🏽 Steps:
 ```
 
-<details>
+<details >
 <summary>Table of steps</summary>
 
 <br>
 
-1. Compare target with the middle element.
-2. If target matches with middle element, we return the middle index.
-3. Else If target is greater than the middle element, then target can only lie in right half subarray after the middle element. So we recur for right half.
-4. Else (target is smaller) recur for the left half.
+1. Determine the middle element of a sorted list by taking the value of the floor of (low + hight) / 2, where low is the lowest index of the list, and high is the highest index in the list. So in the list [1,2,3,4],2 (since 2 occurs at index 1) would be the middle. In the list [1,2,3,4,5],3 (since 3 occurs at index 2) is the middle.
+
+2. Compare the value of that middle element with the target value.
+3. If the target value is equal to the middle element, return that it is true the element is in the list (if the position of the element in the list is desired, return the index as well).
+4. If the target value is less than the middle element, eliminate all elements to the right of (and including) the middle element from the search, and return to step one with this smaller search space.
+5. If the target value is greater than the middle element, eliminate all the elements to the left of (and including) the middle element from the search, and return to step one with this smaller search space.
 
 
 </details>
@@ -1282,13 +1314,14 @@ else:
   
   ```python
 def binarySearchHelper(array, target, left, right):
-
+    # check that the subarray is not empty
     while left <= right:
-
+      
+      # find the index of the median value
       middle = (left + right) // 2
       potentialMatch = array[middle]
 
-      # If element is present at the middle itself
+       # return the middle value if it is the one we we're searching for
       if target == potentialMatch:
           return middle
       
@@ -1301,7 +1334,7 @@ def binarySearchHelper(array, target, left, right):
       else:
           left = middle + 1
     
-    # Element is not present in the list
+    # if the subarray is empty return -1
     return -1
 
 def binarySearch(array, target):
@@ -1339,24 +1372,123 @@ else:
 ```
 
 
-<details>
+<details >
 <summary>Asymptotic analysis</summary>
 
 <br>
 
-**Recursive**
-Time | Space
-----------|----------
-O(log(n)) | O(log(n))
-
-<br>
+<details>
+<summary>Time Complexity Analysis</summary>
 <br>
 
-Iterative
 
-Time | Space
-----------|----------
+
+<details>
+<summary><b>O(log n)</b> explanation</summary>
+
+<br>
+
+When we say the time complexity is log n, we actually mean log2 n, although the base of the log doesn't matter in asymptotic notations, but still to understand this better, we generally consider a base of 2.
+
+Let's first understand what log2(n) means.
+
+```python
+
+Output:
+__
+
+
+Expression: log2(n)
+____________
+
+For n = 2:
+log2(21) = 1
+Output = 1
+____________
+
+For n = 4
+log2(22) = 2
+Output = 2
+____________
+
+For n = 8
+log2(23) = 3
+Output = 3
+____________
+
+For n = 256
+log2(28) = 8
+Output = 8
+____________
+
+For n = 2048
+log2(211) = 11
+Output = 11
+
+```
+
+Now that we know how log2(n) works with different values of n, it will be easier for us to relate it with the time complexity of the binary search algorithm and also to understand how we can find out the number of steps required to search any number using binary search for any value of n.
+
+
+### **Counting the Number of Steps**
+
+
+- As we have already seen, that with every incorrect middle, binary search cuts down the list of elements into half. So if we start with 32 elements, after first unsuccessful middle, we will be left with 16 elements.
+
+- So consider an array with 8 elements, after the first unsuccessful, binary search will cut down the list to half, leaving behind 4 elements, then 2 elements after the second unsuccessful guess, and finally only 1 element will be left, which will either be the target or not, checking that will involve one more step. So all in all binary search needed at most 4 guesses to search the target in an array with 8 elements.
+
+- If the size of the list would have been 16, then after the first unsuccessful guess, we would have been left with 8 elements. And after that, as we know, we need atmost 4 guesses, add 1 guess to cut down the list from 16 to 8, that brings us to 5 guesses.
+
+- So we can say, as the number of elements are getting doubled, the number of guesses required to find the target increments by 1.
+ 
+ Seeing the pattern, right? Generalizing this, we can say, for an array with n elements,
+
+- the number of times we can repeatedly halve, starting at n, until we get the value 1, plus one.
+And guess what, in mathematics, the function log2 n means exactly same. We have already seen how the log function works above, did you notice something there?
+
+- For n = 8, the output of log2 n comes out to be 3, which means the array can be halved 3 times maximum, hence the number of steps(at most) to find the target value will be (3 + 1) = 4.
+
+</details>
+
 ---
+
+</br>
+
+  In each iteration, the search space is getting divided by 2. That means that in the current iteration you have to deal with half of the previous iteration array.
+  And the above steps continue till left<right
+  Best case could be the case where the first mid-value get matched to the element to be searched.
+
+
+  ---
+
+  ### **<div align="center">Complexity</div>**
+
+- This shows that the time complexity of binary search is 𝑂(𝑙𝑜𝑔𝑛). This is true for both the worst and average case. Best
+case would be 𝑂(1) if the first guess is the searched item.
+
+- **Best case**: in Big-Omega notation would Ω(1) as well. Worst-case would be Ω(𝑙𝑜𝑔𝑛), as it would take at least logn many iterations to say that the item is not present.
+- We can see that **Big-O** and **Big-Omega** notation have the same values. This means that we can express the running time in Big-Theta notation. Best case is Θ(1) and worst and average case are Θ(𝑙𝑜𝑔𝑛).
+
+  - Best Time Complexity: O(1)
+  - Average Time Complexity: O(logn)
+  - Worst Time Complexity: O(logn)
+
+  ---
+
+
+<br>
+</details>
+
+<details>
+<summary>Space Complexity Analysis</summary>
+<br>
+
+No auxiliary space is required in Binary Search implementation
+- Hence space complexity: O(1)
+
+
+</br>
+</details>
 
 
 
@@ -1370,17 +1502,35 @@ Time | Space
 ```
 
 
-<details>
+<details >
 <summary>Algorithm's mathematical explanation</summary>
 
 <br>
 
-The time complexity of Binary Search can be written as
+We know that at each step of the algorithm, our search space reduces to half. That means if initially, our search space contains n elements, then after one iteration it contains n/2, then n/4 and so on:
 
-```
+```n —> n/2 —> n/4 —> … —> 1```
+
+Suppose our search space is exhausted after <i>k</i> steps. Then,
+
+``` 
 T(n) = T(n/2) + c 
 
+n/2k = 1
+n = 2k
+k = log2n
+
+T(n) = log(n) = O(logn)
 ```
+
+> Each time we double (N) we increese the time complexity by one step, where is in an linear case algorithm like linear search, we increese one step at each step we give
+
+Therefore, the time complexity of the binary search algorithm is O(log<sup>2</sup>n), which is very efficient. The auxiliary space required by the program is O(1) for iterative implementation and O(log<sup>2</sup>n)  for recursive implementation due to call stack.
+
+
+The time complexity of Binary Search can be written as
+
+
 The above recurrence can be solved either using Recurrence T ree method or Master method. It falls in case II of Master Method and solution of the recurrence is Theta(Logn).
 
 Auxiliary Space: O(1) in case of iterative implementation. In case of recursive implementation, O(Logn) recursion call stack space.
@@ -1937,9 +2087,39 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 ## **Sorting Algorithms**:
 
-<details>
+<details open>
 <summary>Sorting Algorithms explanation and examples</summary>
 <br>
+
+## **<div align="center">Sorting</div>**
+
+ **Sorting** refers to arranging data in a particular format. Sorting algorithm specifies the way to arrange data in a particular order. Most common orders are in numerical or lexicographical order.
+ 
+ - The importance of sorting lies in the fact that data searching can be optimized to a very high level, if data is stored in a sorted manner. Sorting is also used to represent data in more readable formats. Following are some of the examples of sorting in real-life scenarios −
+
+  ---
+  <br>
+
+### **In-place Sorting and Not-in-place Sorting**:
+
+<br>
+
+Sorting algorithms may require some extra space for comparison and temporary storage of few data elements. These algorithms do not require any extra space and sorting is said to happen in-place, or for example, within the array itself. This is called in-place sorting. Bubble sort is an example of in-place sorting.
+
+However, in some sorting algorithms, the program requires space which is more than or equal to the elements being sorted. Sorting which uses equal or more space is called not-in-place sorting. Merge-sort is an example of not-in-place sorting.
+
+
+
+  ---
+  <br>
+
+### **Stable and Not Stable Sorting**:
+
+<br>
+
+<br>
+<br>
+
 
 ---
   
@@ -3401,8 +3581,11 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 
 
+<div align="center">
 
 # 4
+
+</div>
 
 ## **Data structures** 
 
