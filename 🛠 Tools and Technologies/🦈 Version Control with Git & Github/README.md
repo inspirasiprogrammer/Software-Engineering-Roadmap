@@ -1,11 +1,17 @@
 
 ![Markdown Logo](assets/images/vcs.jpg)
+<div align="center">
+<small>Image source: <a href="https://unsplash.com/photos/842ofHC6MaI">Yancy Min</a></small>
+</div>
 <br/><br/>
 
 <div align="center">
 
-# **Version Control with Git & Github**
-#### Learn and Master Git VCS & Github 
+# **Version Control with Git & Github 📜** 
+Learn and Master Git VCS & Github without any prior knowledge required.
+
+
+
 <br>
 
 
@@ -20,23 +26,120 @@
 
 ## - [**Table of content**](#table-of-content)
 
-  - 1 . [What is Git Version Control system & What is Github 😃](#what-is-git-version-control-system--what-is-github-)
-  - 2 . [Git terminology](#git-terminology)
-  - 3 . [Learning Checklist ✅](#learning-checklist-)
-  - 4 . [Install and Setup Git](#install-and-setup-git)
-  - 5 . [Creating a repo (Repository) 🎸](#creating-a-repo-repository-)
-  - 6 . [Review a Repo's History 🕑](#review-a-repo's-history-)
-  - 7 . [Adding Commits to a Repo 📇](#adding-commits-to-a-repo-)
-  - 8 . [Tagging, Branching & Merging 🌳](#tagging,-branching-&-merging-)
-  - 9 . [Undoing Changes 🤚🏽](#undoing-changes-)
+  ### 1 . [**What is Git Version Control system & What is Github 😃**](#what-is-git-version-control-system--what-is-github-)
+  ---
+  ### 2 . [**Git terminology**](#git-terminology)
+  ---
+  ### 3 . [**Learning Checklist ✅**](#learning-checklist-)
+    
+  ---
+
+  ### 4 . [**Install and Setup Git**](#install-and-setup-git)
+  - 1 . [Windows](#windows)
+  - 2 . [Mac](#mac)
+  - 3 . [Advanced Configuration](#advanced-configuration)
+  - 4 . [Getting Help](#getting-help)
+    
+    ---
+  ### 5 . [**Creating Snapshots 🎸**](#creating-snapshots-)
+  - 1 . [Initializing a Repository](#initializing-a-repository)
+  - 2 . [Git Workflow Recap](#git-workflow-recap)
+  - 3 . [Staging Files](#staging-files)
+  - 4 . [Commiting Changes](#commiting-changes)
+  - 5 . [Semantic Commits and Commiting best practices](#semantic-commits-and-commiting-best-practices)
+  - 6 . [Skipping the staging area](#skipping-the-staging-area)
+  - 7 . [Remove, Rename, or Move Files](#remove,-rename,-or-move-files)
+  - 8 . [Ignoring Files](#ignoring-files)
+  - 9 . [Short Status](#short-status)
+  - 10 . [Showing Staged and Unstaged Changes](#showing-staged-and-unstaged-changes)
+  - 11 . [Visual Diff Tools](#visual-diff-tools)
+  - 12 . [View a Repository's History](#view-a-repository's-history)
+  - 13 . [Unstaging Files](#unstaging-files)
+  - 14 . [Discarding local changes](#discarding-local-changes)
+  - 15 . [Restoring a file from an earlier version](#restoring-a-file-from-an-earlier-version)
+    
+    ---
+
+  ###  6 . [**Browse a Repo's History 🕑**](#browse-a-repo's-history-)
+  - 1 . [Browse, Filter and Format a Repository's History](#browse,-filter-and-format-a-repository's-history)
+  - 2 . [Aliases](#aliases)
+  - 3 . [Viewing a Commit and The changes across commits](#viewing-a-commit-and-the-changes-across-commits)
+  - 4 . [Checking out a Commit](#checking-out-a-commit)
+  - 5 . [Finding Bugs Using Bisect](#finding-bugs-using-bisect)
+  - 6 . [Finding Contributors Using Shortlog](#finding-contributors-using-shortlog)
+  - 7 . [Browsing the history of a Branch](#browsing-the-history-of-a-branch)
+  - 8 . [Restoring Files](#restoring-files)
+  - 9 . [Use Blame tool to find the author of a Line](#use-blame-tool-to-find-the-author-of-a-line)
+  - 10 . [Tagging](#tagging)
+    
+    ---
+  ###  7 . [**Branching 🌳**](#branching)
+  - 1 . [What Branches are?](#what-branches-are)
+  - 2 . [Working with Branches](#working-with-branches)
+  - 3 . [Comparing Branches](#comparing-branches)
+  - 4 . [Stashing](#stashing)
+  - 5 . [Merging](#merging)
+  - 6 . [Fast-Forward Merges](#fast-forward-merges)
+  - 7 . [3-Way Merges](#3-way-merges)
+  - 8 . [Viewing Merged and Unmerged Branches](#viewing-merged-and-unmerged-branches)
+  - 9 . [Merge Conflicts](#merge-conflicts)
+  - 10 . [Use GUI merge tools](#use-gui-merge-tools)
+  - 11 . [Aborting a Merge](#aborting-a-merge)
+  - 12 . [Undoing a Faulty Merge](#undoing-a-faulty-merge)
+  - 13 . [Squash Merging](#squash-merging)
+  - 14 . [Rebasing](#rebasing)
+  - 15 . [Cherry Picking](#cherry-picking)
+  - 16 . [Picking a File from another File](#picking-a-file-from-another-file)
+    
+    ---
+  ###   8 . [**Undoing Changes and Rewriting history 🤚🏽**](#undoing-changes-and-rewriting-history-)
+  - 1 . [Why would you need to re-write History](#why-would-you-need-to-re-write-history)
+  - 2 . [The Golden Rule of Re-writing history & Examples of Bad History](#the-golden-rule-of-re-writing-history-&-examples-of-bad-history)
+  - 3 . [Undoing Commits](#undoing-commits)
+  - 4 . [Reverting Commits](#reverting-commits)
+  - 5 . [Reverting lost Commits](#reverting-lost-commits)
+  - 6 . [Amending the Last Commit](#amending-the-last-commit)
+  - 7 . [Amending an Earlier Commit](#amending-an-earlier-commit)
+  - 8 . [Dropping Commits](#dropping-commits)
+  - 9 . [Rewording Commit Messages & Reordering Commits](#rewording-commit-messages-&-reordering-commits)
+  - 10 . [Squashing Commits](#squashing-commits)
+  - 11 . [Splitting a Commit](#splitting-a-commit)
+    
+    ---
+  ### 9 . [**Collabration**](#collabration)
+  - 1 . [Workflows](#workflows)
+  - 2 . [Creating a Github Repository](#creating-a-github-repository)
+  - 3 . [Adding Collaborators](#adding-collaborators)
+  - 4 . [Cloning a Repository](#cloning-a-repository)
+  - 5 . [Fetching](#fetching)
+  - 6 . [Pulling](#pulling)
+  - 7 . [Pushing](#bushing)
+  - 8 . [Storing Credentials](#storing-credentials)
+  - 9 . [Sharing Tags](#sharing-tags)
+  - 10 . [Releases](#releases)
+  - 11 . [Sharing Branches](#sharing-branches)
+  - 12 . [Collaboration Workflow](#collaboration-workflow)
+  - 13 . [Pull Requests](#pull-requests)
+  - 14 . [Resolving Conflicts](#resolving-conflicts)
+  - 15 . [Issues](#issues)
+  - 16 . [Labels](#labels)
+  - 17 . [Contributing to Open-source Projects](#contributing-to-open-source-projects)
+  - 18 . [Syncying your Forked Repository and keeping it up-to-date](#syncying-your-forked-repository-and-keeping-it-up-to-date)
+    
+    ---
   #### Further Learning Resource
 
-  - 10 . [Articles 📰](#articles-)
-  - 11 . [Books 📚](#books-)
-  - 12 . [Courses 💻](#courses-)
+  ### 10 . [Articles 📰](#articles-)
+  ### 11 . [Books 📚](#books-)
+  ### 12 . [Courses 💻](#courses-)
 
 ---
 
+<br/>
+<br/>
+<br/>
+<br/>
+<br/>
 <br/>
 
 # 1
@@ -103,11 +206,6 @@ Git is a tool that covered vast terminology and jargon, which can often be diffi
 ---
 <br/>
 <br/>
-<center>
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/e/e0/Git-logo.svg/2880px-Git-logo.svg.png" alt="drawing" width="200"/>
-</center>
-<br/>
-<br/>
 
 ### 1. **Git**:
 
@@ -116,7 +214,7 @@ an SCM (and therefore a VCS!). The URL for the Git website is https://git-scm.co
 ---
 <br/><br/>
 
-![Branches](https://git-scm.com/book/en/v2/images/distributed.png)
+
 
 ### 2. **VCS version Control System / Source Code Manager**:
 <br/>
@@ -129,7 +227,7 @@ A version control system (abbreviated as VCS) is a tool that manages different v
 
 <br/><br/>
 
-![](https://git-scm.com/book/en/v2/images/lifecycle.png)
+
 
 ### 3. **Commit**:
 <br/>
@@ -143,7 +241,7 @@ Everything you do in Git is to help you make commits, so a commit is the fundame
 ---
 <br/><br/>
 
-![](https://git-scm.com/images/branching-illustration@2x.png)
+<!-- Image goes here -->
 
 ### 4. **Repository / repo**:
 
@@ -154,8 +252,6 @@ A repository is a directory which contains your project work, as well as a few f
 ---
 <br/>
 
-
-![git-scm.com](https://git-scm.com/book/en/v2/images/areas.png)
 
 ### 5. **Working Directory**:
 <br/>
@@ -180,7 +276,6 @@ It is a 40-character string composed of characters (0–9 and a–f) and calcula
 
 </br></br>
 
-![Branches](https://git-scm.com/book/en/v2/images/checkout-master.png)
 
 ### 7. **Branch**:
 
@@ -193,7 +288,6 @@ A branch is a version of the repository that diverges from the main working proj
 ---
 <br/><br/>
 
-![](https://git-scm.com/book/en/v2/images/basic-branching-3.png)
 
 ### 8. **Checkout**:
 
@@ -214,7 +308,6 @@ Cherry-picking in Git is meant to apply some commit from one branch into another
 
 
 
-![](https://git-scm.com/book/en/v2/images/basic-merging-2.png)
 
 ### 10. **Merge**:
 
@@ -225,7 +318,6 @@ Merging is a process to put a forked history back together. The git merge comman
 
 <br/><br/>
 
-![](https://git-scm.com/images/about/index1@2x.png)
 
 ### 11. **Staging Area / Staging Index / Index**:
 <br/>
@@ -506,9 +598,6 @@ You can use this learning checklist to follow this guide step by step and track 
 
 
 
-
-___
-
 </details>
 
 ---
@@ -690,10 +779,217 @@ ___
 
 
 # 5
-## **Creating a repo (Repository) 🎸**
-<details open>
-  <summary>Creating a repo (Repository) 🎸 | <b>Click to expand</b></summary>
+## **Creating Snapshots 🎸**
+<details>
+  <summary>Creating Snapshots 🎸 | <b>Click to expand</b></summary>
 </br>
+
+  
+<br>
+
+  ### **Initializing a Repository**: 
+
+  <details>
+    <summary>Initializing a Repository with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+  
+  ---
+
+  <br>
+
+  ### **Git Workflow Recap**: 
+
+  <details>
+    <summary>Git Workflow Recap with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Staging Files**: 
+
+  <details>
+    <summary>Staging Files with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+  
+  ### **Commiting Changes**: 
+
+  <details>
+    <summary>Commiting Changes with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+  
+  ### **Semantic Commits and Commiting best practices**: 
+
+  <details>
+    <summary>Semantic Commits and Commiting best practices with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Skipping the staging area**: 
+
+  <details>
+    <summary>Skipping the staging area with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Remove, Rename, or Move Files**: 
+
+  <details>
+    <summary>Remove, Rename, or Move Files with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Ignoring Files**: 
+
+  <details>
+    <summary>Ignoring Files with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Short Status**: 
+
+  <details>
+    <summary>Short Status with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Showing Staged and Unstaged Changes**: 
+
+  <details>
+    <summary>Showing Staged and Unstaged Changes with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Visual Diff Tools**: 
+
+  <details>
+    <summary>Visual Diff Tools with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **View a Repository's History**: 
+
+  <details>
+    <summary>View a Repository's History with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Unstaging Files**: 
+
+  <details>
+    <summary>Unstaging Files with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Discarding local changes**: 
+
+  <details>
+    <summary>Discarding local changes with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Restoring a file from an earlier version**: 
+
+  <details>
+    <summary>Restoring a file from an earlier version with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
 
 
 
@@ -706,56 +1002,747 @@ ___
 
 # 6
 
-## **Review a Repo's History 🕑**
+## **Browse a Repo's History 🕑**
 
-<details open>
-  <summary>Review a Repo's History 🕑 | <b>Click to expand</b></summary>
+<details>
+  <summary>Browse a Repo's History 🕑 | <b>Click to expand</b></summary>
 </br>
+
+
+  <br>
+
+  ### **Browse, Filter and Format a Repository's History**: 
+
+  <details>
+    <summary>Browse, Filter and Format a Repository's History with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+
+  ### **Aliases**: 
+
+  <details>
+    <summary>Aliases with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  
+  ---
+  <br>
+  
+  ### **Viewing a Commit and The changes across commits**: 
+
+  <details>
+    <summary>Viewing a Commit and The changes across commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Checking out a Commit**: 
+
+  <details>
+    <summary>Checking out a Commit with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Finding Bugs Using Bisect**: 
+
+  <details>
+    <summary>Finding Bugs Using Bisect with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Finding Contributors Using Shortlog**: 
+
+  <details>
+    <summary>Finding Contributors Using Shortlog with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Browsing the history of a Branch**: 
+
+  <details>
+    <summary>Browsing the history of a Branch with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Restoring Files**: 
+
+  <details>
+    <summary>Restoring Files with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Use Blame tool to find the author of a Line**: 
+
+  <details>
+    <summary>Use Blame tool to find the author of a Line with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Tagging**: 
+
+  <details>
+    <summary>Tagging with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+
+<br>
 
 </details>
 
 ___
 <br/><br/><br/>
+
 
 # 7
 
-## **Adding Commits to a Repo 📇** 
+## **Branching 🌳**
 
-<details open>
-  <summary>Adding Commits to a Repo 📇 | <b>Click to expand</b></summary>
+<details>
+  <summary>Branching 🌳</b></summary>
 </br>
+
+  <br>
+  
+  ### **What Branches are?**: 
+
+  <details>
+    <summary>What Branches are? with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Working with Branches**: 
+
+  <details>
+    <summary>Working with Branches with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Comparing Branches**: 
+
+  <details>
+    <summary>Comparing Branches with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Stashing**: 
+
+  <details>
+    <summary>Stashing with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Merging**: 
+
+  <details>
+    <summary>Merging with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Fast-Forward Merges**: 
+
+  <details>
+    <summary>Fast-Forward Merges with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **3-Way Merges**: 
+
+  <details>
+    <summary>3-Way Merges with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Viewing Merged and Unmerged Branches**: 
+
+  <details>
+    <summary>Viewing Merged and Unmerged Branches with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Merge Conflicts**: 
+
+  <details>
+    <summary>Merge Conflicts with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Use GUI merge tools**: 
+
+  <details>
+    <summary>Use GUI merge tools with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Aborting a Merge**: 
+
+  <details>
+    <summary>Aborting a Merge with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Undoing a Faulty Merge**: 
+
+  <details>
+    <summary>Undoing a Faulty Merge with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Squash Merging**: 
+
+  <details>
+    <summary>Squash Merging with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Rebasing**: 
+
+  <details>
+    <summary>Rebasing with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Cherry Picking**: 
+
+  <details>
+    <summary>Cherry Picking with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Picking a File from another File**: 
+
+  <details>
+    <summary>Picking a File from another File with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+ 
+
 
 </details>
 
 ___
+
 <br/><br/><br/>
 
 # 8
+## **Undoing Changes 🤚🏽**
 
-## **Tagging, Branching & Merging 🌳**
-
-<details open>
-  <summary>Tagging, Branching & Merging 🌳</b></summary>
+<details>
+  <summary>Undoing Changes and Rewriting history 🤚🏽</b></summary>
 </br>
+
+
+ ---
+  <br>
+  
+  ### **Why would you need to re-write History**: 
+
+  <details>
+    <summary>Why would you need to re-write History with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **The Golden Rule of Re-writing history & Examples of Bad History**: 
+
+  <details>
+    <summary>The Golden Rule of Re-writing history & Examples of Bad History with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Undoing Commits**: 
+
+  <details>
+    <summary>Undoing Commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Reverting Commits**: 
+
+  <details>
+    <summary>Reverting Commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Reverting lost Commits**: 
+
+  <details>
+    <summary>Reverting lost Commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Amending the Last Commit**: 
+
+  <details>
+    <summary>Amending the Last Commit with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Amending an Earlier Commit**: 
+
+  <details>
+    <summary>Amending an Earlier Commit with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Dropping Commits**: 
+
+  <details>
+    <summary>Dropping Commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Rewording Commit Messages & Reordering Commits**: 
+
+  <details>
+    <summary>Rewording Commit Messages & Reordering Commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Squashing Commits**: 
+
+  <details>
+    <summary>Squashing Commits with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Splitting a Commit**: 
+
+  <details>
+    <summary>Splitting a Commit with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
 
 </details>
 
 ___
-
 <br/><br/><br/>
 
 # 9
-## **Undoing Changes 🤚🏽**
 
-<details open>
-  <summary>Undoing Changes 🤚🏽</b></summary>
+## **Collabration** 
+
+<details>
+  <summary>Collabration | <b>Click to expand</b></summary>
 </br>
+
+
+
+  <br>
+  
+  ### **Workflows**: 
+
+  <details>
+    <summary>VCS'S Workflows | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Creating a Github Repository**: 
+
+  <details>
+    <summary>Creating a Github Repository with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Adding Collaborators**: 
+
+  <details>
+    <summary>Adding Collaborators with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
+  ---
+  <br>
+  
+  ### **Cloning a Repository**: 
+
+  <details>
+    <summary>Cloning a Repository with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Fetching**: 
+
+  <details>
+    <summary>Fetching with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Pulling**: 
+
+  <details>
+    <summary>Pulling with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Pushing**: 
+
+  <details>
+    <summary>Pushing with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Storing Credentials**: 
+
+  <details>
+    <summary>Storing Credentials with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Sharing Tags**: 
+
+  <details>
+    <summary>Sharing Tags with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Releases**: 
+
+  <details>
+    <summary>Releases with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Sharing Branches**: 
+
+  <details>
+    <summary>Sharing Branches with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Collaboration Workflow**: 
+
+  <details>
+    <summary>Collaboration Workflow with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Pull Requests**: 
+
+  <details>
+    <summary>Pull Requests with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Resolving Conflicts**: 
+
+  <details>
+    <summary>Resolving Conflicts with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Issues**: 
+
+  <details>
+    <summary>Issues with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Labels**: 
+
+  <details>
+    <summary>Labels with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Contributing to Open-source Projects**: 
+
+  <details>
+    <summary>Contributing to Open-source Projects with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+  ---
+  <br>
+  
+  ### **Syncying your Forked Repository and keeping it up-to-date**: 
+
+  <details>
+    <summary>Syncying your Forked Repository with examples | <b>Click to expand</b></summary>
+    </br>
+  </details>
+  <br>
+  <br>
+
+
 
 </details>
 
 ___
-
 <br/><br/><br/>
+
 
 # 10
 ## **Articles 📰**
