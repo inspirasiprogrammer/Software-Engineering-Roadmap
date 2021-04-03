@@ -780,7 +780,7 @@ ___
 
 # 5
 ## **Creating Snapshots 🎸**
-<details>
+<details open>
   <summary>Creating Snapshots 🎸 | <b>Click to expand</b></summary>
 </br>
 
@@ -789,9 +789,21 @@ ___
 
   ### **Initializing a Repository**: 
 
-  <details>
+  <details open>
     <summary>Initializing a Repository with examples | <b>Click to expand</b></summary>
     </br>
+
+  To create a new reposityro in Gitwe use ```git init``` command which creates a new Git repository for us. It can be used to convert an existing, unversioned project to a Git repository or initialize a new, empty repository. Most other Git commands are not available outside of an initialized repository, so this is usually the first command you'll run in a new project.
+  Executing git init creates a .git subdirectory in the current working directory, which contains all of the necessary Git metadata for the new repository. This metadata includes subdirectories for objects, refs, and template files. A HEAD file is also created which points to the currently checked out commit.
+
+  ![](assets/images/creating_snapshots/1_initialize_a_git_repo.jpg)
+
+  <br>
+
+
+   1 . **Create a new Repositroy from Scratch/ An already existed Project.**
+  
+
   </details>
   <br>
   <br>
