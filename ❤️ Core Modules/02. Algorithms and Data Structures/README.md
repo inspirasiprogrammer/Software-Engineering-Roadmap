@@ -2115,19 +2115,145 @@ However, in some sorting algorithms, the program requires space which is more th
 
 ### **Stable and Not Stable Sorting**:
 
-<br>
+![](assets/algorithms/sorting/stable_vs_unstable.png)
+
+A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted. in other words The stability of a sorting algorithm is concerned with how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. In other words, stable sorting maintains the position of two equals elements relative to one another.
+
+
+- We don’t always need stable sorting. Stability is not a concern if:
+
+  - equal elements are indistinguishable
+  - all the elements in the collection are distinct
+- When equal elements are distinguishable, stability is imperative.  For instance, if the collection already has some order, then sorting on another key must preserve that order.
+
+
+
+- Several common sorting algorithms are stable by nature, such as Merge Sort, Timsort, Counting Sort, Insertion Sort, and Bubble Sort. Others such as Quicksort, Heapsort and Selection Sort are unstable.
+
+- We can modify unstable sorting algorithms to be stable. For instance, we can use extra space to maintain stability in Quicksort.
+
+
+> Recap: If a sorting algorithm, after sorting the contents, does not change the sequence of similar content in which they appear, it is called stable sorting.
+>If a sorting algorithm, after sorting the contents, changes the sequence of similar content in which they appear, it is called unstable sorting.
+
+
+
+  ---
+  <br>
+
+### **Adaptive and Non-Adaptive Sorting Algorithm**:
+
+A sorting algorithm is said to be adaptive, if it takes advantage of already 'sorted' elements in the list that is to be sorted. That is, while sorting if the source list has some element already sorted, adaptive algorithms will take this into account and will try not to re-order them.
+
+A non-adaptive algorithm is one which does not take into account the elements which are already sorted. They try to force every single element to be re-ordered to confirm their sortedness.
+
+
+
+
+  ---
+  <br>
+
+<!-- ### **Important Terms**: -->
+
+### **Sorting Efficiency**:
+
+Since the beginning of the programming age, computer scientists have been working on solving the problem of sorting by coming up with various different algorithms to sort data.
+
+The two main criterias to judge which algorithm is better than the other have been:
+
+Time taken to sort the given data.
+Memory Space required to do so.
+
+The following questions help to decide which algorithm should be used:
+
+- How many keys will you be sorting?
+- Will there be duplicate keys in the data?
+- What do you know about your data?
+  -Has the data already been partially sorted?
+  - Do you know the distribution of the keys?
+  - Are your keys very long or hard to compare?
+  - Is the range of possible keys very small?
+- Do I have to worry about disk accesses?
+- How much time do you have to write and debug your routine?
+
+<small>Chapter 14.1 in The Algorithm Design Manual</small>
 
 <br>
 <br>
 
+### Most popular Sorting Algorithms time complexities
+
+
+Algorithm |	  Best	|Average	|Worst|
+------------|----------|---|--|
+Selection Sort |	Ω(n^2)	|θ(n^2)	|O(n^2)|
+Bubble Sort |	Ω(n)	|θ(n^2)	|O(n^2)	|
+Insertion Sort |	Ω(n)	|θ(n^2)	|O(n^2)	|
+Heap Sort |	Ω(n log(n))	|θ(n log(n))	|O(n log(n))|
+Quick Sort|Ω(n log(n))|θ(n log(n))|O(n^2)	|
+Merge Sort|Ω(n log(n))|θ(n log(n))|O(n log(n))|	 
+Bucket Sort|Ω(n+k)|θ(n+k)	|O(n^2)|
+Radix Sort |Ω(nk)	|θ(nk)|O(nk)|
 
 ---
   
+<br>
+
+<br>
+
   ### **Bubble Sort**: 
 
   <details>
     <summary>What is Bubble Sort with examples | <b>Click to expand</b></summary>
     </br>
+
+
+![](https://upload.wikimedia.org/wikipedia/commons/d/d3/Bubblesort_Animation.gif)
+
+<small>Source/ <a href="https://de.wikipedia.org/wiki/Datei:Bubblesort_Animation.gif">Wikipedia</a></small>
+
+  The Bubble sort algorithm compares each pair of elements in an array and swaps them if they are out of order until the entire array is sorted. For each element in the list, the algorithm compares every pair of elements. 
+  
+  > it starts by comparing the first element in the array to the next. If the first element is bigger than the next, it swaps them before moving to the next element and repeats the process, until it gets to the end of the array. It then starts a new iteration with one less item to be compared, until the array is sorted.
+
+- Because at each iteration this algorithm moves the item with the largest value at the end, the relative order of elements with the same value remains the same and thus is algorithm is stable.
+
+- This algorithm terminates for every input, as soon as there is an iteration in which no elements of the array need to be sorted.
+
+
+
+
+
+<details>
+
+<summary>Example:</summary>
+
+<br>
+
+First Pass:
+- [ 5 1 4 2 8 ] –> [ 1 5 4 2 8 ], Here, algorithm compares the first two elements, and swaps since 5 > 1.
+- [ 1 5 4 2 8 ] –>  [ 1 4 5 2 8 ], Swap since 5 > 4
+- [ 1 4 5 2 8 ] –>  [ 1 4 2 5 8 ], Swap since 5 > 2
+- [ 1 4 2 5 8 ] –> [ 1 4 2 5 8 ], Now, since these elements are already in order [8 > 5), alg]rithm does not swap them.
+
+Second Pass:
+- [ 1 4 2 5 8 ] –> [ 1 4 2 5 8 ]
+- [ 1 4 2 5 8 ] –> [ 1 2 4 5 8 ], Swap since 4 > 2
+- [ 1 2 4 5 8 ] –> [ 1 2 4 5 8 ]
+- [ 1 2 4 5 8 ] –>  [ 1 2 4 5 8 ]
+Now, the array is already sorted, but our algorithm does not know if it is completed. The algorithm needs one whole pass without any swap to know it is sorted.
+
+Third Pass:
+- [ 1 2 4 5 8 ] –> [ 1 2 4 5 8 ]
+- [ 1 2 4 5 8 ] –> [ 1 2 4 5 8 ]
+- [ 1 2 4 5 8 ] –> [ 1 2 4 5 8 ]
+- [ 1 2 4 5 8 ] –> [ 1 2 4 5 8 ]
+
+</details>
+
+<br><br>
+
+
 
 ``` 
  🦶🏽 Steps:
@@ -2138,7 +2264,17 @@ However, in some sorting algorithms, the program requires space which is more th
 
 <br>
 
+- Compare A[0] and A[1]. If A[0] is bigger than A[1], swap the elements.
+- Move to the next element, A[1] (which might now contain the result of a swap from the previous step), and compare it with A[2]. If A[1]A[1] is bigger than A[2], swap the elements. Do this for every pair of elements until the end of the list.
 
+- Do steps 1 and 2 <i>n</i> times.
+
+  ---
+
+  - The Bubble sort makes multiple passes through a list
+  - It compares adjacent items and exchanges those that are out of order
+  - Each pass through the list places the next largest value in its proper place
+  - Each item "bubbles" up to the location where it belongs
 
 </details>
 <br>
@@ -2154,7 +2290,59 @@ However, in some sorting algorithms, the program requires space which is more th
 
 <br>
 
+Non-optimized
 
+```python
+procedure bubbleSort( list : array of items )
+
+   loop = list.count;
+   
+   for i = 0 to loop-1 do:
+      swapped = false
+		
+      for j = 0 to loop-1 do:
+      
+         /* compare the adjacent elements */   
+         if list[j] > list[j+1] then
+            /* swap them */
+            swap( list[j], list[j+1] )		 
+            swapped = true
+         end if
+         
+      end for
+      
+      /*if no number was swapped that means 
+      array is sorted now, break the loop.*/
+      
+      if(not swapped) then
+         break
+      end if
+      
+   end for
+   
+end procedure return list
+
+```
+
+
+Optimized
+
+```python
+procedure bubbleSort(A : list of sortable items)
+    n := length(A)
+    repeat
+        swapped := false
+        for i := 1 to n - 1 inclusive do
+            if A[i - 1] > A[i] then
+                swap(A[i - 1], A[i])
+                swapped = true
+            end if
+        end for
+        n := n - 1
+    until not swapped
+end procedure
+
+```
 
 </details>
 
@@ -2170,6 +2358,16 @@ However, in some sorting algorithms, the program requires space which is more th
 <summary>Input/ output examples</summary>
 
 <br>
+
+
+  Sample input/ Output:
+    
+``` python
+array = [8, 5, 2, 9, 5, 6, 3]
+```
+
+  Output : [2, 3, 5, 5, 6, 8, 9] array is sorted;
+
 
 
 
@@ -2189,6 +2387,85 @@ However, in some sorting algorithms, the program requires space which is more th
 <br>
 
 
+<details>
+<summary>Non-optimized</summary>
+
+<br>
+
+
+```Python
+
+def bubbleSort(array):
+  isSorted = False
+
+  while not isSorted:
+    isSorted = True
+    for i in range(len(array) - 1):
+      if array[i] > array[i + 1]:
+        swap(i, i + 1, array)
+        isSorted = False
+  return array
+
+def swap(i, j, array):
+  array[i], array[j] = array[j], array[i]
+
+array = [8, 5, 2, 9, 5, 6, 3]
+print(bubbleSort(array))
+
+
+```
+
+</details>
+
+<details>
+<summary>Optimized</summary>
+
+<br>
+The above function always runs O(n^2) time even if the array is sorted. It can be optimized by stopping the algorithm if inner loop didn’t cause any swap.
+
+
+
+```Python
+
+def bubbleSort(array):
+
+  # check if any items have been swapped
+  isSorted = False
+  
+  # will iterate until the end of the n-1
+  counter = 0
+
+  # Run loops two times: one for walking throught the array
+  # and the other for comparison
+  
+  while not isSorted:
+    # isSorted keeps track of swapping
+    isSorted = True
+
+    # Traverse through all array elements
+    #traverse the array from 0 to n-1-counter. Swap if the element found is greater than the next element
+    for i in range(len(array) - 1 - counter):
+      # To sort in descending order, change > to < in this line.
+      if array[i] > array[i + 1]:
+        # Swap if greater is at the rear position
+        swap(i, i + 1, array)
+        isSorted = False
+    # will disregard the last valuesorted key in the list cause the counter is 1 now
+    counter += 1
+  return array
+
+def swap(i, j, array):
+  array[i], array[j] = array[j], array[i]
+
+array = [8, 5, 2, 9, 5, 6, 3]
+print(bubbleSort(array))
+
+
+```
+
+</details>
+
+
 
 </details>
 <br>
@@ -2200,10 +2477,46 @@ However, in some sorting algorithms, the program requires space which is more th
 ```
 
 
-<details>
+<details open>
 <summary>Asymptotic analysis</summary>
 
 <br>
+
+<details open>
+<summary>Time Complexity Analysis</summary>
+<br>
+
+
+- **Worst Case Complexity**: O(n2)
+If we want to sort in ascending order and the array is in descending order or the array is completly unsorted then, the worst case occurs.
+- **Best Case Complexity**: O(n)
+If the array is already sorted, then there is no need for sorting.
+- **Average Case Complexity**: O(n2)
+It occurs when the elements of the array are in jumbled order (neither ascending nor descending) | ```or there is only one value that needs to be sorted```.
+- **Sorting In Place**: Yes
+
+- **Stable**: Yes
+
+
+To calculate the complexity of the bubble sort algorithm, it is useful to determine how many comparisons each loop performs. For each element in the array, bubble sort does n-1 comparisons. In big O notation, bubble sort performs O(n) comparisons. Because the array contains nn elements, it has an O(n) number of elements. In other words, bubble sort performs O(n) operations on an O(n) number of elements, leading to a total running time of O(n^2)
+
+
+Note: O(n) is the best-case running time for bubble sort. It is possible to modify bubble sort to keep track of the number of swaps it performs. If an array is already in sorted order, and bubble sort makes no swaps, the algorithm can terminate after one pass. With this modification, if bubble sort encounters a list that is already sorted, it will finish in O(n) time.
+
+
+
+</details>
+
+
+<details>
+<summary>Space Complexity Analysis</summary>
+<br>
+
+Because this is an in-place algorithm, it does not require any auxiliary space.
+
+
+
+</details>
 
 
 
@@ -2222,10 +2535,28 @@ However, in some sorting algorithms, the program requires space which is more th
 
 <br>
 
+Cycle	| Comparisons
+-----|------
+1st|	(n-1)|
+2nd|	(n-2)|
+3rd|	(n-3)|
+.......| 	......
+last |	1
+
+Here, number of comparisons
+
+```(n - 1) + (n - 2) + (n - 3) +.....+ 1 = n(n - 1) / 2```
+
+- nearly equals to n2
+
+- Hence, Complexity: O(n2)
+
+- Also, if we simply observe the number of loops. The algorithm implements two loops. Hence, the complexity is ```n*n = n2```
+
+
 
 
 </details>
-<br>
 <br>
 
   </details>
