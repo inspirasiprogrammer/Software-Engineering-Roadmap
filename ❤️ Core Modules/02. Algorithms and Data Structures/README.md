@@ -75,6 +75,7 @@
       - 1 . [Breadth-first search](#breadth-first-search)
       - 2 . [Depth-first search](#depth-first-search)
       - 3 . [Dijkstra’s shortest path algorithm]()
+      - 3 . [A* Algorithm]()
       - 4 . [Bellman–Ford algorithm](#bellman–ford-algorithm)
   - ## 4 . [Data structres](#data-structres)
     - 1  . [What are Data structres?](#what-are-data-structres?)
@@ -85,10 +86,10 @@
       - 5.1  . [Singly Linked lists](#singly-linked-lists)
       - 5.2  . [Doubly Linked lists](#doubly-linked-lists)
       - 5.2  . [Circular Linked lists](#circular-linked-lists)
-    - 6  . [Hash tables](#hash-tables)
-    - 7  . [Stacks](#stacks)
-    - 8 . [Queues](#queues)
-    - 9 . [Trees](#trees)
+    - 6  . [Stacks](#stacks)
+    - 7  . [Queues](#queues)
+    - 8  . [Hash tables](#hash-tables)
+    - 9  . [Trees](#trees)
       - 9.1 . [Binary search trees](#binary-search-trees)
       - 9.2 . [AVL Trees](#avl-trees)
       - 9.3 . [Heaps](#heaps)
@@ -2160,7 +2161,7 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
 ## **Sorting Algorithms**:
 
-<details open>
+<details >
 <summary>Sorting Algorithms explanation and examples</summary>
 <br>
 
@@ -4145,7 +4146,7 @@ The time complexity of the selection sort is the same in all cases. At every ste
 
 <br>
 
-<details>
+<details open>
 <summary>Data structres | <b>Click to expand</b></summary>
 
 <br>
@@ -4162,6 +4163,15 @@ The time complexity of the selection sort is the same in all cases. At every ste
 
 A data structure is a named location that can be used to store and organize data. And, an algorithm is a collection of steps to solve a particular problem. Learning data structures and algorithms allow us to write efficient and optimized computer programs. 
 
+
+</br></br>
+
+
+### **What are Data structres?**:
+<details>
+  <summary>What are Data structres & Differences | <b>Click to expand</b></summary>
+
+  <br>
 
 - Anything that can store data can be called as a data structure, hence Integer, Float, Boolean, Char etc, all are data structures. They are known as Primitive Data Structures.
 
@@ -4191,28 +4201,209 @@ Data structures can also be classified on the basis of the following characteris
 **<small>Cambridge dictionary/ Oxford Languages</small>**
 
 <br>
+
+</br>
+</details>
+
+</br>
+
+---
+
+</br>
+
+
+### **Logarithm**:
 <details>
-<summary>Algorithms Applications & theory | <b>Click to expand 🔥</b></summary>
+  <summary>What you need to know about memory? | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+### **Arrays**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Linked Lists**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+
+
+### **Singly Linked Lists**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+
+</details>
 
 <br>
 
-- **What:** 
-  
-  ---
+---
 
+<br>
 
+### **Doubly Linked Lists**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
 
-- **Applications**: 
+</details>
 
-___
+<br>
 
-- **Efficiency**: 
+---
 
-    ---
-- **Measuring Efficiency**: 
+<br>
+
+### **Circular Linked Lists**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+
+</details>
 
 
 </details>
+
+</br>
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
+---
+
+</br>
+
+
+
+### **Memory**:
+<details>
+  <summary> | <b>Click to expand</b></summary>
+</br>
+</details>
+
+</br>
+
+
 
 </details>
 
