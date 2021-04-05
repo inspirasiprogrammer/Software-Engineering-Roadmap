@@ -42,6 +42,12 @@
         - [Same Time Complexity](#same-time-complexity)
     - 4 . [Master Theorem](#algorithm-design-strategies--techniques)
     - 5 . [Algorithm Design Techniques & Strategies](#master-theorem)
+      - 1 . [Brute Force Algorithms](#brute-force-algorithms)
+      - 2 . [Backtracking Algorithms](#backtracking-algorithms)
+      - 4 . [Dynamic Programming](#dynamic-programming)
+      - 3 . [Greedy Algorithms](#greedy-algorithms)
+      - 4 . [Parallel Algorithms](#parallel-algorithms)
+      - 5 . [Divide and Conquer](#ivide-and-conquer)
     - 6 . [Searching Algorithms](#searching-algorithms)
       - 1 . [Linear Search](#linear-search)
       - 2 . [Binary Search](#binary-search)
@@ -70,10 +76,6 @@
       - 2 . [Depth-first search](#depth-first-search)
       - 3 . [Dijkstra’s shortest path algorithm]()
       - 4 . [Bellman–Ford algorithm](#bellman–ford-algorithm)
-    - 10 . [Greedy Algorithms](#greedy-algorithms)
-    - 11 . [Divide and Conquer](#divide-and-conquer)
-    - 12 . [Dynamic Programming](#dynamic-programming)
-    - 13 . [Backtracking](#backtracking)
   - ## 4 . [Data structres](#data-structres)
     - 1  . [What are Data structres?](#what-are-data-structres?)
     - 2  . [Logarithm](#logarithm)
@@ -709,7 +711,7 @@ characters.
 
   <div align="center">
 
-  ![progra](assets/images/asymptotic_notation/big-o.png)
+  ![progra](assets/images/asymptotic_notation/big_o/big-o.png)
 
   <small>Big O.
   | Image source / <a href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation">Khan Academy</a></small>
@@ -831,25 +833,6 @@ Summary:
 
 
 
-# 3.3
-
-## **Algorithm design strategies & Techniques**:
-
-<details>
-  <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
-</br>
-
-</details>
-<br/>
-
----
-
-<br/>
-<br/>
-<br/>
-<br/>
-
-
 
 
 # 3.4
@@ -859,6 +842,84 @@ Summary:
 <details>
   <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
 </br>
+
+
+<br/>
+
+
+
+
+  ### **Brute Force Algorithms**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+  <br>
+
+  ### **Backtracking Algorithms**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+<br>
+
+  ### **Dynamic Programming**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+<br/>
+
+  ### **Greedy Algorithms**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+<br/>
+
+
+  ### **Parallel Algorithms**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+<br/>
+
+
+
+  ### **Divide and Conquer**:
+  <details>
+    <summary> | <b>Click to expand</b></summary>
+    </br>
+
+  </details>
+
+  ---
+
+<br/>
+
+
+
 
 </details>
 <br/>
@@ -894,6 +955,18 @@ Summary:
   - **Sequential Search**: Lists or arrays are traversed sequentially and every element is checked. For example: Linear Search. (designed to search for an item in unsorted data structures, they check every item in the data structure sequentially.) For example: **Linear Search**.
 
   - **Interval Search**: These algorithms are specifically designed for searching in sorted data-structures. These type of searching algorithms are much more efficient than Linear Search as they repeatedly target the center of the search structure and divide the search space in half. For Example: Binary Search.
+
+  ---
+
+  The following questions help to decide which algorithm should be used:
+  - How much time can you spend programming?
+  - Are certain items accessed more often than other ones?
+  - Might access frequencies change over time?
+  - Is the key close by?
+  - Is my data structure sitting on external memory?
+  - Can I guess where the key should be?
+
+  <small>Chapter 14.2 in The Algorithm Design Manual</small>
 
 
   <br>
@@ -2091,12 +2164,20 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 <summary>Sorting Algorithms explanation and examples</summary>
 <br>
 
-## **<div align="center">Sorting</div>**
+
+<details>
+<summary>What Sorting algorithms are with some examples | <b>Click to expand</b></summary>
+
+<br>
+
+## **<div align="left">Sorting</div>**
 
  **Sorting** refers to arranging data in a particular format. Sorting algorithm specifies the way to arrange data in a particular order. Most common orders are in numerical or lexicographical order.
  
  - The importance of sorting lies in the fact that data searching can be optimized to a very high level, if data is stored in a sorted manner. Sorting is also used to represent data in more readable formats. Following are some of the examples of sorting in real-life scenarios −
 
+
+> You need two essential tools in order to describe most sorting algorithms: comparison and swapping.
   ---
   <br>
 
@@ -2114,8 +2195,6 @@ However, in some sorting algorithms, the program requires space which is more th
   <br>
 
 ### **Stable and Not Stable Sorting**:
-
-![](assets/algorithms/sorting/stable_vs_unstable.png)
 
 A sorting algorithm is said to be stable if two objects with equal keys appear in the same order in sorted output as they appear in the input array to be sorted. in other words The stability of a sorting algorithm is concerned with how the algorithm treats equal (or repeated) elements. Stable sorting algorithms preserve the relative order of equal elements, while unstable sorting algorithms don’t. In other words, stable sorting maintains the position of two equals elements relative to one another.
 
@@ -2195,6 +2274,8 @@ Merge Sort|Ω(n log(n))|θ(n log(n))|O(n log(n))|
 Bucket Sort|Ω(n+k)|θ(n+k)	|O(n^2)|
 Radix Sort |Ω(nk)	|θ(nk)|O(nk)|
 
+
+</details>
 ---
   
 <br>
@@ -2399,10 +2480,15 @@ def bubbleSort(array):
   isSorted = False
 
   while not isSorted:
+
+    # We assume that the list is sorted here
+    # then we walk through the array
     isSorted = True
+    #The reason why we have array - 1 is because array of i is actually going look at the next element, so if we had this be array just go up to len(array), then We're going to get an out of bounds error on the very last element. So we need to make sure that this is len(array -1)
     for i in range(len(array) - 1):
       if array[i] > array[i + 1]:
         swap(i, i + 1, array)
+        # if anything is out of order we indicate that this array is still not sorted and we set the isSorted to False
         isSorted = False
   return array
 
@@ -2477,12 +2563,12 @@ print(bubbleSort(array))
 ```
 
 
-<details open>
+<details>
 <summary>Asymptotic analysis</summary>
 
 <br>
 
-<details open>
+<details>
 <summary>Time Complexity Analysis</summary>
 <br>
 
@@ -2491,8 +2577,7 @@ print(bubbleSort(array))
 If we want to sort in ascending order and the array is in descending order or the array is completly unsorted then, the worst case occurs.
 - **Best Case Complexity**: O(n)
 If the array is already sorted, then there is no need for sorting.
-- **Average Case Complexity**: O(n2)
-It occurs when the elements of the array are in jumbled order (neither ascending nor descending) | ```or there is only one value that needs to be sorted```.
+- **Average Case Complexity**: The average-case time complexity for the bubble sort algorithm is O(n2), which happens when 2 or more elements are in jumbled, i.e., neither in the ascending order nor in the descending order.
 - **Sorting In Place**: Yes
 
 - **Stable**: Yes
@@ -2535,6 +2620,17 @@ Because this is an in-place algorithm, it does not require any auxiliary space.
 
 <br>
 
+- Input: Given n input elements.
+
+- Output: Number of steps incurred to sort a list.
+
+- Logic: If we are given n elements, then in the first pass, it will do n-1 comparisons; in the second pass, it will do n-2; in the third pass, it will do n-3 and so on. Thus, the total number of comparisons can be found by;
+
+- Therefore, the bubble sort algorithm encompasses a time complexity of O(n2) and a space complexity of O(1) because it necessitates some extra memory space for temp variable for swapping.
+
+
+
+
 Cycle	| Comparisons
 -----|------
 1st|	(n-1)|
@@ -2545,7 +2641,14 @@ last |	1
 
 Here, number of comparisons
 
-```(n - 1) + (n - 2) + (n - 3) +.....+ 1 = n(n - 1) / 2```
+```
+(n - 1) + (n - 2) + (n - 3) +.....+ 1 = n(n - 1) / 2
+
+Sum = n(n - 1) / 2
+
+i.e o(n^2)
+
+```
 
 - nearly equals to n2
 
@@ -2569,9 +2672,35 @@ Here, number of comparisons
 
   ### **Selection Sort**:
 
+  
+
  <details>
-   <summary>What is Selection Sort with examples<b>Click to expand</b></summary>
+   <summary>What is Selection Sort with examples<b> | Click to expand</b></summary>
    </br>
+
+   ![](https://www.codingconnect.net/wp-content/uploads/2016/09/Selection-Sort.gif)
+   <small>Source <a href="https://ada-students.gitbooks.io/apprentice-handbook/content/year-one/data-structures-and-algorithms/02-sorting-algorithms.html">Selection Sort Animaiton. Blue = current index, Red = current minimum, Yellow = already sorted/ ada-students</a></small>
+
+   <br>
+
+  Selection Sort Algorithm is an in-place, iterative  in-place comparison-based algorithm in which the list is divided into two parts, the sorted part at the left end and the unsorted part at the right end. Initially, the sorted part is empty and the unsorted part is the entire list.
+
+  - It works by comparing the first item in a array to all the other items with a greater index and swaps it with the smallest it founds. It then moves to the next element and repeats the process until it gets to the last item of the array. In this way, after each iteration one more item is sorted.
+
+
+  - Selection sort enhances the bubble sort by making only a single swap for each pass through the rundown. In order to do this, a selection sort searches for the biggest value as it makes a pass and, after finishing the pass, places it in the best possible area. Similarly, as with a bubble sort, after the first pass, the biggest item is in the right place. After the second pass, the following biggest is set up. This procedure proceeds and requires n-1 goes to sort n item since the last item must be set up after the (n-1) th pass.
+
+
+
+
+sorts an algorithm by repeatedly finding the minimum element from the unsorted part and putting it at the beginning
+in place algorithm
+does not save the ordered array in another memory location
+rearranges the input array
+
+<br>
+
+
 
 ``` 
  🦶🏽 Steps:
@@ -2582,6 +2711,21 @@ Here, number of comparisons
 
 <br>
 
+  1. In the selection sort, first of all, we set the initial element as a minimum.
+  2. Now we will compare the minimum with the second element. If the second element turns out to be smaller than the minimum, we will swap them, followed by assigning to a minimum to the third element.
+  3. Else if the second element is greater than the minimum, which is our first element, then we will do nothing and move on to the third element and then compare it with the minimum.
+  We will repeat this process until we reach the last element.
+  4. After the completion of each iteration, we will notice that our minimum has reached the start of the unsorted list.
+  5. For each iteration, we will start the indexing from the first element of the unsorted list. We will repeat the Steps from 1 to 4 until the list gets sorted or all the elements get correctly positioned.
+  Consider the following example of an unsorted array that we will sort with the help of the Selection Sort algorithm.
+
+  Simpler explanation:
+
+  - Store the first element as the smallest value we've seen so far and set it to location 0
+  - Compare this item to the next item in the array until we find a smaller number.
+  - If a smaller number is found, designate that smaller number to be the new "minimum" and continue until the end of the array.
+  - If the "minimum" is not the value (index) we initially began with, swap the two values.
+- Repeat this with the next element until the array is sorted.
 
 
 </details>
@@ -2598,7 +2742,21 @@ Here, number of comparisons
 
 <br>
 
+```python
+selectionSort(array, size)
 
+  repeat (size - 1) times
+
+  set the first unsorted element as the minimum
+
+  for each of the unsorted elements
+    if element < currentMinimum
+      set element as new minimum
+  swap minimum with first unsorted position
+
+end selectionSort
+
+```
 
 </details>
 
@@ -2616,21 +2774,86 @@ Here, number of comparisons
 <br>
 
 
+Input
+
+  ```
+  array = [7, 9, 5, 1, 3, 4, 8]
+  ```
+
+Output
+```
+[1, 3, 4, 5, 7, 8, 9]
+```
 
 </details>
 <br>
 <br>
 
 
-```
- 💻 Implementation:
-```
 
 
 <details>
 <summary>Python 🐍</summary>
 
 <br>
+
+<details>
+<summary>#1 implementation</summary>
+
+<br>
+
+```python
+def selectionSort(array):
+    for currentIndex in range(len(array) - 1):
+        # find the index of the smallest element
+        smallestIndex = currentIndex
+        for j in range(smallestIndex+1, len(array)):
+            if array[smallestIndex] > array[j]:
+                smallestIndex = j
+        swap(currentIndex, smallestIndex, array)
+    return array
+        
+def swap(i, j, array):
+    array[i], array[j] = array[j], array[i]
+
+array = [7, 9, 5, 1, 3, 4, 8]
+print(selectionSort(array))
+```
+
+</details>
+
+
+<details>
+<summary>#2 implementation</summary>
+
+<br>
+
+```python
+def selectionSort(array):
+
+    currentIndex = 0
+    #when  current index gets all the way to the final index-1, then everythign is sorted
+    while currentIndex < len(array) -1:
+      # Assume that smallest index = first index
+      smallestIndex = currentIndex
+      # iterate starting at the second item to the end of the list 
+      for i in range(currentIndex +1, len(array)):
+        # we check if the smallest potential number is greater than the current number then update to smallestIndex = current index
+        if array[smallestIndex] > array[i]:
+          smallestIndex = i
+        swap(currentIndex, smallestIndex, array)
+        currentIndex += 1
+      return array
+
+        
+def swap(i, j, array):
+    array[i], array[j] = array[j], array[i]
+
+array = [7, 9, 5, 1, 3, 4, 8]
+print(selectionSort(array))
+```
+
+</details>
 
 
 
@@ -2650,6 +2873,45 @@ Here, number of comparisons
 <br>
 
 
+<details>
+<summary>Time Complexity</summary>
+
+<br>
+
+
+- The outer loop runs n times Θ(𝑛)
+- The inner loop runs n times then n-1 times then n-2 times ... (arithmetic series)
+  - 𝑛 /2 + 𝑛/2 calculates the sum of this series
+- This means that Θ(𝑛^2) applies for the inner loop
+- as learned, constant factors and lower-order terms do not matter for the asymptotic analysis
+- The most significant term is Θ(𝑛^2)
+  - This means that the running time of selection sort is
+we also know that selection sort always runs in time in all cases
+this is true because the iteration amount of the loops does not depend on the order of data in the array
+even a sorted array would lead to the same amount of iterations as an unsorted one
+
+
+- **Best Case Complexity**: The selection sort algorithm has a best-case time complexity of O(n2) for the already sorted array.
+
+- **Average Case Complexity**: The average-case time complexity for the selection sort algorithm is O(n2), in which the existing elements are in jumbled ordered, i.e., neither in the ascending order nor in the descending order.
+- **Worst Case Complexity**: The worst-case time complexity is also O(n2), which occurs when we sort the descending order of an array into the ascending order.
+
+</details>
+
+<details >
+<summary>Space Complexity</summary>
+
+<br>
+
+Because this is an in-place algorithm, it does not require any auxiliary space, which means that We did this all in place in the same input array that was given to us. This naturally means that the space complexity is gonna be O of one space.
+
+Space = O(1)
+
+
+
+</details>
+
+
 
 </details>
 <br>
@@ -2665,6 +2927,40 @@ Here, number of comparisons
 <summary>Algorithm's mathematical explanation</summary>
 
 <br>
+
+If we multiply the amount of opeartions carried out by the two loops we will find out that the asymptotic growth of this function is quadratic, therefore, the average, best, and worst case-scenario time complexity will be 
+Θ = Ω = O(n2).
+
+But to make sure let's go through the following
+
+Cycle	| Comparisons
+-----|------
+1st|	(n-1)|
+2nd|	(n-2)|
+3rd|	(n-3)|
+.......| 	......
+last |	1
+
+
+Here, number of comparisons
+
+If we are given n elements, then in the first pass, it will do n-1 comparisons; in the second pass, it will do n-2; in the third pass, it will do n-3 and so on. Thus, the total number of comparisons can be found by;
+
+```
+(n - 1) + (n - 2) + (n - 3) + ..... + 1 = n(n - 1) / 2 
+
+nearly equals to n2.
+
+Sum = n(n - 1) / 2
+
+i.e o(n^2)
+
+
+Also, we can analyze the complexity by simply observing the number of loops. There are 2 loops so the complexity is n*n = n2.
+
+```
+
+The time complexity of the selection sort is the same in all cases. At every step, you have to find the minimum element and put it in the right place. The minimum element is not known until the end of the array is not reached.
 
 
 
@@ -3830,80 +4126,7 @@ Here, number of comparisons
 ---
 
   <br>
-<br/>
-<br/>
-<br/>
 
-
-
-# 3.8
-
-## **Divide and Conquer**:
-
-  <br>
-
-
-
-
-  ### **Breadth-first search**:
-  <details>
-    <summary> | <b>Click to expand</b></summary>
-    </br>
-
-  </details>
-
-  ---
-
-  <br>
-<br/>
-<br/>
-<br/>
-
-
-# 3.9
-
-## **Dynamic Programming**:
-
-  <br>
-
-
-
-
-  ### **Breadth-first search**:
-  <details>
-    <summary> | <b>Click to expand</b></summary>
-    </br>
-
-  </details>
-
-  ---
-
-  <br>
-<br/>
-<br/>
-<br/>
-
-
-# 3.10
-
-## **Backtracking**:
-
-  <br>
-
-
-
-
-  ### **Breadth-first search**:
-  <details>
-    <summary> | <b>Click to expand</b></summary>
-    </br>
-
-  </details>
-
-  ---
-
-<br/>
-<br/>
 <br/>
 <br/>
 
