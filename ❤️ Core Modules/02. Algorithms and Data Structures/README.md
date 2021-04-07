@@ -40,8 +40,14 @@
         - [Properties of Logarithm](#properties-of-logarithm)
         - [Dominance Pecking Order](#dominance-pecking-order)
         - [Same Time Complexity](#same-time-complexity)
-    - 4 . [Master Theorem](#algorithm-design-strategies--techniques)
-    - 5 . [Algorithm Design Techniques & Strategies](#master-theorem)
+    - 4 . [Math](#math) (But not that scary 💆🏽)
+      - 1 . [Master Theorem](#master-theorem)
+      - 2 . [Exponents](#exeponents)
+      - 3 . [Lograithms](#lograithms)
+        - 1 . [Lograithm bases](#lograithm-bases)
+      - 4 . [Lograithms](#lograithms)
+      - 5 . [Arithmetic series](#lograithms)
+    - 5 . [Algorithm Design Techniques & Strategies](#algorithm-design-strategies--techniques)
       - 1 . [Brute Force Algorithms](#brute-force-algorithms)
       - 2 . [Backtracking Algorithms](#backtracking-algorithms)
       - 4 . [Dynamic Programming](#dynamic-programming)
@@ -639,7 +645,7 @@ However just because you have n calls total doesn’t mean it takes O(n) space.
 
 <br>
 
-<details>
+<details open>
 <summary>Asymptotic mathematical Notations <b> | Click to expand</b></summary>
 
 <br>
@@ -779,9 +785,21 @@ Summary:
 
   ### **Omega notation (Ω)**: 😌 (Asymptotic Lower bound)
 
-  <details>
+  <details open>
     <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
     </br>
+
+  **Big Omega** notation is used to define the lower bound of any algorithm or we can say the best case of any algorithm.
+
+This always indicates the minimum time required for any algorithm for all input values, therefore the best case of any algorithm.
+
+In simple words, when we represent a time complexity for any algorithm in the form of big-Ω, we mean that the algorithm will take atleast this much time to cmplete it's execution. It can definitely take more time than this too.
+
+
+
+  ![](assets/images/asymptotic_notation/big_omega/big_omega.png)
+
+
   </details>
 
   ---
@@ -2094,9 +2112,609 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 ## **Recursion (Recursive Algorithms)**:
   
 
-<details>
+<details open>
 <summary>Recursion cases, explanation & examples</summary>
 
+  <br>
+
+  > To solve a problem, solve a subproblem that is a smaller instance of the same problem, and then use the solution to that smaller instance to solve the original problem.
+
+
+
+
+
+  **Recursion** is the process in which a a function or method that repeatedly calculates a smaller part of itself to arrive at the final result. It is similar to iteration, but instead of repeating a set of operations, a recursive function accomplishes repetition by calling itself in its own definition.. Using recursive algorithm, certain problems can be solved quite easily. Examples of such problems are Fibonacci, Towers of Hanoi (TOH), Factorial, Tree Traversals, DFS of Graph, etc..
+
+  ```
+  We say there's a recursion when a function delegates work to clones of itself
+  ```
+  <br>
+
+  - The term  describes  While the concept of recursive programming can be difficult to grasp initially, mastering it can be very useful. Recursion is one of the fundamental tools of computer science.
+
+  - Recursive algorithms have:
+    - Base cases that terminate the loop
+    - Recursive cases that call themselves they can take a lot of memory due to many function calls
+    > In a base case, we compute the result immediately given the inputs to the function call.
+    
+    > In a recursive step, we compute the result with the help of one or more recursive calls to this same function, but with the inputs somehow reduced in size or complexity, closer to a base case.
+
+    --- 
+    <br>
+
+ ### **Recursion instances**
+  1. When recursion is used as a technique in which a function makes one or more calls to itself.
+  2. When a data structre uses smaller instances of the exact same types of data structre when it represents itself.
+
+  ---
+
+  <br>
+
+   ### **Improving efficiency of recursive functions**
+  <br>
+
+  - **Memoization**
+  1. When recursion is used as a technique in which a function makes one or more calls to itself.
+  2. When a data structre uses smaller instances of the exact same types of data structre when it represents itself.
+
+
+  ---
+  
+  <br>
+
+  Using recursion requires creativity for seeing how a problem can be stated in terms of itself.
+
+  ---
+## **<div align="left"> Recursion Examples</div>**
+
+<br>
+
+### **(Factorial)</b> Classic recursion example** 
+<details>
+<summary>Exaplanataion & Implementastion<b> | Click to expand</b></summary>
+<br>
+ A classic example is the recursive method for computing the factorial of a number. The factorial of an integer n, which is written as n!, is the result of multiplying n by all the positive integers less than n. For instance, 3! = 3 x 2 x 1, which results in 6, and 4! = 4 x 3 x 2 x 1, which results in 24. An efficient way to calculate a factorial is with a recursive function.
+
+  > In mathematics, the factorial of a non-negative integer n, denoted by n!, is the product of all positive integers less than or equal to n: For example, The value of 0! is 1, according to the convention for an empty product.
+
+
+  <br>
+  
+  <div align="center">
+
+  <!-- ![](assets/algorithms/../images/algorithms/recursion/factorial/factorial.png)
+  <small>Source: <a href="https://educative.io"></a></small> -->
+
+  </div>
+
+  ```python
+
+  def factorial(n):
+    # n! = n × (n−1) × (n−2) × … × 2 × 1
+    return 1 if n == 0 else n * factorial(n-1)
+      
+  factorial(120)
+  # Result: 120
+
+  ```
+
+We can trace this computation in precisely the same way that we trace any sequence of function calls.
+
+
+  ```python
+  factorial(5) 
+   factorial(4) 
+      factorial(3) 
+         factorial(2) 
+            factorial(1) 
+               return 1 
+            return 2 * 1 = 2 
+         return 3 * 2 = 6 
+      return 4 * 6 = 24 
+   return 5 * 24 = 120
+  ```
+
+  - Our factorial() implementation exhibits the two main components that are required for every recursive function.
+
+    - The base case returns a value without making any subsequent recursive calls. It does this for one or more special input values for which the function can be evaluated without recursion. For factorial(), the base case is n = 1.
+
+    - The reduction step is the central part of a recursive function. It relates the value of the function at one (or more) input values to the value of the function at one (or more) other input values. Furthermore, the sequence of input values values must converge to the base case. For factorial(), the value of n decreases by 1 for each call, so the sequence of input values converges to the base case.
+
+</details>
+
+<br>
+
+### **Palindrome algorithm</b>** 
+<details>
+<summary>Exaplanataion & Implementastion<b> | Click to expand</b></summary>
+<br>
+
+
+``` 
+ 🦶🏽 Steps:
+```
+
+<details>
+<summary>Table of steps</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+Input:
+
+```
+Input  : n = 2
+```
+Output: 1
+
+---
+
+Input:
+
+```
+Input  : n = 9
+```
+Output: 34
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+<details>
+<summary>Recursive implementation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+<details>
+<summary>Recursive optimized</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+<details>
+<summary>Iterative implmenetation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+
+</details>
+
+
+<br>
+
+### **Fibonacci algorithm</b>** 
+<details open>
+<summary>Exaplanataion & Implementastion<b> | Click to expand</b></summary>
+<br>
+
+![](assets/images/algorithms/recursion/gloden-ration.jpeg)
+
+**Fibonacci sequence** is a very famous sequence of numbers in math. 
+The way that it's defined is the first two numbers are zero and one, they're kind of just given to you and then every number thereafter can be found by adding the two previous numbers. 
+
+- The Fibonacci numbers are the numbers in the following integer sequence.
+  - 0, 1, 1, 2, 3, 5, 8, 13, 21, 34, 55, 89, 144, ……..
+  - In mathematical terms, the sequence Fn of Fibonacci numbers is defined by the recurrence relation ```Fn = F(n-1) + F(n-2)``` with seed values    ```F0 = 0 and F1 = 1.```
+  - Example: 0 ,1,1,2,3,5,8,13,21,..... is a Fibonacci sequence.
+
+  ```python
+  F0 = 0
+  Fn = 1
+  Fn = F(n - 1)+ F(n - 2)
+  fib (n) 
+  __
+
+  1. If (n < 2) 
+  2. then return n 
+  3. else return fib(n - 1) + fib(n - 2)
+  ```
+  ---
+
+
+  ```
+                                fib(5)   
+                          /                \
+                    fib(4)                fib(3)   
+                  /        \              /       \ 
+              fib(3)      fib(2)         fib(2)   fib(1)
+              /    \       /    \        /      \
+        fib(2)   fib(1)  fib(1) fib(0) fib(1) fib(0)
+        /     \
+      fib(1) fib(0)
+
+  ```
+
+
+  - A single recursive call to fib(n) results in one recursive call to fib (n - 1)
+  - two recursive calls to fib (n - 2)
+  - three recursive calls to fib (n - 3), 
+  - five recursive calls to fib (n - 4) 
+  - and, in general, Fk-1 recursive calls to fib (n - k) We can avoid this unneeded repetition by writing down the conclusion of recursive calls and looking them up again if we need them later. This process is called memorization. (Which we will get to in teh examples)
+
+
+
+
+
+
+<br>
+
+
+``` 
+ 🐾 Steps extended:
+```
+
+<details>
+<summary>Table of steps <b>(Pseudocode)</b></summary>
+
+<br>
+
+<details>
+<summary>Recursive steps </summary>
+
+<br>
+
+```python
+if (n < 2) 
+then return n
+if (F[n] is undefined)
+then F[n] ← fib (n - 1) + fib (n - 2)
+return F[n]
+
+```
+
+
+</details>
+
+<details>
+<summary>Iterative steps </summary>
+
+<br>
+
+```python
+F [0] ← 0 
+F [1] ← 1 
+for i ← 2 to n 
+do 
+F[i] ← F [i - 1] + F [i - 2] 
+return F[n]
+```
+
+</details>
+
+
+</details>
+
+
+<br>
+<br>
+
+``` 
+ 📟 input/ output:
+```
+
+<details>
+<summary>Input/ output examples</summary>
+
+<br>
+
+Input:
+
+```
+Input  : n = 2
+```
+Output: 1
+
+---
+
+Input:
+
+```
+n = 9
+```
+Output: 34
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 💻 Implementation:
+```
+
+
+<details>
+<summary>Python 🐍</summary>
+
+<br>
+
+
+<details>
+<summary>Recursive implementation</summary>
+
+<br>
+
+```python
+
+# nth Fibonacci number
+
+def fib(n):
+  if n < 2:
+    return 1
+  elif n == 1:
+    return 0
+  else:
+    # T(n) = T(n-1) + T(n-2)
+    # Exponential time complexity
+    return fib(n - 1) + fib(n - 2) 
+
+result = fib(5)
+
+print(result)
+
+```
+
+
+</details>
+<br>
+
+<details>
+<summary>Recursive optimized/ Memoize Fib</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+<details>
+<summary>Iterative implmenetation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+
+</details>
+<br>
+<br>
+
+
+```
+ ⏳ Time & Space Complexity (in terms of asymptotic notations):
+```
+
+
+<details>
+<summary>Asymptotic analysis</summary>
+
+<br>
+
+<details>
+<summary>Recursive</summary>
+
+<br>
+
+
+<details>
+<summary>Time complexity</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+<details>
+<summary>Space Complexity</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+
+</details>
+
+
+<br>
+
+<details>
+<summary>Recursive optimized/ Memoization (Caching) Fib</summary>
+
+<br>
+
+
+<details>
+<summary>Time complexity</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+<details>
+<summary>Space Complexity</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+
+</details>
+<br>
+
+<details>
+<summary>Iterative</summary>
+
+<br>
+
+
+<details>
+<summary>Time complexity</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+<details>
+<summary>Space Complexity</summary>
+
+<br>
+
+
+
+</details>
+<br>
+
+
+</details>
+<br>
+
+
+
+
+</details>
+<br>
+<br>
+
+
+```
+ 🧮 Mathematical Abstraction:
+```
+
+
+<details>
+<summary>Algorithm's mathematical explanation</summary>
+
+<br>
+
+
+
+</details>
+<br>
+<br>
+
+
+</details>
+
+
+---
+
+  <br>
   <br>
 
   ### **Differences between Recursion and Iteration**:
@@ -2122,9 +2740,18 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
   <br>
 
   ### **Base case**:
-  <details>
-    <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
+  <details open>
+    <summary>What is a base condition in recursion? | <b>Click to expand</b></summary>
     </br>
+
+  In a recursive function, the solution to the base case is provided and the solution of the bigger problem is expressed in terms of smaller problems.
+
+  > The base case is when the recursion stops
+  
+  The role of the base condition is to stop a recursive function from executing endlessly – once a pre-specified base condition is met, the function knows it’s time to exit.
+
+
+
   </details>
 
   ---
@@ -4432,6 +5059,7 @@ Article           | Provider (Platform) | Used as reference|
 [Difference between Big Oh, Big Omega and Big Theta](https://www.tutorialspoint.com/data_structures_algorithms/asymptotic_analysis.htm) | Tutorialspoint | Yes
 [Difference between Recursion and Iteration](https://www.geeksforgeeks.org/difference-between-recursion-and-iteration/) | Geeksforgeeks | Yes
 [Difference between Big Oh, Big Omega and Big Theta](https://www.geeksforgeeks.org/difference-between-big-oh-big-omega-and-big-theta/) | Geeksforgeeks | Yes
+[What is recursion?](https://www.educative.io/edpresso/what-is-recursion) | Geeksforgeeks | Yes
 
 ___
 <br/><br/><br/>
