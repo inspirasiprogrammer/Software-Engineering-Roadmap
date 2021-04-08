@@ -645,7 +645,7 @@ However just because you have n calls total doesn’t mean it takes O(n) space.
 
 <br>
 
-<details open>
+<details>
 <summary>Asymptotic mathematical Notations <b> | Click to expand</b></summary>
 
 <br>
@@ -785,7 +785,7 @@ Summary:
 
   ### **Omega notation (Ω)**: 😌 (Asymptotic Lower bound)
 
-  <details open>
+  <details>
     <summary>What is Omega notation (Ω) | <b>Click to expand</b></summary>
     </br>
 
@@ -797,7 +797,21 @@ In simple words, when we represent a time complexity for any algorithm in the fo
 
 
 
+<div align="center">
+
   ![](assets/images/asymptotic_notation/big_omega/big_omega.png)
+
+</div>
+
+```
+Ω(g(n)) = { f(n): there exist positive constants c and n0 
+            such that 0 ≤ cg(n) ≤ f(n) for all n ≥ n0 }
+```
+
+
+The above expression can be described as a function f(n) belongs to the set Ω(g(n)) if there exists a positive constant c such that it lies above cg(n), for sufficiently large n.
+
+For any value of n, the minimum time required by the algorithm is given by Omega Ω(g(n)).
 
 
   </details>
@@ -2112,7 +2126,7 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 ## **Recursion (Recursive Algorithms)**:
   
 
-<details open>
+<details>
 <summary>Recursion cases, explanation & examples</summary>
 
   <br>
@@ -2120,7 +2134,7 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
   > To solve a problem, solve a subproblem that is a smaller instance of the same problem, and then use the solution to that smaller instance to solve the original problem.
 
 
-
+<br>
 
 
   **Recursion** is the process in which a a function or method that repeatedly calculates a smaller part of itself to arrive at the final result. It is similar to iteration, but instead of repeating a set of operations, a recursive function accomplishes repetition by calling itself in its own definition.. Using recursive algorithm, certain problems can be solved quite easily. Examples of such problems are Fibonacci, Towers of Hanoi (TOH), Factorial, Tree Traversals, DFS of Graph, etc..
@@ -2128,7 +2142,6 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
   ```
   We say there's a recursion when a function delegates work to clones of itself
   ```
-  <br>
 
   - The term  describes  While the concept of recursive programming can be difficult to grasp initially, mastering it can be very useful. Recursion is one of the fundamental tools of computer science.
 
@@ -2153,18 +2166,68 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
    ### **Improving efficiency of recursive functions**
   <br>
 
+  Recursive algorithms can take a lot of memory due to many function calls, and improving efficiency of recursive algorithms can be achieved by:
+  1. Memoization (a form of caching)
+  2. using tail recursion
+  3. Bottom-up (avoiding recursion)
+
+  ---
+  
   - **Memoization**
-  1. When recursion is used as a technique in which a function makes one or more calls to itself.
-  2. When a data structre uses smaller instances of the exact same types of data structre when it represents itself.
+    - **Memoization** or memoisation is an optimization technique used primarily to speed up computer programs by storing the results of expensive function calls and returning the cached result when the same inputs occur again.
+ 
+    - it's used for improving the performance of recursive algorithms. It involves rewriting the recursive algorithm so that as answers to problems are found, they are stored in an data structure. Recursive calls can look up results in the data structure rather than having to recalculate them.
+    - We can think about it as a specific type of **Caching**. but While caching can refer in general to any storing technique (like HTTP caching) for future use, **Memoizing** specifically involves caching the return values of a function.
+
+    Recap: 
+    1. Memoization is a technique for improving the performance of recursive algorithms
+    2. It involves rewriting the recursive algorithm so that as answers to problems are found, they are stored in an array.
+    3. Recursive calls can look up results in the array rather than having to recalculate them
+    4. Memoization improves performance because partial results are never calculated twice
+
+  ---
+
+  - **Tail recursion**
+
+    A recursive function is tail recursive when recursive call is the last thing executed by the function
+
+    The tail recursive functions considered better than non tail recursive functions as tail-recursion can be optimized by compiler. The idea used by compilers to optimize tail-recursive functions is simple, since the recursive call is the last statement, there is nothing left to do in the current function, so saving the current function’s stack frame is of no use
+
+    - You can turn a non-tail recursive function into tail-recursive to optimize it.
+      - if we looked at the factorial of n. It is a non-tail-recursive function. Although it looks like a tail recursive at first look. If we take a closer look, we can see that the value returned by fact(n-1) is used in fact(n), so the call to fact(n-1) is not the last thing done by fact(n) 
+
+
+
+    - the recursive call is the last thing executed by the function
+    - the compiler optimizes a tail recursive function by not saving the current function's stack frame because the
+    - recursive call is the last statement and there is nothing left to do in that function
+
+    ---
+
+  - **Bottom-up**:
+      - Going bottom-up is a way to avoid recursion, saving the memory cost that recursion incurs when it builds up the call stack.
+
+      - Put simply, a bottom-up algorithm "starts from the beginning," while a recursive algorithm often "starts from the end and works backwards."
+
+      - The approach of using recursion if we consider the function call stack size has a problem: it builds up a call stack of size O(n)O(n), which makes our total memory cost O(n)O(n). This makes it vulnerable to a stack overflow error, where the call stack gets too big and runs out of space (To avoid this, we can instead go bottom-up)
+
+
+
 
 
   ---
   
-  <br>
 
-  Using recursion requires creativity for seeing how a problem can be stated in terms of itself.
+  <div align="center">
+
+  <h3>Using recursion requires creativity for seeing how a problem can be stated in terms of itself.</h3>
+  
+  </div>
 
   ---
+
+<br>
+
 ## **<div align="left"> Recursion Examples</div>**
 
 <br>
@@ -2187,7 +2250,23 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
 
   </div>
 
+
+<div align="center">NON-tail-recursive function</div>
+
+
   ```python
+
+  # This function can be written as a tail recursive function. The idea is to use one more argument and accumulate the factorial value in second argument. When n reaches 0, return the accumulated value.
+
+
+
+# A NON-tail-recursive function.
+# The function is not tail
+# recursive because the value
+# returned by fact(n-1) is used
+# in fact(n) and call to fact(n-1)
+# is not the last thing done by
+# fact(n)
 
   def factorial(n):
     # n! = n × (n−1) × (n−2) × … × 2 × 1
@@ -2197,6 +2276,35 @@ Auxiliary Space: O(1) in case of iterative implementation. In case of recursive 
   # Result: 120
 
   ```
+
+<details>
+<summary>Tail-recursive function |  <b>Optimized</b></summary>
+
+
+  ```python
+
+  # A tail recursive function
+  # to calculate factorial
+  def fact(n, a = 1):
+  
+      if (n == 0):
+          return a
+  
+      return fact(n - 1, n * a)
+  
+  # Driver program to test
+  #  above function
+  print(fact(5))
+
+  # time complexity:
+  # the amount of recursive calls is directly proportional to the input number Θ(𝑛)
+  
+  ```
+
+</details>
+
+
+<br>
 
 We can trace this computation in precisely the same way that we trace any sequence of function calls.
 
@@ -2229,149 +2337,50 @@ We can trace this computation in precisely the same way that we trace any sequen
 <summary>Exaplanataion & Implementastion<b> | Click to expand</b></summary>
 <br>
 
+An algorithm to check if a given string is palindrome or not.
 
-``` 
- 🦶🏽 Steps:
-```
 
-<details>
-<summary>Table of steps</summary>
 
-<br>
 
 
+  <br>
+  
+  <div align="center">
 
-</details>
-<br>
-<br>
+  <!-- ![](assets/algorithms/../images/algorithms/recursion/factorial/factorial.png)
+  <small>Source: <a href="https://educative.io"></a></small> -->
 
+  </div>
 
-``` 
- 🐾 Steps extended:
-```
+  ```python
 
-<details>
-<summary>Table of steps <b>(Pseudocode)</b></summary>
+  def palindrome(word):
+      if len(word) < 2:
+          return print("A Plaindrome")
+      elif word[0] == word[-1]:
+          return palindrome(word[1:-1])
+      else:
+          return print("Not a Palindrome")
 
-<br>
+  palindrome("ada")
 
 
+  # Result: A Plaindrome
 
-</details>
+  ```
 
+time complexity:
 
-<br>
-<br>
+  ```python
+- recursive call will be made n/2 times, as the word is stripped of the first and last letter every call 
 
-``` 
- 📟 input/ output:
-```
+- the amount of recursive calls is directly proportional to the input number
 
-<details>
-<summary>Input/ output examples</summary>
+- Θ(𝑛)
+  ```
 
-<br>
+ 
 
-Input:
-
-```
-Input  : n = 2
-```
-Output: 1
-
----
-
-Input:
-
-```
-Input  : n = 9
-```
-Output: 34
-
-
-</details>
-<br>
-<br>
-
-
-```
- 💻 Implementation:
-```
-
-
-<details>
-<summary>Python 🐍</summary>
-
-<br>
-
-
-<details>
-<summary>Recursive implementation</summary>
-
-<br>
-
-
-
-</details>
-<br>
-
-<details>
-<summary>Recursive optimized</summary>
-
-<br>
-
-
-
-</details>
-<br>
-
-<details>
-<summary>Iterative implmenetation</summary>
-
-<br>
-
-
-
-</details>
-<br>
-
-
-</details>
-<br>
-<br>
-
-
-```
- ⏳ Time & Space Complexity (in terms of asymptotic notations):
-```
-
-
-<details>
-<summary>Asymptotic analysis</summary>
-
-<br>
-
-
-
-</details>
-<br>
-<br>
-
-
-```
- 🧮 Mathematical Abstraction:
-```
-
-
-<details>
-<summary>Algorithm's mathematical explanation</summary>
-
-<br>
-
-
-
-</details>
-<br>
 
 
 </details>
@@ -2380,11 +2389,15 @@ Output: 34
 <br>
 
 ### **Fibonacci algorithm</b>** 
-<details open>
+<details>
 <summary>Exaplanataion & Implementastion<b> | Click to expand</b></summary>
 <br>
 
+<div align="center">
+
 ![](assets/images/algorithms/recursion/gloden-ration.jpeg)
+
+</div>
 
 **Fibonacci sequence** is a very famous sequence of numbers in math. 
 The way that it's defined is the first two numbers are zero and one, they're kind of just given to you and then every number thereafter can be found by adding the two previous numbers. 
@@ -2446,7 +2459,7 @@ The way that it's defined is the first two numbers are zero and one, they're kin
 <br>
 
 <details>
-<summary>Recursive steps </summary>
+<summary>Recursive steps (memoization) </summary>
 
 <br>
 
@@ -2561,6 +2574,18 @@ print(result)
 
 <br>
 
+```python
+
+# O(n) time | O(n) Space
+
+def getNthFib(n, memoize={1: 0, 2: 1}):
+	if n in memoize:
+		return memoize[n]
+	else:
+		memoize[n] = getNthFib(n - 1, memoize) + getNthFib(n - 2, memoize)
+		return memoize[n]
+
+```
 
 
 </details>
@@ -2603,6 +2628,25 @@ print(result)
 
 <br>
 
+```
+Time Complexity: T(n) = T(n-1) + T(n-2) which is exponential. 
+```
+
+We can observe that this implementation does a lot of repeated work (see the following recursion tree). So this is a bad implementation for nth Fibonacci number. 
+
+  ```
+                                fib(5)   
+                          /                \
+                    fib(4)                fib(3)   
+                  /        \              /       \ 
+              fib(3)      fib(2)         fib(2)   fib(1)
+              /    \       /    \        /      \
+        fib(2)   fib(1)  fib(1) fib(0) fib(1) fib(0)
+        /     \
+      fib(1) fib(0)
+
+  ```
+
 
 
 </details>
@@ -2613,7 +2657,7 @@ print(result)
 
 <br>
 
-
+Extra Space: O(n) if we consider the function call stack size
 
 </details>
 <br>
@@ -2635,6 +2679,7 @@ print(result)
 
 <br>
 
+Time complexity: O(n) linear time
 
 
 </details>
@@ -2645,7 +2690,7 @@ print(result)
 
 <br>
 
-
+Extra Space: O(n) if we consider the function call stack size
 
 </details>
 <br>
@@ -2665,7 +2710,9 @@ print(result)
 
 <br>
 
+Time complexity: O(n)
 
+So time is gonna be O of N because ultimately, we have to calculate N Fibonacci numbers, so we have to do at least like N constant time operations, because we're literally not using space, we're not doing any recursive calls so we don't have to worry about the call stack and we're not storing anything except for two values which is constant space
 
 </details>
 <br>
@@ -2675,7 +2722,9 @@ print(result)
 
 <br>
 
+Space Complexity: O(1)
 
+We calculate the next Fibonacci number in constant time by just accessing these two values that we're storing and then we just update the array. 
 
 </details>
 <br>
@@ -2701,6 +2750,25 @@ print(result)
 <summary>Algorithm's mathematical explanation</summary>
 
 <br>
+
+
+<details>
+<summary>Fibonacci - Simple Recursive</summary>
+
+<br>
+
+Time Complexity: T(n) = T(n-1) + T(n-2) 
+
+fibb(0) = 0, fibb(1) = 1; fibb(n) = fibb(n-1) + fibb(n-2)
+- Performance:
+  - Recurrence: T(n)=...
+  - T(n) is exponential
+  - Actually, T(n)=Θ(fibb(n)
+  - fibb(n)≃1.6n
+
+</details>
+<br>
+
 
 
 
@@ -2740,9 +2808,17 @@ print(result)
   <br>
 
   ### **Base case**:
-  <details open>
+  <details>
     <summary>What is a base condition in recursion? | <b>Click to expand</b></summary>
     </br>
+
+
+  The base case, or halting case, of a function is the problem that we know the answer to, that can be solved without any more recursive calls. The base case is what stops the recursion from continuing on forever. Every recursive function must have at least one base case (many functions have more than one). If it doesn't, your function will not work correctly most of the time, and will most likely cause your program to crash in many situations, definitely not a desired effect.
+
+Let's return to our factorial example from above. Remember the problem was that we never stopped the recursion process; we didn't have a base case. Luckily, the factorial function in math defines a base case for us. n! = n*(n - 1)! as long as n > 1. If n = = 1 or n = = 0, then n! = 1. The factorial function is undefined for values less than 0, so in our implementation, we'll return some error value. Using this updated definition, let's rewrite our factorial function.
+
+
+
 
   In a recursive function, the solution to the base case is provided and the solution of the bigger problem is expressed in terms of smaller problems.
 
@@ -2751,6 +2827,7 @@ print(result)
   The role of the base condition is to stop a recursive function from executing endlessly – once a pre-specified base condition is met, the function knows it’s time to exit.
 
 
+  </br>
 
   </details>
 
@@ -2761,16 +2838,67 @@ print(result)
   ### **General (recursive) case**:
   <details>
     <summary>Differences between Recursion and Iteration | <b>Click to expand</b></summary>
-    </br>
 
-  ---
+  <br>
+
+  
+
+  The general case is what happens most of the time, and is where the recursive call takes place. In the case of factorial, the general case occurs when n > 1, meaning we use the equation and recursive definition n! = n*(n - 1)!.
+
 
   </details>
 
+  </br>
+
+  ---
 
 
+ 
+
+  <br>
+
+  ### **Diminishing Size of Problem**:
+  <details>
+    <summary>Diminishing Size of Problem | <b>Click to expand</b></summary>
+
+  <br>
+
+  
+  Our third requirement for a recursive function is that the on each recursive call the problem must be approaching the base case. If the problem isn't approaching the base case, we'll never reach it and the recursion will never end. Imagine the following incorrect implementation of factorial:
+
+
+
+
+  </details>
+
+<br>
+
+
+  ---
+
+  <br>
+
+  ### **The Call Stack**:
+  <details>
+    <summary>The call stack | <b>Click to expand</b></summary>
+    </br>
+
+  When a function is called, a certain amount of memory is set aside for that function to use for purposes such as storing local variables. This memory, called a frame, is also used by the computer to store information about the function such as the function's address in memory; this allows the program to return to the proper place after a function call (for example, if you write a function that calls printf(), you would like control to return to your function after printf() completes; this is made possible by the frame).
+
+  Every function has its own frame that is created when the function is called. Since functions can call other functions, often more than one function is in existence at any given time, and therefore there are multiple frames to keep track of. These frames are stored on the call stack, an area of memory devoted to holding information about currently running functions.
+
+
+
+
+
+  ---
+
+
+  </details>
 
 <br/>
+
+
 
 
 </details>
@@ -3417,6 +3545,11 @@ Output
 <br>
 <br>
 
+
+
+```
+ 💻 Implementation:
+```
 
 
 
@@ -4773,7 +4906,7 @@ The time complexity of the selection sort is the same in all cases. At every ste
 
 <br>
 
-<details open>
+<details>
 <summary>Data structres | <b>Click to expand</b></summary>
 
 <br>
