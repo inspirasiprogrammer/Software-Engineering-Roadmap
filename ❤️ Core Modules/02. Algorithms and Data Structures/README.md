@@ -106,13 +106,17 @@
     - 14 . [Dictionaries](#dictionaries)
     - 15 . [Matrix](#Matrix)
     
-    <br>
 
-    #### **Further Learning Resource**
+  ## 5 . [Space station connections algorithm](#space-station-connections)
 
-  - 5 . [Articles 📰](#-articles-)
-  - 6 . [Books 📚](#-books-)
-  - 7 . [Courses 💻](#-courses-)
+<br>
+
+  #### **Further Learning Resource**
+
+  - 6 . [Articles 📰](#-articles-)
+  - 7 . [Books 📚](#-books-)
+  - 8 . [Courses 💻](#-courses-)
+  - 9 . [Resources](#resources)
 
 ---
 
@@ -645,7 +649,7 @@ However just because you have n calls total doesn’t mean it takes O(n) space.
 
 <br>
 
-<details>
+<details open>
 <summary>Asymptotic mathematical Notations <b> | Click to expand</b></summary>
 
 <br>
@@ -714,19 +718,30 @@ of only uppercase characters vs. on an input string with just a few uppercase
 characters.
 - when describing the time complexity of an algorithm, it's helpful somtimers to specify what the time complexity refers to. the average case or to the worst case (e.g., "this algorithm runs in O(nlog(n)) time on average and in $O(n^2)$ time in the worse case").
 
+> "the running time grows at most this much, but it could grow more slowly"
+
+
 <br>
 
   <div align="center">
 
   ![progra](assets/images/asymptotic_notation/big_o/big-o.png)
 
+  "the running time grows at most this much, but it could grow more slowly"
+
   <small>Big O.
-  | Image source / <a href="https://www.khanacademy.org/computing/computer-science/algorithms/asymptotic-notation/a/big-o-notation">Khan Academy</a></small>
+  | Image source / <a href="https://www.programiz.com">Programiz</a></small>
+  
 <br>
 <br>
 
 </div>
+
+
 The Big O notation is useful when we only have upper bound on time complexity of an algorithm. Many times we easily find an upper bound by simply looking at the algorithm.  
+
+(expresses the upper bound)
+
 For a function g(n), O(g(n)) is given by the relation:
 
 ``` math
@@ -744,7 +759,7 @@ Since Big-o gives the worst-case running time of an algorithm, it is widely used
 Summary:
 >The Big O of a function is its asymptotic upper bound. This means that the running time of a function T will be always shorter than that of f . To generalize we can say that a funciton **T(n)** is **O(f(n))** if there is a constant k such that **T(n) < k** ⋅ **f(n)** for large enough **n**.
 
-
+> P.s Many use Big-O notation even if Big-Theta would be more fitting.
 
   
     
@@ -801,6 +816,10 @@ In simple words, when we represent a time complexity for any algorithm in the fo
 
   ![](assets/images/asymptotic_notation/big_omega/big_omega.png)
 
+"the running time grows at least this much"
+
+<small>Source <a href="://www.programiz.com">Programiz</a></small>
+
 </div>
 
 ```
@@ -814,6 +833,9 @@ The above expression can be described as a function f(n) belongs to the set Ω(g
 For any value of n, the minimum time required by the algorithm is given by Omega Ω(g(n)).
 
 
+
+
+
   </details>
 
   ---
@@ -824,14 +846,86 @@ For any value of n, the minimum time required by the algorithm is given by Omega
   <details>
     <summary>What Asymptotic Analysis is? | <b>Click to expand</b></summary>
     </br>
+
+
+  **Theta notation** encloses the function from above and below. Since it represents the upper and the lower bound of the running time of an algorithm, it is used for analyzing the average-case complexity of an algorithm. (expresses the lower bound)
+
+<div align="center">
+
+  ![](assets/images/asymptotic_notation/big_theta.png)
+
+
+  the function grows asymptotically as fast as ,e.g., n<sup>2</sup>
+
+<small>Source <a href="://www.programiz.com">Programiz</a></small>
+
+</div>
+
+---
+
+<br>
+
+
+For a function g(n), Θ(g(n)) is given by the relation:
+
+```
+Θ(g(n)) = { f(n): there exist positive constants c1, c2 and n0 such that 0 ≤ c1g(n) ≤ f(n) ≤ c2g(n) for all n ≥ n0 }
+```
+
+The above expression can be described as a function f(n) belongs to the set Θ(g(n)) if there exist positive constants c1 and c2 such that it can be sandwiched between c1g(n) and c2g(n), for sufficiently large n.
+
+If a function f(n) lies anywhere in between c1g(n) and c2g(n) for all n ≥ n0, then f(n) is said to be asymptotically tight bound.
+
+
+
   </details>
   
   ---
-<br/>
 
+  <br>
 
+### **Working with the Asymptotic Notation**: 
+<details>
+ <summary> | <b>Click to expand</b></summary>
+ </br>
 
-<br/>
+> Important to note is that for each time complexity there can be a best, worst and average case. To clarify this, I want to
+use this example:
+
+```
+Contrive(n)
+if n = 0 then do something Theta(n^3)
+else if n is even then
+  flip a coin
+  if heads, do something Theta(n)
+  else if tails, do something Theta(n^2)
+else if n is odd then
+  flip a coin
+  if heads, do something Theta(n^4)
+  else if tails, do something Theta(n^5)
+```
+<div align="center">
+
+Source: [Stackexchange](https://cs.stackexchange.com/questions/23068/how-do-o-and-%ce%a9-relate-to-worst-and-best-case)
+
+</div>
+
+If this would be an algorithm, we can find different asymptotic behavior of this function.
+In the best case (n is even), the runtime is and but not of anything.
+In the worst case (n is odd), the runtime is and but not of anything.
+In the case n = 0, the running time is .
+
+This also means that the instances of the size n define each case. In the example above, it is odd, even or 0. For some
+sorting algorithms, it can be that n is already sorted, almost sorted or sorted in reverse. For searching algorithms this may
+be that the looked for element is at index 0, at index n-1 or not in the input at all. Concrete examples will be given when
+algorithms are analyzed.
+
+</details>
+
+ ---
+
+  <br>
+  <br>
 
 
   ## **Differences between Big-O, Big-Ω and Big-Θ**
@@ -5176,11 +5270,32 @@ Data structures can also be classified on the basis of the following characteris
 
 
 
+<div align="center">
+
+# 5
+
+</div>
+
+## **Space station connections algorithm** 
+
+<br>
+
+<details>
+<summary>Custom engineered and impelemnted algorithm | <b>Click to expand</b></summary>
+
+<br>
+
+</details>
+
+<br/>
+
+---
+
+<br/>
+<br/>
 
 
-
-
-# 8
+# 6
 ## **Articles 📰**
 
 ___
@@ -5197,7 +5312,7 @@ Article           | Provider (Platform) | Used as reference|
 ___
 <br/><br/><br/>
 
-# 9
+# 7
 ## **Books 📚**
 One of the most straight to the point Books 🔥🕹📟
 ___
@@ -5210,7 +5325,7 @@ ___
 
 <br/> 
 
-# 10
+# 8
 
 ## **Courses 💻**
 ----
@@ -5225,7 +5340,7 @@ Course name           | Provider (Platform) | Duration| Skill level | Course Cos
 
 <br/><br/><br/>
 
-# 11
+# 9
 
 <!-- Tables -->
 ## **Resources**
