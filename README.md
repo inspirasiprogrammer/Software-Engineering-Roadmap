@@ -1,4 +1,4 @@
-![](Assets/images/cover.jpg)
+![](.github_assets/images/cover_alt.jpg)
 
 <div align="center">The <b>simplest</b> self-taught roadmap for becoming a <b>Solid Software Engineer</b> ✨🔥 
 
